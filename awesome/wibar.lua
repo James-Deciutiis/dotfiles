@@ -4,7 +4,6 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 local colors = RC.colors
 
--- {{{ Wibar
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
 -- Create a wibox for each screen and add it
@@ -68,7 +67,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ " ❶ HOME ", " ❷ WEB ", " ❸ EDIT ", " ❹ READ ", " ❺ DISC" }, s, awful.layout.layouts[1])
+    awful.tag({ " ❶ HOME ", " ❷ WEB ", " ❸ EDIT ", " ❹ READ ", " ❺ CHAT ", " ❻ MISC " }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -103,29 +102,29 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Create a tasklist widget
     s.mytasklist = awful.widget.tasklist {
-        screen  = s,
-        filter  = awful.widget.tasklist.filter.currenttags,
-        buttons = tasklist_buttons,
-        style = {
-            bg_normal = colors['color0'],
-            bg_focus = colors['color2'],
-			shape  = gears.shape.rounded_bar,
-			disable_task_name = true,
+      screen  = s,
+      filter  = awful.widget.tasklist.filter.currenttags,
+      buttons = tasklist_buttons,
+      style = {
+        disable_task_name = true,
+        bg_normal = colors['color0'],
+        bg_focus = colors['color2'],
+        shape  = gears.shape.rectangle,
+      },
+      layout = {
+        spacing_widget = {
+          {
+            forced_width  = 7,
+            forced_height = 7,
+            shape        = gears.shape.circle,
+            widget       = wibox.widget.separator
+          },
+          valign = 'center',
+          halign = 'center',
+          widget = wibox.container.place,
         },
-		layout   = {
-			spacing_widget = {
-				{
-					forced_width  = 7,
-					forced_height = 7,
-                    shape        = gears.shape.circle,
-					widget       = wibox.widget.separator
-				},
-				valign = 'center',
-				halign = 'center',
-				widget = wibox.container.place,
-			},
-			spacing = 50,
-			layout  = wibox.layout.fixed.horizontal
+        spacing = 50,
+        layout  = wibox.layout.fixed.horizontal,
     	},
     }
 
@@ -158,14 +157,16 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             mykeyboardlayout,
 			      tbox_seperator,
+            wibox.widget.textbox("📅 : "),
             mytextclock,
 			      tbox_seperator,
+            wibox.widget.textbox("🌡️: "),
             awful.widget.watch('bash -c "sensors | grep temp1 | tr -s [:space:]"', 15),
 			      tbox_seperator,
-            awful.widget.watch('bash -c "acpi | grep Battery | tr -s [:space:]"', 15),
+            wibox.widget.textbox("🔋 : "),
+            awful.widget.watch('bash -c "acpi | grep -Eo [0-9]{2}%.*  | tr -s [:space:]"', 15),
 			      tbox_seperator,
             s.mylayoutbox,
         },
     }
 end)
--- }}}
