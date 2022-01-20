@@ -64,11 +64,15 @@ root.keys(globalkeys)
 -- {{{ Rules
 RC.rules = require("rules")
 awful.rules.rules = RC.rules 
+client.connect_signal("manage", function (c)
+  c.shape = gears.shape.rounded_rect
+  awful.spawn.with_shell("compton")
+  awful.spawn.with_shell("feh --bg-fill ~/Pictures/rocky-shore-sunset.jpg")
+end)
 -- }}}
+
 
 -- {{{ Signals
 require("signals")
 -- }}}
 
-awful.spawn.with_shell("compton")
-awful.spawn.with_shell("feh --bg-fill ~/Pictures/rocky-shore-sunset.jpg")

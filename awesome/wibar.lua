@@ -86,45 +86,53 @@ awful.screen.connect_for_each_screen(function(s)
         filter  = awful.widget.taglist.filter.all,
         buttons = taglist_buttons,
         style = {
-            bg_normal = colors['color0'],
-            bg_focus = colors['color2']
-     	},
-		layout = {
-			spacing = 10,
-			spacing_widget = {
-				color  = '#dddddd',
-				shape  = gears.shape.powerline,
-				widget = wibox.widget.separator,
-			},
-			layout  = wibox.layout.fixed.horizontal   
-		}
+					bg_normal = colors['color4'],
+					bg_focus = colors['color2'],
+     		},
+				layout = {
+					spacing = 10,
+					spacing_widget = {
+						color  = '#dddddd',
+						shape  = gears.shape.powerline,
+						widget = wibox.widget.separator,
+					},
+					layout  = wibox.layout.fixed.horizontal   
+				}
 	}
 
     -- Create a tasklist widget
     s.mytasklist = awful.widget.tasklist {
-      screen  = s,
-      filter  = awful.widget.tasklist.filter.currenttags,
-      buttons = tasklist_buttons,
-      style = {
-        disable_task_name = true,
-        bg_normal = colors['color0'],
-        bg_focus = colors['color2'],
-        shape  = gears.shape.rectangle,
-      },
-      layout = {
-        spacing_widget = {
-          {
-            forced_width  = 7,
-            forced_height = 7,
-            shape        = gears.shape.circle,
-            widget       = wibox.widget.separator
-          },
-          valign = 'center',
-          halign = 'center',
-          widget = wibox.container.place,
-        },
-        spacing = 50,
-        layout  = wibox.layout.fixed.horizontal,
+			screen = s,
+    	filter = awful.widget.tasklist.filter.currenttags,
+			buttons = tasklist_buttons,
+	 		style = {
+				disable_task_name = true,
+				bg_normal = colors['color4'],
+				bg_focus = colors['color2'],
+				shape = gears.shape.rounded_rect,
+			},
+			layout = {
+				spacing = 10,
+				forced_num_cols = 1,
+				layout = wibox.layout.grid.horizontal,
+			},
+			widget_template = {
+				{
+					{
+						id = "clienticon",
+						widget = awful.widget.clienticon,
+					},
+					id = "clienticon_margin_role",
+					left = 14,
+					widget = wibox.container.margin,
+				},
+				id = "background_role",
+				forced_width = 50,
+				forced_height = 75,
+				widget = wibox.container.background,
+				create_callback = function(self, c, index, objects) --luacheck: no unused
+        	self:get_children_by_id("clienticon")[1].client = c
+				end
     	},
     }
 

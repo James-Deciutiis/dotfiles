@@ -1,4 +1,5 @@
 local awful = require("awful")
+local gears = require("gears")
 local beautiful = require("beautiful")
 
 clientkeys = RC.bindings.clientkeys 
@@ -8,20 +9,22 @@ clientbuttons = RC.bindings.clientbuttons
 -- Rules to apply to new clients (through the "manage" signal).
 local rules = {
     -- All clients will match this rule.
-    { rule = { },
-      properties = { border_width = 5,
-                     border_color = beautiful.border_normal,
-                     focus = awful.client.focus.filter,
-                     raise = true,
-                     keys = clientkeys,
-                     buttons = clientbuttons,
-                     screen = awful.screen.preferred,
-                     placement = awful.placement.no_overlap+awful.placement.no_offscreen
-     }
+    { 
+      rule = { },
+      properties = { 
+        border_width = 6,
+        border_color = beautiful.border_normal,
+        focus = awful.client.focus.filter,
+        raise = true,
+        keys = clientkeys,
+        buttons = clientbuttons,
+        screen = awful.screen.preferred,
+        placement = awful.placement.no_overlap+awful.placement.no_offscreen
+      }
     },
-
     -- Floating clients.
-    { rule_any = {
+    { 
+      rule_any = {
         instance = {
           "DTA",  -- Firefox addon DownThemAll.
           "copyq",  -- Includes session name in class.
@@ -49,7 +52,9 @@ local rules = {
           "ConfigManager",  -- Thunderbird's about:config.
           "pop-up",       -- e.g. Google Chrome's (detached) Developer Tools.
         }
-      }, properties = { floating = true }},
+      }, 
+      properties = { floating = true },
+    },
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
