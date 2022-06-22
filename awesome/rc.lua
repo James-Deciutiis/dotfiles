@@ -24,6 +24,8 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Variable definitions
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.useless_gap = 3
+beautiful.gap_single_client = true
 modkey = RC.vars.modkey
 awful.layout.layouts = RC.vars.layouts
 terminal = RC.vars.terminal
