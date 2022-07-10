@@ -81,6 +81,7 @@ awful.screen.connect_for_each_screen(function(s)
             screen = s,
             filter = awful.widget.taglist.filter.all,
             buttons = taglist_buttons,
+            style = {bg_urgent = colors['color9']},
             widget_template = {
                 {
                     {
@@ -93,8 +94,8 @@ awful.screen.connect_for_each_screen(function(s)
                                 margins = 2,
                                 widget = wibox.container.margin
                             },
-                            bg = '#dddddd',
-                            shape = gears.shape.circle,
+                            bg = colors['color0'],
+                            shape = gears.shape.hexagon,
                             widget = wibox.container.background
                         },
                         {
@@ -116,8 +117,9 @@ awful.screen.connect_for_each_screen(function(s)
                                                                           index ..
                                                                           ' </b>'
                     self.shape = gears.shape.rounded_rect
-                    self.bg = c3.selected and colors['color2'] or
+                    self.bg = c3.selected and colors['color5'] or
                                   colors['color0']
+
                     self:connect_signal('mouse::enter', function()
                         if self.bg ~= colors['color3'] then
                             self.backup = self.bg
@@ -135,11 +137,11 @@ awful.screen.connect_for_each_screen(function(s)
                     self:get_children_by_id('index_role')[1].markup = '<b> ' ..
                                                                           index ..
                                                                           ' </b>'
-                    self.bg = c3.selected and colors['color2'] or
+                    self.bg = c3.selected and colors['color5'] or
                                   colors['color0']
                 end
             },
-            layout = {spacing = 0, layout = wibox.layout.fixed.horizontal}
+            layout = wibox.layout.fixed.horizontal
         }
     }
 
@@ -150,21 +152,17 @@ awful.screen.connect_for_each_screen(function(s)
             filter = awful.widget.tasklist.filter.currenttags,
             buttons = tasklist_buttons,
             style = {
-                disable_task_name = true,
-                bg = colors['color0'],
-                bg_focus = colors['color2'],
-                shape = gears.shape.rounded_rect
+                bg_normal = colors['color0'],
+                bg_focus = colors['color5'],
+                bg_urgent = colors['color3'],
+                shape = gears.shape.circle
             },
-            layout = {
-                spacing = 10,
-                forced_num_cols = 1,
-                layout = wibox.layout.grid.horizontal
-            },
+            layout = {layout = wibox.layout.grid.horizontal},
             widget_template = {
                 {
                     {id = "clienticon", widget = awful.widget.clienticon},
                     id = "clienticon_margin_role",
-                    left = 14,
+                    left = 14.5,
                     widget = wibox.container.margin
                 },
                 id = "background_role",
@@ -173,6 +171,14 @@ awful.screen.connect_for_each_screen(function(s)
                 widget = wibox.container.background,
                 create_callback = function(self, c, index, objects) -- luacheck: no unused
                     self:get_children_by_id("clienticon")[1].client = c
+                end,
+
+                update_callback = function(self, c, index, objects) -- luacheck: no unused
+                    self:get_children_by_id("clienticon")[1].client = c
+
+                    if (#s.clients < 1) then
+                        s.mytasklist.visible = false
+                    end
                 end
             }
         },
@@ -187,6 +193,7 @@ awful.screen.connect_for_each_screen(function(s)
         position = "top",
         screen = s,
         bg = beautiful.bg_normal .. "0",
+        border_width = 5,
         height = 30
     })
 
@@ -199,7 +206,7 @@ awful.screen.connect_for_each_screen(function(s)
                 {
                     wibox.widget {
                         forced_width = 10,
-                        color = '#fffff100',
+                        color = "#fffff100",
                         widget = wibox.widget.separator
                     },
                     {
@@ -217,7 +224,7 @@ awful.screen.connect_for_each_screen(function(s)
                         shape = gears.shape.rounded_rect,
                         bg = colors['color0'],
                         fg = colors['color4'],
-                        shape_border_color = colors['color3'],
+                        shape_border_color = colors['color4'],
                         shape_border_width = 5,
                         widget = wibox.container.background
 
@@ -247,7 +254,7 @@ awful.screen.connect_for_each_screen(function(s)
                 shape = gears.shape.rounded_rect,
                 bg = colors['color0'],
                 fg = colors['color4'],
-                shape_border_color = colors['color3'],
+                shape_border_color = colors['color4'],
                 shape_border_width = 5,
                 widget = wibox.container.background
 
@@ -264,10 +271,8 @@ awful.screen.connect_for_each_screen(function(s)
                         {
                             mykeyboardlayout,
                             tbox_seperator,
-                            wibox.widget.textbox("📅 : "),
                             mytextclock,
                             tbox_seperator,
-                            wibox.widget.textbox("🌡️: "),
                             awful.widget.watch(
                                 'bash -c "sensors | grep junction | tr -s [:space:]"',
                                 15),
@@ -286,7 +291,7 @@ awful.screen.connect_for_each_screen(function(s)
                     shape = gears.shape.rounded_rect,
                     bg = colors['color0'],
                     fg = colors['color4'],
-                    shape_border_color = colors['color3'],
+                    shape_border_color = colors['color4'],
                     shape_border_width = 5,
                     widget = wibox.container.background
                 },
@@ -299,7 +304,7 @@ awful.screen.connect_for_each_screen(function(s)
                 layout = wibox.layout.fixed.horizontal
             }
         },
-        margins = 2,
+        margins = 1.75,
         widget = wibox.container.margin
     }
 end)

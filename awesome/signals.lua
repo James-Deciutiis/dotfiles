@@ -18,11 +18,7 @@ client.connect_signal("manage", function(c)
 end)
 
 client.connect_signal("property::fullscreen", function(c)
-    if (c.fullscreen) then
-        c.shape = gears.shape.rectangle
-    else
-        c.shape = gears.shape.rounded_rect
-    end
+    c.shape = c.fullscreen and gears.shape.rectangle or gears.shape.rounded_rect
 end)
 
 -- Add a titlebar if titlebars_enabled is set to true in the rules.
@@ -68,8 +64,8 @@ client.connect_signal("mouse::enter", function(c)
 end)
 
 client.connect_signal("focus",
-                      function(c) c.border_color = RC.colors['color2'] end)
+                      function(c) c.border_color = RC.colors['color5'] end)
 client.connect_signal("unfocus",
-                      function(c) c.border_color = beautiful.border_normal end)
+                      function(c) c.border_color = RC.colors['color4'] end)
 -- }}}
 -- 

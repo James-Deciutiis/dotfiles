@@ -26,7 +26,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 beautiful.useless_gap = 3
 beautiful.gap_single_client = true
-beautiful.wallpaper = "~/Pictures/Dune-in-Wind-Wallpaper.png"
+beautiful.wallpaper = "~/Pictures/desert-with-pyramids-wallpaper.png"
 modkey = RC.vars.modkey
 awful.layout.layouts = RC.vars.layouts
 terminal = RC.vars.terminal
@@ -73,8 +73,8 @@ awful.rules.rules = RC.rules
 client.connect_signal("manage", function(c)
     c.shape = gears.shape.rounded_rect
     awful.spawn.with_shell("compton")
-    awful.spawn
-        .with_shell("feh --bg-fill ~/Pictures/Dune-in-Wind-Wallpaper.png")
+    awful.spawn.with_shell(
+        "feh --bg-fill ~/Pictures/desert-with-pyramids-wallpaper.png")
     awful.spawn.with_shell(
         "xrandr --output DisplayPort-1 --auto --output HDMI-A-0 --primary --left-of DisplayPort-1")
 end)
