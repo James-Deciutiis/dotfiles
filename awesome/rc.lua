@@ -26,6 +26,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 beautiful.useless_gap = 3
 beautiful.gap_single_client = true
+beautiful.wallpaper = "~/Pictures/Dune-in-Wind-Wallpaper.png"
 modkey = RC.vars.modkey
 awful.layout.layouts = RC.vars.layouts
 terminal = RC.vars.terminal

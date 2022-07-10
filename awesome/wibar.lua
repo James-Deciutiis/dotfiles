@@ -76,77 +76,71 @@ awful.screen.connect_for_each_screen(function(s)
     tbox_seperator = wibox.widget.textbox("  |  ")
 
     -- Create a taglist widget
-    s.mytaglist = wibox.widget {
-        {
-            widget = awful.widget.taglist {
-                screen = s,
-                filter = awful.widget.taglist.filter.all,
-                buttons = taglist_buttons,
-                widget_template = {
+    s.mytaglist = {
+        widget = awful.widget.taglist {
+            screen = s,
+            filter = awful.widget.taglist.filter.all,
+            buttons = taglist_buttons,
+            widget_template = {
+                {
                     {
                         {
                             {
                                 {
-                                    {
-                                        id = 'index_role',
-                                        widget = wibox.widget.textbox
-                                    },
-                                    margins = 2,
-                                    widget = wibox.container.margin
+                                    id = 'index_role',
+                                    widget = wibox.widget.textbox
                                 },
-                                bg = '#dddddd',
-                                shape = gears.shape.circle,
-                                widget = wibox.container.background
-                            },
-                            {
-                                {
-                                    id = 'icon_role',
-                                    widget = wibox.widget.imagebox
-                                },
-                                margins = 1,
+                                margins = 2,
                                 widget = wibox.container.margin
                             },
-                            {id = 'text_role', widget = wibox.widget.textbox},
-                            layout = wibox.layout.fixed.horizontal
+                            bg = '#dddddd',
+                            shape = gears.shape.circle,
+                            widget = wibox.container.background
                         },
-                        left = 7,
-                        right = 7,
-                        widget = wibox.container.margin
+                        {
+                            {id = 'icon_role', widget = wibox.widget.imagebox},
+                            margins = 1,
+                            widget = wibox.container.margin
+                        },
+                        {id = 'text_role', widget = wibox.widget.textbox},
+                        layout = wibox.layout.fixed.horizontal
                     },
-                    widget = wibox.container.background,
-                    -- Add support for hover colors and an index label
-                    create_callback = function(self, c3, index, objects) -- luacheck: no unused args
-                        self:get_children_by_id('index_role')[1].markup =
-                            '<b> ' .. index .. ' </b>'
-
-                        self.bg = c3.selected and colors['color2'] or
-                                      colors['color0']
-
-                        self:connect_signal('mouse::enter', function()
-                            if self.bg ~= colors['color3'] then
-                                self.backup = self.bg
-                                self.has_backup = true
-                            end
-                            self.bg = colors['color3']
-                        end)
-                        self:connect_signal('mouse::leave', function()
-                            if self.has_backup then
-                                self.bg = self.backup
-                            end
-                        end)
-                    end,
-                    update_callback = function(self, c3, index, objects) -- luacheck: no unused args
-                        self:get_children_by_id('index_role')[1].markup =
-                            '<b> ' .. index .. ' </b>'
-
-                        self.bg = c3.selected and colors['color2'] or
-                                      colors['color0']
-                    end
+                    left = 7,
+                    right = 7,
+                    widget = wibox.container.margin
                 },
-                layout = {spacing = 0, layout = wibox.layout.fixed.horizontal}
-            }
-        },
-        widget = wibox.container.background
+                widget = wibox.container.background,
+                -- Add support for hover colors and an index label
+                create_callback = function(self, c3, index, objects) -- luacheck: no unused args
+                    self:get_children_by_id('index_role')[1].markup = '<b> ' ..
+                                                                          index ..
+                                                                          ' </b>'
+                    self.shape = gears.shape.rounded_rect
+                    self.bg = c3.selected and colors['color2'] or
+                                  colors['color0']
+                    self:connect_signal('mouse::enter', function()
+                        if self.bg ~= colors['color3'] then
+                            self.backup = self.bg
+                            self.has_backup = true
+                        end
+                        self.bg = colors['color3']
+                    end)
+                    self:connect_signal('mouse::leave', function()
+                        if self.has_backup then
+                            self.bg = self.backup
+                        end
+                    end)
+                end,
+                update_callback = function(self, c3, index, objects) -- luacheck: no unused args
+                    self:get_children_by_id('index_role')[1].markup = '<b> ' ..
+                                                                          index ..
+                                                                          ' </b>'
+                    self.bg = c3.selected and colors['color2'] or
+                                  colors['color0']
+                end
+            },
+            layout = {spacing = 0, layout = wibox.layout.fixed.horizontal}
+        }
     }
 
     -- Create a tasklist widget
@@ -182,8 +176,9 @@ awful.screen.connect_for_each_screen(function(s)
                 end
             }
         },
-        widget = wibox.container.background,
-        bg = colors['color0']
+        bg = colors['color0'],
+        shape = gears.shape.rounded_rect,
+        widget = wibox.container.background
     }
 
     local forcedWidth = 300
@@ -191,13 +186,15 @@ awful.screen.connect_for_each_screen(function(s)
     s.mywibox = awful.wibar({
         position = "top",
         screen = s,
-        bg = beautiful.bg_normal .. "0"
+        bg = beautiful.bg_normal .. "0",
+        height = 30
     })
 
     -- Add widgets to the wibox
     s.mywibox:setup{
         {
             layout = wibox.layout.align.horizontal,
+            expand = "none",
             { -- Left widgets
                 {
                     wibox.widget {
@@ -205,18 +202,56 @@ awful.screen.connect_for_each_screen(function(s)
                         color = '#fffff100',
                         widget = wibox.widget.separator
                     },
-                    {s.mytaglist, layout = wibox.layout.fixed.horizontal},
+                    {
+                        {
+                            {
+                                s.mytaglist,
+                                layout = wibox.layout.fixed.horizontal
+                            },
+                            left = 10,
+                            right = 10,
+                            top = 3,
+                            bottom = 3,
+                            widget = wibox.container.margin
+                        },
+                        shape = gears.shape.rounded_rect,
+                        bg = colors['color0'],
+                        fg = colors['color4'],
+                        shape_border_color = colors['color3'],
+                        shape_border_width = 5,
+                        widget = wibox.container.background
+
+                    },
                     wibox.widget {
                         forced_width = forcedWidth,
                         color = '#fffff100',
                         shape = gears.shape.rectangle,
                         widget = wibox.widget.separator
                     },
+                    shape_clip = true,
+                    shape = gears.shape.rectangle,
                     layout = wibox.layout.fixed.horizontal
                 },
                 layout = wibox.layout.fixed.horizontal
             },
-            s.mytasklist,
+            {
+                {
+                    {s.mytasklist, layout = wibox.layout.fixed.horizontal},
+
+                    left = 10,
+                    right = 10,
+                    top = 3,
+                    bottom = 3,
+                    widget = wibox.container.margin
+                },
+                shape = gears.shape.rounded_rect,
+                bg = colors['color0'],
+                fg = colors['color4'],
+                shape_border_color = colors['color3'],
+                shape_border_width = 5,
+                widget = wibox.container.background
+
+            },
             { -- Right widgets
                 wibox.widget {
                     forced_width = forcedWidth,
@@ -224,34 +259,47 @@ awful.screen.connect_for_each_screen(function(s)
                     shape = gears.shape.rectangle,
                     widget = wibox.widget.separator
                 },
-                layout = wibox.layout.fixed.horizontal,
                 {
                     {
-                        mykeyboardlayout,
-                        tbox_seperator,
-                        wibox.widget.textbox("📅 : "),
-                        mytextclock,
-                        tbox_seperator,
-                        wibox.widget.textbox("🌡️: "),
-                        awful.widget.watch(
-                            'bash -c "sensors | grep junction | tr -s [:space:]"',
-                            15),
-                        tbox_seperator,
-                        s.mylayoutbox,
-                        layout = wibox.layout.fixed.horizontal
+                        {
+                            mykeyboardlayout,
+                            tbox_seperator,
+                            wibox.widget.textbox("📅 : "),
+                            mytextclock,
+                            tbox_seperator,
+                            wibox.widget.textbox("🌡️: "),
+                            awful.widget.watch(
+                                'bash -c "sensors | grep junction | tr -s [:space:]"',
+                                15),
+                            tbox_seperator,
+                            s.mylayoutbox,
+                            layout = wibox.layout.fixed.horizontal
+                        },
+                        left = 10,
+                        right = 10,
+                        top = 3,
+                        bottom = 3,
+                        widget = wibox.container.margin
+
                     },
-                    widget = wibox.container.background,
-                    bg = colors['color0']
+
+                    shape = gears.shape.rounded_rect,
+                    bg = colors['color0'],
+                    fg = colors['color4'],
+                    shape_border_color = colors['color3'],
+                    shape_border_width = 5,
+                    widget = wibox.container.background
                 },
                 wibox.widget {
                     forced_width = 10,
                     color = '#fffff100',
                     shape = gears.shape.rectangle,
                     widget = wibox.widget.separator
-                }
+                },
+                layout = wibox.layout.fixed.horizontal
             }
         },
-        top = 4,
+        margins = 2,
         widget = wibox.container.margin
     }
 end)
