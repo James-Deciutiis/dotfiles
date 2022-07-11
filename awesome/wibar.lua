@@ -81,7 +81,7 @@ awful.screen.connect_for_each_screen(function(s)
             screen = s,
             filter = awful.widget.taglist.filter.all,
             buttons = taglist_buttons,
-            style = {bg_urgent = colors['color9']},
+            style = {bg_urgent = colors['color1']},
             widget_template = {
                 {
                     {
@@ -117,19 +117,30 @@ awful.screen.connect_for_each_screen(function(s)
                                                                           index ..
                                                                           ' </b>'
                     self.shape = gears.shape.rounded_rect
+                    self.shape_border_width = 3
                     self.bg = c3.selected and colors['color5'] or
                                   colors['color0']
+                    self.shape_border_color =
+                        c3.selected and colors['color4'] or colors['color0']
 
                     self:connect_signal('mouse::enter', function()
-                        if self.bg ~= colors['color3'] then
+                        if self.bg ~= colors['color5'] then
                             self.backup = self.bg
                             self.has_backup = true
                         end
-                        self.bg = colors['color3']
+
+                        self.shape_border_color = c3.selected and
+                                                      colors['color5'] or
+                                                      colors['color0']
+                        self.bg = colors['color5']
                     end)
                     self:connect_signal('mouse::leave', function()
                         if self.has_backup then
-                            self.bg = self.backup
+                            self.bg = c3.selected and colors['color5'] or
+                                          colors['color0']
+                            self.shape_border_color = c3.selected and
+                                                          colors['color4'] or
+                                                          colors['color0']
                         end
                     end)
                 end,
@@ -139,6 +150,8 @@ awful.screen.connect_for_each_screen(function(s)
                                                                           ' </b>'
                     self.bg = c3.selected and colors['color5'] or
                                   colors['color0']
+                    self.shape_border_color =
+                        c3.selected and colors['color4'] or colors['color0']
                 end
             },
             layout = wibox.layout.fixed.horizontal
@@ -146,46 +159,99 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create a tasklist widget
-    s.mytasklist = wibox.widget {
-        awful.widget.tasklist {
-            screen = s,
-            filter = awful.widget.tasklist.filter.currenttags,
-            buttons = tasklist_buttons,
-            style = {
-                bg_normal = colors['color0'],
-                bg_focus = colors['color5'],
-                bg_urgent = colors['color3'],
-                shape = gears.shape.circle
-            },
-            layout = {layout = wibox.layout.grid.horizontal},
-            widget_template = {
-                {
-                    {id = "clienticon", widget = awful.widget.clienticon},
-                    id = "clienticon_margin_role",
-                    left = 14.5,
-                    widget = wibox.container.margin
+    s.mytasklist = {
+        {
+            {
+                awful.widget.tasklist {
+                    screen = s,
+                    filter = awful.widget.tasklist.filter.currenttags,
+                    buttons = tasklist_buttons,
+                    style = {
+                        bg_normal = colors['color0'],
+                        bg_focus = colors['color5'],
+                        bg_urgent = colors['color3'],
+                        shape = gears.shape.circle
+                    },
+                    layout = {layout = wibox.layout.grid.horizontal},
+                    widget_template = {
+                        {
+                            {
+                                id = "clienticon",
+                                widget = awful.widget.clienticon
+                            },
+                            id = "clienticon_margin_role",
+                            left = 14.5,
+                            widget = wibox.container.margin
+                        },
+                        id = "background_role",
+                        forced_width = 50,
+                        forced_height = 75,
+                        widget = wibox.container.background,
+
+                        create_callback = function(self, c, index, objects) -- luacheck: no unused
+                            self:get_children_by_id("clienticon")[1].client = c
+                        end
+                    }
                 },
-                id = "background_role",
-                forced_width = 50,
-                forced_height = 75,
-                widget = wibox.container.background,
-                create_callback = function(self, c, index, objects) -- luacheck: no unused
-                    self:get_children_by_id("clienticon")[1].client = c
-                end,
-
-                update_callback = function(self, c, index, objects) -- luacheck: no unused
-                    self:get_children_by_id("clienticon")[1].client = c
-
-                    if (#s.clients < 1) then
-                        s.mytasklist.visible = false
-                    end
-                end
-            }
+                layout = wibox.layout.fixed.horizontal
+            },
+            left = 10,
+            right = 10,
+            top = 3,
+            bottom = 3,
+            widget = wibox.container.margin
         },
-        bg = colors['color0'],
         shape = gears.shape.rounded_rect,
+        bg = colors['color0'],
+        fg = colors['color4'],
+        shape_border_color = colors['color4'],
+        shape_border_width = 5,
         widget = wibox.container.background
     }
+
+    -- hide our middle wibox if tasklist empty
+    local update_middlebar = function()
+        local client_count = 0
+        for _, c in ipairs(client.get()) do
+            if awful.widget.tasklist.filter.currenttags(c, s) then
+                client_count = client_count + 1
+            end
+        end
+
+        if client_count == 0 then
+            s.mytasklist.visible = false
+        else
+            s.mytasklist.visible = true
+        end
+    end
+
+    tag.connect_signal("property::selected", update_middlebar)
+    tag.connect_signal("property::activated", update_middlebar)
+    client.connect_signal("list", update_middlebar)
+    client.connect_signal("property::sticky", update_middlebar)
+    client.connect_signal("property::skip_taskbar", update_middlebar)
+    client.connect_signal("property::hidden", update_middlebar)
+    client.connect_signal("tagged", update_middlebar)
+    client.connect_signal("untagged", update_middlebar)
+    client.connect_signal("list", update_middlebar)
+    -- widget = wibox.container.background,
+    -- bg = colors['color0'],
+    -- shape = gears.shape.rounded_rect
+    --        {
+    --            {s.mytasklist, layout = wibox.layout.fixed.horizontal},
+
+    --            left = 10,
+    --            right = 10,
+    --            top = 3,
+    --            bottom = 3,
+    --            widget = wibox.container.margin
+    --        },
+    --        shape = gears.shape.rounded_rect,
+    --        bg = colors['color0'],
+    --        fg = colors['color4'],
+    --        shape_border_color = colors['color4'],
+    --        shape_border_width = 5,
+    --        widget = wibox.container.background
 
     local forcedWidth = 300
     -- Create the wibox
@@ -241,24 +307,7 @@ awful.screen.connect_for_each_screen(function(s)
                 },
                 layout = wibox.layout.fixed.horizontal
             },
-            {
-                {
-                    {s.mytasklist, layout = wibox.layout.fixed.horizontal},
-
-                    left = 10,
-                    right = 10,
-                    top = 3,
-                    bottom = 3,
-                    widget = wibox.container.margin
-                },
-                shape = gears.shape.rounded_rect,
-                bg = colors['color0'],
-                fg = colors['color4'],
-                shape_border_color = colors['color4'],
-                shape_border_width = 5,
-                widget = wibox.container.background
-
-            },
+            s.mytasklist,
             { -- Right widgets
                 wibox.widget {
                     forced_width = forcedWidth,
