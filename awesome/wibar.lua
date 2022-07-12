@@ -81,7 +81,7 @@ awful.screen.connect_for_each_screen(function(s)
             screen = s,
             filter = awful.widget.taglist.filter.all,
             buttons = taglist_buttons,
-            style = {bg_urgent = colors['color1']},
+            style = {bg_urgent = colors['color3']},
             widget_template = {
                 {
                     {
@@ -118,32 +118,27 @@ awful.screen.connect_for_each_screen(function(s)
                                                                           ' </b>'
                     self.shape = gears.shape.rounded_rect
                     self.shape_border_width = 3
+
                     self.bg = c3.selected and colors['color5'] or
                                   colors['color0']
                     self.shape_border_color =
                         c3.selected and colors['color4'] or colors['color0']
+                    self.bg = c3.urgent and colors['color11'] or self.bg
 
                     self:connect_signal('mouse::enter', function()
-                        if self.bg ~= colors['color5'] then
-                            self.backup = self.bg
-                            self.has_backup = true
-                        end
-
-                        self.shape_border_color = c3.selected and
-                                                      colors['color5'] or
-                                                      colors['color0']
+                        self.shape_border_color = colors['color5']
                         self.bg = colors['color5']
                     end)
+
                     self:connect_signal('mouse::leave', function()
-                        if self.has_backup then
-                            self.bg = c3.selected and colors['color5'] or
-                                          colors['color0']
-                            self.shape_border_color = c3.selected and
-                                                          colors['color4'] or
-                                                          colors['color0']
-                        end
+                        self.bg = c3.selected and colors['color5'] or
+                                      colors['color0']
+                        self.shape_border_color = c3.selected and
+                                                      colors['color4'] or
+                                                      colors['color0']
                     end)
                 end,
+
                 update_callback = function(self, c3, index, objects) -- luacheck: no unused args
                     self:get_children_by_id('index_role')[1].markup = '<b> ' ..
                                                                           index ..
@@ -152,6 +147,12 @@ awful.screen.connect_for_each_screen(function(s)
                                   colors['color0']
                     self.shape_border_color =
                         c3.selected and colors['color4'] or colors['color0']
+
+                    self.bg = c3.urgent and colors['color11'] or self.bg
+                    self.shape_border_color =
+                        c3.urgent and colors['color11'] or
+                            self.shape_border_color
+
                 end
             },
             layout = wibox.layout.fixed.horizontal
