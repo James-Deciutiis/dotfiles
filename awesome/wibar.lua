@@ -1,7 +1,9 @@
 local gears = require("gears")
+local naughty = require("naughty")
 local awful = require("awful")
 local wibox = require("wibox")
 local beautiful = require("beautiful")
+local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 local colors = RC.colors
 
 -- Create a textclock widget
@@ -50,14 +52,10 @@ awful.screen.connect_for_each_screen(function(s)
     -- Wallpaper
     set_wallpaper(s)
 
-    -- " ❶ HOME ", " ❷ WEB ", " ❸ EDIT ", " ❹ READ ", " ❺ CHAT ", " ❻ MISC "
-
     -- Each screen has its own tag table.
     awful.tag({" HOME ", "  WEB ", "  EDIT ", "  READ ", "  CHAT ", "  MISC "},
               s, awful.layout.layouts[1])
 
-    -- Create a promptbox for each screen
-    s.mypromptbox = awful.widget.prompt()
     -- Create an imagebox widget which will contain an icon indicating which layout we're using.
     -- We need one layoutbox per screen.
     s.mylayoutbox = awful.widget.layoutbox(s)
@@ -81,7 +79,6 @@ awful.screen.connect_for_each_screen(function(s)
             screen = s,
             filter = awful.widget.taglist.filter.all,
             buttons = taglist_buttons,
-            style = {bg_urgent = colors['color3']},
             widget_template = {
                 {
                     {
@@ -126,7 +123,7 @@ awful.screen.connect_for_each_screen(function(s)
                     self.bg = c3.urgent and colors['color11'] or self.bg
 
                     self:connect_signal('mouse::enter', function()
-                        self.shape_border_color = colors['color5']
+                        self.shape_border_color = colors['color3']
                         self.bg = colors['color5']
                     end)
 
@@ -160,58 +157,60 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create a tasklist widget
-    s.mytasklist = {
-        {
-            {
-                awful.widget.tasklist {
-                    screen = s,
-                    filter = awful.widget.tasklist.filter.currenttags,
-                    buttons = tasklist_buttons,
-                    style = {
-                        bg_normal = colors['color0'],
-                        bg_focus = colors['color5'],
-                        bg_urgent = colors['color3'],
-                        shape = gears.shape.circle
-                    },
-                    layout = {layout = wibox.layout.grid.horizontal},
-                    widget_template = {
-                        {
-                            {
-                                id = "clienticon",
-                                widget = awful.widget.clienticon
-                            },
-                            id = "clienticon_margin_role",
-                            left = 14.5,
-                            widget = wibox.container.margin
-                        },
-                        id = "background_role",
-                        forced_width = 50,
-                        forced_height = 75,
-                        widget = wibox.container.background,
-
-                        create_callback = function(self, c, index, objects) -- luacheck: no unused
-                            self:get_children_by_id("clienticon")[1].client = c
-                        end
-                    }
-                },
-                layout = wibox.layout.fixed.horizontal
-            },
-            left = 10,
-            right = 10,
-            top = 3,
-            bottom = 3,
-            widget = wibox.container.margin
+    s.mytasklist = awful.widget.tasklist {
+        screen = s,
+        filter = awful.widget.tasklist.filter.currenttags,
+        buttons = tasklist_buttons,
+        style = {
+            bg_normal = colors['color0'],
+            bg_focus = colors['color5'],
+            bg_urgent = colors['color3'],
+            shape = gears.shape.circle
         },
-        shape = gears.shape.rounded_rect,
-        bg = colors['color0'],
-        fg = colors['color4'],
-        shape_border_color = colors['color4'],
-        shape_border_width = 5,
-        widget = wibox.container.background
+        layout = {layout = wibox.layout.grid.horizontal},
+        widget_template = {
+            {
+                {id = "clienticon", widget = awful.widget.clienticon},
+                id = "clienticon_margin_role",
+                left = 18,
+                widget = wibox.container.margin
+            },
+            id = "background_role",
+            forced_width = 50,
+            forced_height = 75,
+            widget = wibox.container.background,
+
+            create_callback = function(self, c, index, objects) -- luacheck: no unused
+                self:get_children_by_id("clienticon")[1].client = c
+            end
+        }
     }
 
-    -- hide our middle wibox if tasklist empty
-    local update_middlebar = function()
+    s.middlebar = awful.popup({
+        screen = s,
+        placement = function(c)
+            return awful.placement.top(c, {margins = 7})
+        end,
+        minimum_height = 17,
+        maximum_height = 17,
+        widget = {
+            {s.mytasklist, layout = wibox.layout.align.horizontal},
+            left = 3,
+            right = 3,
+            top = 1.5,
+            bottom = 1.5,
+            widget = wibox.container.margin
+        },
+
+        bg = colors['color0'],
+        fg = colors['color4'],
+        shape = function(cr, w, h) gears.shape.rounded_rect(cr, w, h, 20) end,
+        border_color = colors['color4'],
+        border_width = 5
+    })
+    s.middlebar:struts({top = 10})
+
+    local function update_middlebar()
         local client_count = 0
         for _, c in ipairs(client.get()) do
             if awful.widget.tasklist.filter.currenttags(c, s) then
@@ -220,9 +219,9 @@ awful.screen.connect_for_each_screen(function(s)
         end
 
         if client_count == 0 then
-            s.mytasklist.visible = false
+            s.middlebar.visible = false
         else
-            s.mytasklist.visible = true
+            s.middlebar.visible = true
         end
     end
 
@@ -235,24 +234,6 @@ awful.screen.connect_for_each_screen(function(s)
     client.connect_signal("tagged", update_middlebar)
     client.connect_signal("untagged", update_middlebar)
     client.connect_signal("list", update_middlebar)
-    -- widget = wibox.container.background,
-    -- bg = colors['color0'],
-    -- shape = gears.shape.rounded_rect
-    --        {
-    --            {s.mytasklist, layout = wibox.layout.fixed.horizontal},
-
-    --            left = 10,
-    --            right = 10,
-    --            top = 3,
-    --            bottom = 3,
-    --            widget = wibox.container.margin
-    --        },
-    --        shape = gears.shape.rounded_rect,
-    --        bg = colors['color0'],
-    --        fg = colors['color4'],
-    --        shape_border_color = colors['color4'],
-    --        shape_border_width = 5,
-    --        widget = wibox.container.background
 
     local forcedWidth = 300
     -- Create the wibox
@@ -308,7 +289,12 @@ awful.screen.connect_for_each_screen(function(s)
                 },
                 layout = wibox.layout.fixed.horizontal
             },
-            s.mytasklist,
+            wibox.widget {
+                forced_width = forcedWidth,
+                color = '#fffff100',
+                shape = gears.shape.rectangle,
+                widget = wibox.widget.separator
+            },
             { -- Right widgets
                 wibox.widget {
                     forced_width = forcedWidth,
@@ -328,6 +314,8 @@ awful.screen.connect_for_each_screen(function(s)
                                 15),
                             tbox_seperator,
                             s.mylayoutbox,
+                            tbox_seperator,
+                            volume_widget {widget_type = "arc"},
                             layout = wibox.layout.fixed.horizontal
                         },
                         left = 10,
@@ -354,7 +342,7 @@ awful.screen.connect_for_each_screen(function(s)
                 layout = wibox.layout.fixed.horizontal
             }
         },
-        margins = 1.75,
+        margins = 1.5,
         widget = wibox.container.margin
     }
 end)
