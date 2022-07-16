@@ -15,10 +15,16 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 require("awful.autofocus")
 require("awful.hotkeys_popup.keys")
 require("error-handling")
+
+local current_theme = "gruvbox-light"
+
 RC = {}
-current_theme = "gruvbox-light"
 RC.colors = require("theme/" .. current_theme .. "/colors")
 RC.vars = require("variables")
+RC.mywidgets = require("wibar/mywidgets")
+RC.leftbar = require("wibar/leftbar")
+RC.middlebar = require("wibar/middlebar")
+RC.rightbar = require("wibar/rightbar")
 menu = require("menu")
 mykeyboardlayout = awful.widget.keyboardlayout()
 
@@ -49,7 +55,7 @@ menubar.utils.terminal = RC.vars.terminal
 -- }}}
 
 -- {{{ Wibar
-require("wibar")
+require("wibar.wibar")
 -- }}}
 
 -- {{{ Mouse bindings
