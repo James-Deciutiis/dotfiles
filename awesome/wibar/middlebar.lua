@@ -10,7 +10,7 @@ local colors = RC.colors
 local middlebar = {}
 
 middlebar.init = function(s)
-    s.middlebar = awful.popup({
+    s.middlebar = awful.popup {
         screen = s,
         placement = function(c)
             return awful.placement.top(c, {margins = 7})
@@ -23,15 +23,16 @@ middlebar.init = function(s)
             right = 3,
             top = 1.5,
             bottom = 1.5,
+            margins = 2,
             widget = wibox.container.margin
         },
 
         bg = colors['color0'],
         fg = colors['color4'],
-        shape = function(cr, w, h) gears.shape.rounded_rect(cr, w, h, 20) end,
+        shape = gears.shape.rounded_rect,
         border_color = colors['color4'],
-        border_width = 5
-    })
+        border_width = 2
+    }
     s.middlebar:struts({top = 10})
 
     local function update_middlebar()

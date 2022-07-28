@@ -4,19 +4,15 @@ pcall(require, "luarocks.loader")
 local gears = require("gears")
 local awful = require("awful")
 local wibox = require("wibox")
--- Theme handling library
 local beautiful = require("beautiful")
--- Notification library
-local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
--- Enable hotkeys help widget for VIM and other apps
--- when client with a matching name is opened:
+local naughty = require("naughty")
 require("awful.autofocus")
 require("awful.hotkeys_popup.keys")
 require("error-handling")
 
-local current_theme = "gruvbox-light"
+local current_theme = "onedark"
 
 RC = {}
 RC.colors = require("theme/" .. current_theme .. "/colors")
@@ -39,7 +35,6 @@ terminal = RC.vars.terminal
 -- }}}
 
 -- {{{ Menu
--- Create a launcher widget and a main menu
 RC.mainmenu = awful.menu({items = menu()})
 mymainmenu = awful.menu({
     items = {
@@ -79,8 +74,7 @@ awful.rules.rules = RC.rules
 client.connect_signal("manage", function(c)
     c.shape = gears.shape.rounded_rect
     awful.spawn.with_shell("compton")
-    awful.spawn.with_shell(
-        "feh --bg-fill ~/Pictures/desert-with-pyramids-wallpaper.png")
+    awful.spawn.with_shell("feh --bg-fill ~/Pictures/BladeRunnerWallpaper1.jpg")
     awful.spawn.with_shell(
         "xrandr --output DisplayPort-1 --auto --output HDMI-A-0 --primary --left-of DisplayPort-1")
 end)
@@ -88,4 +82,14 @@ end)
 
 -- {{{ Signals
 require("signals")
+-- }}}
+--
+-- {{{ Notifications
+
+naughty.config.presets.normal.bg = RC.colors['color0']
+naughty.config.presets.normal.border_color = RC.colors['color4']
+naughty.config.presets.normal.shape = gears.shape.rounded_rect
+naughty.config.presets.normal.border_width = 4
+
+-- for testing naughty.notify({title = "Achtung!", message = "You're idling", timeout = 0})
 -- }}}

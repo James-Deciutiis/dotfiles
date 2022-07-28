@@ -42,7 +42,7 @@ awful.screen.connect_for_each_screen(function(s)
         screen = s,
         bg = beautiful.bg_normal .. "0",
         border_width = 5,
-        height = 35
+        height = 30
     })
 
     s.mywibox:setup{

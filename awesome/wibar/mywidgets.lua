@@ -48,7 +48,7 @@ mywidgets.tasklist = function(s)
             {
                 {id = "clienticon", widget = awful.widget.clienticon},
                 id = "clienticon_margin_role",
-                left = 6,
+                left = 5.5,
                 widget = wibox.container.margin
             },
             id = "background_role",
@@ -78,14 +78,10 @@ mywidgets.mytaglist = function(s)
                             widget = wibox.container.margin
                         },
                         bg = colors['color0'],
-                        shape = gears.shape.hexagon,
+                        shape = gears.shape.circle,
                         widget = wibox.container.background
                     },
-                    {
-                        {id = 'icon_role', widget = wibox.widget.imagebox},
-                        margins = 1,
-                        widget = wibox.container.margin
-                    },
+                    {id = 'icon_role', widget = wibox.widget.imagebox},
                     {id = 'text_role', widget = wibox.widget.textbox},
                     layout = wibox.layout.fixed.horizontal
                 },
@@ -99,16 +95,16 @@ mywidgets.mytaglist = function(s)
                                                                       index ..
                                                                       ' </b>'
                 self.shape = gears.shape.rounded_rect
-                self.shape_border_width = 3
+                self.shape_border_width = 2
 
                 self.bg = c3.selected and colors['color5'] or colors['color0']
                 self.shape_border_color =
                     c3.selected and colors['color4'] or colors['color0']
-                self.bg = c3.urgent and colors['color11'] or self.bg
+                self.bg = c3.urgent and colors['color3'] or self.bg
 
                 self:connect_signal('mouse::enter', function()
-                    self.shape_border_color = colors['color3']
-                    self.bg = colors['color5']
+                    self.shape_border_color = colors['color4']
+                    self.bg = colors['color13']
                 end)
 
                 self:connect_signal('mouse::leave', function()
@@ -123,13 +119,13 @@ mywidgets.mytaglist = function(s)
                 self:get_children_by_id('index_role')[1].markup = '<b> ' ..
                                                                       index ..
                                                                       ' </b>'
+
                 self.bg = c3.selected and colors['color5'] or colors['color0']
                 self.shape_border_color =
                     c3.selected and colors['color4'] or colors['color0']
-
-                self.bg = c3.urgent and colors['color11'] or self.bg
+                self.bg = c3.urgent and colors['color3'] or self.bg
                 self.shape_border_color =
-                    c3.urgent and colors['color11'] or self.shape_border_color
+                    c3.urgent and colors['color4'] or self.shape_border_color
 
             end
         },
