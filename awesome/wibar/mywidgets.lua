@@ -41,6 +41,9 @@ mywidgets.tasklist = function(s)
             bg_normal = colors['color0'],
             bg_focus = colors['color5'],
             bg_urgent = colors['color3'],
+            shape_border_color_focus = colors['color4'],
+            shape_border_color = colors['color0'],
+            shape_border_width = 2,
             shape = gears.shape.rounded_rect
         },
         layout = {layout = wibox.layout.grid.horizontal, spacing = 15},
@@ -48,14 +51,14 @@ mywidgets.tasklist = function(s)
             {
                 {id = "clienticon", widget = awful.widget.clienticon},
                 id = "clienticon_margin_role",
-                left = 5.5,
+                top = 2,
+                left = 7.5,
+                bottom = 2,
                 widget = wibox.container.margin
             },
             id = "background_role",
             forced_width = 30,
-            forced_height = 75,
             widget = wibox.container.background,
-
             create_callback = function(self, c, index, objects)
                 self:get_children_by_id("clienticon")[1].client = c
             end
