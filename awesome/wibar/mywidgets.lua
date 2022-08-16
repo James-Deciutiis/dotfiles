@@ -1,8 +1,6 @@
 local gears = require("gears")
-local naughty = require("naughty")
 local awful = require("awful")
 local wibox = require("wibox")
-local beautiful = require("beautiful")
 local mywidgets = {}
 local colors = RC.colors
 
@@ -59,7 +57,7 @@ mywidgets.tasklist = function(s)
             id = "background_role",
             forced_width = 30,
             widget = wibox.container.background,
-            create_callback = function(self, c, index, objects)
+            create_callback = function(self, c)
                 self:get_children_by_id("clienticon")[1].client = c
             end
         }
@@ -93,11 +91,11 @@ mywidgets.mytaglist = function(s)
                 widget = wibox.container.margin
             },
             widget = wibox.container.background,
-            create_callback = function(self, c3, index, objects)
+            create_callback = function(self, c3, index)
                 self:get_children_by_id('index_role')[1].markup = '<b> ' ..
                                                                       index ..
                                                                       ' </b>'
-                self.shape = gears.shape.rounded_rect
+                self.shape = gears.shape.rounded_bar
                 self.shape_border_width = 2
 
                 self.bg = c3.selected and colors['color5'] or colors['color0']
@@ -118,7 +116,7 @@ mywidgets.mytaglist = function(s)
                 end)
             end,
 
-            update_callback = function(self, c3, index, objects)
+            update_callback = function(self, c3, index)
                 self:get_children_by_id('index_role')[1].markup = '<b> ' ..
                                                                       index ..
                                                                       ' </b>'

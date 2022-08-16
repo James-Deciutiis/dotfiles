@@ -21,8 +21,8 @@ leftbar.makeLeftbar = function(s)
                     },
                     left = 10,
                     right = 10,
-                    top = 4.5,
-                    bottom = 4.5,
+                    top = 1.5,
+                    bottom = 1.5,
                     widget = wibox.container.margin
                 },
                 shape = gears.shape.rounded_rect,
