@@ -29,7 +29,7 @@ leftbar.makeLeftbar = function(s)
                 bg = colors['color0'],
                 fg = colors['color4'],
                 shape_border_color = colors['color4'],
-                shape_border_width = 2,
+                shape_border_width = 4,
                 widget = wibox.container.background
             },
             shape_clip = true,

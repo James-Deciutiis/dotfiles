@@ -1,15 +1,14 @@
 local gears = require("gears")
-local naughty = require("naughty")
 local awful = require("awful")
 local wibox = require("wibox")
-local beautiful = require("beautiful")
 local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 local calendar_widget = require("awesome-wm-widgets.calendar-widget.calendar")
 local mpc = require("mpc")
 local textbox = require("wibox.widget.textbox")
 local timer = require("gears.timer")
 local mpd_widget = textbox()
-local state, title, artist, file = "stop", "", "", ""
+local state, title, artist = "stop", "", ""
+
 local function update_widget()
     local text = "♬"
     text = text .. tostring(artist or "") .. "  " .. tostring(title or "")
@@ -93,7 +92,7 @@ rightbar.makeRightbar = function(s)
             bg = colors['color0'],
             fg = colors['color4'],
             shape_border_color = colors['color4'],
-            shape_border_width = 2,
+            shape_border_width = 4,
             widget = wibox.container.background
         },
         layout = wibox.layout.fixed.horizontal

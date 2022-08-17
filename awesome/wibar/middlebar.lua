@@ -1,8 +1,6 @@
 local gears = require("gears")
-local naughty = require("naughty")
 local awful = require("awful")
 local wibox = require("wibox")
-local beautiful = require("beautiful")
 
 local mywidgets = RC.mywidgets
 local colors = RC.colors
@@ -31,7 +29,7 @@ middlebar.init = function(s)
         fg = colors['color4'],
         shape = gears.shape.rounded_rect,
         border_color = colors['color4'],
-        border_width = 2
+        border_width = 4
     }
     s.middlebar:struts({top = 10})
 

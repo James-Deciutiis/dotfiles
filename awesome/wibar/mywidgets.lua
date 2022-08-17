@@ -75,6 +75,8 @@ mywidgets.mytaglist = function(s)
                     {
                         {
                             {id = 'index_role', widget = wibox.widget.textbox},
+                            right = 6,
+                            left = 1,
                             margins = 2,
                             widget = wibox.container.margin
                         },
