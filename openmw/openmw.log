@@ -1,0 +1,868 @@
+[13:48:05.327 I] OpenMW version 0.49.0
+[13:48:05.327 I] Revision: 1982004cda
+[13:48:05.327 I] Using default (English) font encoding.
+[13:48:05.352 W] No such dir: /home/xerxes/.local/share/openmw/data
+[13:48:05.352 I] OSG version: 3.6.5
+[13:48:05.352 I] SDL version: 2.26.2
+[13:48:05.352 I] Loading shader settings file: "/home/xerxes/.config/openmw/shaders.yaml"
+[13:48:05.431 I] OpenGL Vendor: AMD
+[13:48:05.431 I] OpenGL Renderer: AMD Radeon RX 5700 XT (navi10, LLVM 15.0.7, DRM 3.49, 6.1.7-arch1-1)
+[13:48:05.431 I] OpenGL Version: 4.6 (Compatibility Profile) Mesa 22.3.3
+[13:48:05.431 I] Using reverse-z depth buffer
+[13:48:05.432 I] Adding BSA archive /home/xerxes/.local/share/Steam/steamapps/common/Morrowind/Data Files/Morrowind.bsa
+[13:48:05.434 I] Adding BSA archive /home/xerxes/.local/share/Steam/steamapps/common/Morrowind/Data Files/Tribunal.bsa
+[13:48:05.435 I] Adding BSA archive /home/xerxes/.local/share/Steam/steamapps/common/Morrowind/Data Files/Bloodmoon.bsa
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/code/open-source/openmw-gitlab/openmw/build/./resources/vfs
+[13:48:05.437 I] Adding data directory /home/xerxes/.local/share/Steam/steamapps/common/Morrowind/Data Files
+[13:48:05.437 I] Adding data directory /home/xerxes/.local/share/openmw/basedata
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Patch for Purists
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Morrowind Enhanced Textures/main
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Morrowind Enhanced Textures/Interface
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Better Waterfalls/00 Core
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Better Waterfalls/01 Vanilla Resolution Textures
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Aethesia Groundcover/00 Core
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Aethesia Groundcover/OpenMW
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Aethesia Groundcover/02 Plugins - Vanilla Regions
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Aethesia Groundcover/darker
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Remiros' Groundcover/00 Core OpenMW
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Remiros' Groundcover/01b Thicker Grass OpenMW
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Remiros' Groundcover/03 TR Plugins
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Graphic Herbalism/00 Core + Vanilla Meshes
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Graphic Herbalism/01 Optional - Smoothed Meshes
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Graphic Herbalism/00 Correct UV Ore + README
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Graphic Herbalism/06 Less Epic Plants
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Ghastly Glowyfence
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Dwemer Mesh Improvements
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Mesh Fix
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Correct Meshes
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Correct UV Rocks
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Properly Smoothed Meshes/00 Core
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Properly Smoothed Meshes/03 Higher Poly Glowing Candles
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Properly Smoothed Meshes/05 Beaker, Flasks - clear glass
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Vurt's Trees/Vurt's Trees Bitter Coast
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Vurt's Trees/Vurt's Trees Grazeland
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/RR Better Meshes/00 - Main Files
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/RR Better Meshes/02 - Optional - Animation Fix for Dwemer Mesh Improvement mod
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/RR Better Meshes/04 - Optional - Skooma Pipe 1
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Normal Maps for Morrowind/03 Telvanni
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Normal Maps for Morrowind/04 Daedric
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Normal Maps for Morrowind/05 Redoran
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Normal Maps for Morrowind/07 Terrain
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Normal Maps for Morrowind/08 Rocks
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Normal Maps for Morrowind/09b Swirlwood (Ket's Swirlwood)
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Dunmer Latern Replacer/01 Glow Effect
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Dunmer Latern Replacer/04 Tamriel_Data Patch - Glow Effect
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Better Bodies
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Better Bodies/00 Core
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Better Bodies/01 Normal Maps
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Project Atlas/00 Core
+[13:48:05.437 I] Adding data directory /home/xerxes/Documents/openmwMods/Project Atlas/01 Textures - MET
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Project Atlas/02 Urns - Smoothed
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Project Atlas/03 Redware - Smoothed
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Project Atlas/04 Emperor Parasols - Smoothed
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Project Atlas/05 Wood Poles - Hi-Res Texture
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Project Atlas/07 Graphic Herbalism Patch
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Glow in the Dahrk/00 Core
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Glow in the Dahrk/01 Hi Res Window Texture Replacer
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Glow in the Dahrk/03 Telvanni Dormers on Vvardenfell
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Glow in the Dahrk/04 Raven Rock Glass Windows
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/One True Faith/HQ
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Khajit Head Pack/Base
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Khajit Head Pack/Patch
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Crystal Soul Gems/main/00 - Data Files
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Crystal Soul Gems/main/05 - Ultra Glow
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Caverns Bump/Main
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Caverns Bump/Bloodmoon
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Divine Dagoths/00 - Core Files
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Netch Bump Mapped
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Silt Striders With New Textures/Silt Strider/Data files
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Silt Striders With New Textures/Main
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Silt Striders With New Textures/Clutter
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Silt Striders With New Textures/TES3 recolor
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Luminous Atronachs
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Mudcrab Replacer/Data Files
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Cliff Racer Replacer/Data Files
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Better Spriggans
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Creatures Morrowind/Ascended Sleeper
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Creatures Morrowind/Clannfear
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Creatures Morrowind/Daedroth
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Creatures Morrowind/Durzog
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Creatures Morrowind/Guar
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Creatures Morrowind/Kagouti
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Creatures Morrowind/Kwama
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Creatures Morrowind/Nix Hound
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Creatures Morrowind/Ogrim
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Creatures Morrowind/Shalk
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/OAAB/00 Core
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/OAAB/01 Epic Plants Patch
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Aldruhn/Main/Data files
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Aldruhn/Ald-ruhn-Under-Skar/Data files
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Caldera/Data files
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Hla Oad/Data files
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Guilds/Data files
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Vivec/Data files
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Better Clothes Shoe Fix
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Redoran/Ald-Scar
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Redoran/Main
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Redoran/Data
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Telvanni/main
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Telvanni/missing
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Hlaalu
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Better Clothes/Data files
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Better Clothes/Darknut's HD Retexture
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Better Robes/Data Files
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Better Robes/Overhaul
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Hirez Armors
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Armor Retexture/Data Files
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Weapons/Ice Blade of the Monarch/Data Files
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Weapons/Mehrunes' Razor
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Weapons/Corrected Iron Warhammer/Data Files
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Weapons/Chrysamere
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Weapons/Trueflame
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Weapons/Tools of Kagrenac/Data Files
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Weapons/Oriental Weapons
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Weapons/Eltonbrand
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Intro Video Reworked
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Better Heads
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Better Intro Cinematic
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Landscape Retexture
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Landscape Retexture/Patch
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Widescreen Splash
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Sewers
+[13:48:05.438 I] Adding data directory /home/xerxes/Documents/openmwMods/Skies/Data Files
+[13:48:05.605 W] Warning: found duplicate file for '/home/xerxes/Documents/openmwMods/Vurt's Trees/Vurt's Trees Bitter Coast/Meshes/f/vurt_UniCy02.nif', please check your file system for two files with the same name in different cases.
+[13:48:05.605 W] Warning: found duplicate file for '/home/xerxes/Documents/openmwMods/Vurt's Trees/Vurt's Trees Bitter Coast/Meshes/f/flora_bc_tree_07.nif', please check your file system for two files with the same name in different cases.
+[13:48:05.605 W] Warning: found duplicate file for '/home/xerxes/Documents/openmwMods/Vurt's Trees/Vurt's Trees Bitter Coast/Meshes/f/flora_bc_tree_01.nif', please check your file system for two files with the same name in different cases.
+[13:48:05.605 W] Warning: found duplicate file for '/home/xerxes/Documents/openmwMods/Vurt's Trees/Vurt's Trees Bitter Coast/Meshes/f/vurt_bctree.nif', please check your file system for two files with the same name in different cases.
+[13:48:05.605 W] Warning: found duplicate file for '/home/xerxes/Documents/openmwMods/Vurt's Trees/Vurt's Trees Bitter Coast/Meshes/f/vurt_DeCsTree.nif', please check your file system for two files with the same name in different cases.
+[13:48:05.605 W] Warning: found duplicate file for '/home/xerxes/Documents/openmwMods/Vurt's Trees/Vurt's Trees Bitter Coast/Meshes/f/vurt_UniCy01.nif', please check your file system for two files with the same name in different cases.
+[13:48:05.605 W] Warning: found duplicate file for '/home/xerxes/Documents/openmwMods/Vurt's Trees/Vurt's Trees Bitter Coast/Meshes/f/flora_bc_tree_04.nif', please check your file system for two files with the same name in different cases.
+[13:48:05.605 W] Warning: found duplicate file for '/home/xerxes/Documents/openmwMods/Vurt's Trees/Vurt's Trees Bitter Coast/Meshes/f/vurt_UniCy03.nif', please check your file system for two files with the same name in different cases.
+[13:48:05.605 W] Warning: found duplicate file for '/home/xerxes/Documents/openmwMods/Vurt's Trees/Vurt's Trees Bitter Coast/Meshes/f/flora_bc_tree_03.nif', please check your file system for two files with the same name in different cases.
+[13:48:05.605 W] Warning: found duplicate file for '/home/xerxes/Documents/openmwMods/Vurt's Trees/Vurt's Trees Bitter Coast/Meshes/f/flora_bc_tree_05.nif', please check your file system for two files with the same name in different cases.
+[13:48:05.605 W] Warning: found duplicate file for '/home/xerxes/Documents/openmwMods/Vurt's Trees/Vurt's Trees Bitter Coast/Meshes/f/Vurt_NeenTree.nif', please check your file system for two files with the same name in different cases.
+[13:48:05.605 W] Warning: found duplicate file for '/home/xerxes/Documents/openmwMods/Vurt's Trees/Vurt's Trees Bitter Coast/Meshes/f/flora_bc_tree_06.nif', please check your file system for two files with the same name in different cases.
+[13:48:05.605 W] Warning: found duplicate file for '/home/xerxes/Documents/openmwMods/Vurt's Trees/Vurt's Trees Bitter Coast/Meshes/f/flora_bc_tree_02.nif', please check your file system for two files with the same name in different cases.
+[13:48:05.605 W] Warning: found duplicate file for '/home/xerxes/Documents/openmwMods/Vurt's Trees/Vurt's Trees Bitter Coast/Meshes/f/flora_bc_tree_08.nif', please check your file system for two files with the same name in different cases.
+[13:48:05.739 I] Preferred locales: en
+[13:48:05.740 I] Initializing LuaUtil::LuaState with profiler
+[13:48:05.740 I] Lua version: Lua 5.1.4 (LuaJIT 2.1.0-beta3)
+[13:48:05.740 I] Loading keybindings file: /home/xerxes/.config/openmw/input_v3.xml
+[13:48:05.743 I] Loading font file magic_cards_regular.fnt
+[13:48:05.747 I] Loading font file daedric_font.fnt
+[13:48:05.750 I] Loading font file DejaVuLGCSansMono.omwfont
+[13:48:05.769 I] Initializing OpenAL...
+[13:48:05.799 I] Opened "G733 Gaming Headset Analog Stereo"
+[13:48:05.799 I]   ALC Version: 1.1
+[13:48:05.799 I]   ALC Extensions: ALC_ENUMERATE_ALL_EXT ALC_ENUMERATION_EXT ALC_EXT_CAPTURE ALC_EXT_DEDICATED ALC_EXT_disconnect ALC_EXT_EFX ALC_EXT_thread_local_context ALC_SOFT_device_clock ALC_SOFT_HRTF ALC_SOFT_loopback ALC_SOFT_loopback_bformat ALC_SOFT_output_limiter ALC_SOFT_output_mode ALC_SOFT_pause_device ALC_SOFT_reopen_device
+[13:48:05.800 I]   Vendor: OpenAL Community
+[13:48:05.800 I]   Renderer: OpenAL Soft
+[13:48:05.800 I]   Version: 1.1 ALSOFT 1.22.2
+[13:48:05.800 I]   Extensions: AL_EXT_ALAW AL_EXT_BFORMAT AL_EXT_DOUBLE AL_EXT_EXPONENT_DISTANCE AL_EXT_FLOAT32 AL_EXT_IMA4 AL_EXT_LINEAR_DISTANCE AL_EXT_MCFORMATS AL_EXT_MULAW AL_EXT_MULAW_BFORMAT AL_EXT_MULAW_MCFORMATS AL_EXT_OFFSET AL_EXT_source_distance_model AL_EXT_SOURCE_RADIUS AL_EXT_STEREO_ANGLES AL_LOKI_quadriphonic AL_SOFT_bformat_ex AL_SOFTX_bformat_hoa AL_SOFT_block_alignment AL_SOFT_callback_buffer AL_SOFTX_convolution_reverb AL_SOFT_deferred_updates AL_SOFT_direct_channels AL_SOFT_direct_channels_remix AL_SOFT_effect_target AL_SOFT_events AL_SOFT_gain_clamp_ex AL_SOFTX_hold_on_disconnect AL_SOFT_loop_points AL_SOFTX_map_buffer AL_SOFT_MSADPCM AL_SOFT_source_latency AL_SOFT_source_length AL_SOFT_source_resampler AL_SOFT_source_spatialize AL_SOFT_UHJ
+[13:48:05.800 I] HRTF disabled
+[13:48:05.800 I] Allocated 256 sound sources
+[13:48:05.800 I] Low-pass filter supported
+[13:48:05.800 I] EAX Reverb supported
+[13:48:05.801 I] Enumerated output devices:
+[13:48:05.801 I]   G733 Gaming Headset Analog Stereo  Starship/Matisse HD Audio Controller Digital Stereo (IEC958)  Navi 10 HDMI Audio Digital Stereo (HDMI)
+[13:48:05.801 I] Enumerated HRTF names:
+[13:48:05.801 I]   Default HRTF  Built-In HRTF
+[13:48:05.811 I] Loading content file builtin.omwscripts
+[13:48:05.811 I] Loading content file Morrowind.esm
+[13:48:05.943 I] Loading content file Eltonbrand Replacer.ESP
+[13:48:05.943 I] Loading content file BC_shoe_fix.esp
+[13:48:05.943 I] Loading content file Bob's Diverse Dagoths - DNGDR - Hostile Gilvoth.esp
+[13:48:05.944 I] Loading content file Bob's Diverse Dagoths - DNGDR.esp
+[13:48:05.944 I] Loading content file Bob's Diverse Dagoths - Hostile Gilvoth.esp
+[13:48:05.944 I] Loading content file Bob's Diverse Dagoths.esp
+[13:48:05.945 I] Loading content file Unique Dagoth Brandy & Amulet.ESP
+[13:48:05.945 I] Loading content file GITD_Telvanni_Dormers.ESP
+[13:48:05.945 I] Loading content file GITD_Telvanni_Dormers_NoUvirith.ESP
+[13:48:05.946 I] Loading content file Vurt's Grazelands Unique Trees.ESP
+[13:48:05.947 I] Loading content file Vurt's BC Tree Replacer II.ESP
+[13:48:05.947 I] Loading content file ghastly gg.esp
+[13:48:05.947 I] Loading content file Tribunal.esm
+[13:48:05.965 I] Loading content file Bloodmoon.esm
+[13:48:05.985 I] Loading content file correctUV Ore Replacer_fixed.esp
+[13:48:05.986 I] Loading content file correctUV Ore Replacer_respawning.esp
+[13:48:05.986 I] Loading content file Rem_TR_AC.esp
+[13:48:06.004 I] Loading content file Rem_TR_AI.esp
+[13:48:06.035 I] Loading content file Rem_TR_AT.esp
+[13:48:06.078 I] Loading content file Rem_TR_BC.esp
+[13:48:06.098 I] Loading content file Rem_TR_GL.esp
+[13:48:06.202 I] Loading content file Rem_TR_RR.esp
+[13:48:06.206 I] Loading content file Rem_TR_WG.esp
+[13:48:06.282 I] Loading content file Rem_BC.esp
+[13:48:06.295 I] Loading content file Rem_GL.esp
+[13:48:06.315 I] Loading content file Rem_Solstheim.esp
+[13:48:06.354 I] Loading content file Patch for Purists - Book Typos.ESP
+[13:48:06.358 I] Loading content file Patch for Purists - Semi-Purist Fixes.ESP
+[13:48:06.359 I] Loading content file Patch for Purists.esm
+[13:48:06.373 I] Loading content file OAAB_Data.esm
+[13:48:06.378 I] Loading content file Under-Skar.ESP
+[13:48:06.378 I] Loading content file Guilds.esp
+[13:48:06.379 I] Loading content file Caldera.esp
+[13:48:06.380 I] Loading content file Better Robes.ESP
+[13:48:06.380 I] Loading content file Better Clothes Complete.ESP
+[13:48:06.381 I] Loading content file Ald-ruhn.esp
+[13:48:06.382 I] Loading content file Better Heads.esm
+[13:48:06.383 I] Loading content file Better Heads Bloodmoon addon.esm
+[13:48:06.384 I] Loading content file Better Heads Tribunal addon.esm
+[13:48:06.384 I] Loading content file GITD_WL_RR_Interiors.esp
+[13:48:06.384 I] Loading groundcover:
+[13:48:06.384 I] Loading ESM data...
+[13:48:06.385 I] Loading ESM file /home/xerxes/Documents/openmwMods/Aethesia Groundcover/02 Plugins - Vanilla Regions/AesAdGrass_AC.esp
+[13:48:06.422 I] Loading ESM file /home/xerxes/Documents/openmwMods/Aethesia Groundcover/02 Plugins - Vanilla Regions/AesAdGrass_AI.esp
+[13:48:06.437 I] Loading ESM file /home/xerxes/Documents/openmwMods/Aethesia Groundcover/02 Plugins - Vanilla Regions/AesAdGrass_AL.esp
+[13:48:06.494 I] Loading ESM file /home/xerxes/Documents/openmwMods/Aethesia Groundcover/02 Plugins - Vanilla Regions/AesAdGrass_BC.esp
+[13:48:06.506 I] Loading ESM file /home/xerxes/Documents/openmwMods/Aethesia Groundcover/02 Plugins - Vanilla Regions/AesAdGrass_WG.esp
+[13:48:06.531 I] Loading ESM file /home/xerxes/Documents/openmwMods/Aethesia Groundcover/02 Plugins - Vanilla Regions/AesGrass_GL.esp
+[13:48:06.542 I] Loading ESM file /home/xerxes/Documents/openmwMods/Aethesia Groundcover/02 Plugins - Vanilla Regions/AesGrass_SV.esp
+[13:48:06.553 I] Loading ESM file /home/xerxes/Documents/openmwMods/Remiros' Groundcover/00 Core OpenMW/Rem_GL.esp
+[13:48:06.553 I] Loading ESM file /home/xerxes/Documents/openmwMods/Remiros' Groundcover/00 Core OpenMW/Rem_WG.esp
+[13:48:06.564 I] Loading ESM file /home/xerxes/Documents/openmwMods/Remiros' Groundcover/00 Core OpenMW/Rem_AL.esp
+[13:48:06.586 I] Loading ESM file /home/xerxes/Documents/openmwMods/Remiros' Groundcover/00 Core OpenMW/Rem_BC.esp
+[13:48:06.587 I] Loading ESM file /home/xerxes/Documents/openmwMods/Remiros' Groundcover/00 Core OpenMW/Rem_Solstheim.esp
+[13:48:06.587 I] Loading ESM file /home/xerxes/Documents/openmwMods/Remiros' Groundcover/00 Core OpenMW/Rem_AC.esp
+[13:48:06.594 I] Loading ESM file /home/xerxes/Documents/openmwMods/Remiros' Groundcover/00 Core OpenMW/Rem_AI.esp
+[13:48:06.602 I] Loading ESM file /home/xerxes/Documents/openmwMods/Remiros' Groundcover/03 TR Plugins/Rem_TR_BC.esp
+[13:48:06.602 I] Loading ESM file /home/xerxes/Documents/openmwMods/Remiros' Groundcover/03 TR Plugins/Rem_TR_AI.esp
+[13:48:06.603 I] Loading ESM file /home/xerxes/Documents/openmwMods/Remiros' Groundcover/03 TR Plugins/Rem_TR_AT.esp
+[13:48:06.603 I] Loading ESM file /home/xerxes/Documents/openmwMods/Remiros' Groundcover/03 TR Plugins/Rem_TR_GL.esp
+[13:48:06.604 I] Loading ESM file /home/xerxes/Documents/openmwMods/Remiros' Groundcover/03 TR Plugins/Rem_TR_AC.esp
+[13:48:06.605 I] Loading ESM file /home/xerxes/Documents/openmwMods/Remiros' Groundcover/03 TR Plugins/Rem_TR_WG.esp
+[13:48:06.607 I] Loaded 2350 cells, 468 statics,
+[13:48:06.607 I] Prepared 2350 unique cells, 292 unique statics,
+[13:48:07.335 V] Using idle priority for thread=140456411252416
+[13:48:07.337 V] Disabling Multiview (disabled by config)
+[13:48:07.556 V] Fallback locale: en
+[13:48:07.557 V] Language file "l10n/OMWEngine/en.yaml" is enabled
+[13:48:07.558 V] Fallback locale: en
+[13:48:07.558 W] No language files for the preferred languages found in "l10n/SettingsMenu"
+[13:48:07.575 V] Fallback locale: en
+[13:48:07.576 V] Language file "l10n/OMWShaders/en.yaml" is enabled
+[13:48:07.580 V] Lua scripts configuration (9 scripts):
+[13:48:07.580 V] #0 PLAYER : scripts/omw/mwui/init.lua
+[13:48:07.580 V] #1 GLOBAL : scripts/omw/settings/global.lua
+[13:48:07.580 V] #2 PLAYER : scripts/omw/settings/player.lua
+[13:48:07.580 V] #3 PLAYER : scripts/omw/playercontrols.lua
+[13:48:07.580 V] #4 PLAYER : scripts/omw/camera/camera.lua
+[13:48:07.580 V] #5 NPC CREATURE : scripts/omw/ai.lua
+[13:48:07.580 V] #6 PLAYER : scripts/omw/console/player.lua
+[13:48:07.580 V] #7 GLOBAL : scripts/omw/console/global.lua
+[13:48:07.580 V] #8 CUSTOM : scripts/omw/console/local.lua
+[13:48:07.580 I] Loading Lua storage "/home/xerxes/.config/openmw/global_storage.bin" (3 bytes)
+[13:48:07.580 I] Loading Lua storage "/home/xerxes/.config/openmw/player_storage.bin" (414 bytes)
+[13:48:07.582 I] Starting a new game
+[13:48:07.585 V] Fallback locale: en
+[13:48:07.585 V] Language file "l10n/Interface/en.yaml" is enabled
+[13:48:07.585 V] Fallback locale: en
+[13:48:07.585 V] Language file "l10n/OMWControls/en.yaml" is enabled
+[13:48:07.586 V] Fallback locale: en
+[13:48:07.587 V] Language file "l10n/OMWCamera/en.yaml" is enabled
+[13:48:09.308 I] Unhandled effect NiPointLight in "meshes/x/ex_velothi_window_01.nif"
+[13:48:09.324 I] Unhandled effect NiPointLight in "meshes/x/ex_hlaalu_win_01.nif"
+[13:48:10.488 I] Loading cell Balmora (-2, -2)
+[13:48:10.640 I] Loading cell West Gash Region (-2, -1)
+[13:48:10.668 I] Loading cell West Gash Region (-1, -2)
+[13:48:10.675 I] Loading cell Balmora (-3, -2)
+[13:48:10.898 I] Loading cell West Gash Region (-2, -3)
+[13:48:10.924 I] Loading cell West Gash Region (-1, -1)
+[13:48:10.991 I] Loading cell West Gash Region (-3, -1)
+[13:48:10.993 I] Loading cell Moonmoth Legion Fort (-1, -3)
+[13:48:11.093 I] RootCollisionNode is not attached to the root node in meshes/x/ex_imp_guardtower_01.nif. Treating it as a common NiTriShape.
+[13:48:11.095 I] Loading cell Balmora (-3, -3)
+[13:48:11.124 V] Controller R2_Claw02 present more than once in meshes/r/xsiltstrider.kf, ignoring later version
+[13:48:11.280 I] Warning: OutsideBanner line 38, column 6 (endif): endif without matching if/elseif
+[13:48:12.144 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.144 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.144 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.144 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.144 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.144 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.144 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.144 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.144 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.144 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.144 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.144 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.144 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.144 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.144 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.144 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.147 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.149 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.152 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.156 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.156 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.156 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.156 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.156 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.156 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.156 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.156 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.156 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.156 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.156 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.156 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.156 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.156 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.156 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.156 E] Cell reference 'UNKNOWN_GRASS' not found!
+[13:48:12.196 I] Playing music/explore/mx_explore_1.mp3
+[13:48:42.541 I] Unloading cell West Gash Region (-2, -1)
+[13:48:42.541 I] Unloading cell West Gash Region (-3, -1)
+[13:48:42.542 I] Unloading cell West Gash Region (-1, -1)
+[13:48:42.543 I] Loading cell Ascadian Isles Region (-2, -4)
+[13:48:42.544 I] Loading cell Ascadian Isles Region (-1, -4)
+[13:48:42.547 I] Loading cell Ascadian Isles Region (-3, -4)
+[13:48:44.204 I] Unloading cell Moonmoth Legion Fort (-1, -3)
+[13:48:44.205 I] Unloading cell West Gash Region (-1, -2)
+[13:48:44.205 I] Unloading cell Ascadian Isles Region (-1, -4)
+[13:48:44.207 I] Loading cell West Gash Region (-4, -3)
+[13:48:44.212 I] Loading cell Balmora (-4, -2)
+[13:48:44.216 I] Loading cell Ascadian Isles Region (-4, -4)
+[13:48:50.493 I] Unloading cell West Gash Region (-2, -3)
+[13:48:50.494 I] Unloading cell Balmora (-2, -2)
+[13:48:50.494 I] Unloading cell Ascadian Isles Region (-2, -4)
+[13:48:50.569 I] Loading cell Bitter Coast Region (-5, -3)
+[13:48:50.604 I] Loading cell Bitter Coast Region (-5, -2)
+[13:48:50.632 I] Loading cell Bitter Coast Region (-5, -4)
+[13:48:51.437 I] Unloading cell Balmora (-3, -2)
+[13:48:51.439 I] Unloading cell Balmora (-4, -2)
+[13:48:51.441 I] Unloading cell Bitter Coast Region (-5, -2)
+[13:48:51.448 I] Loading cell Ascadian Isles Region (-4, -5)
+[13:48:51.450 I] Loading cell Ascadian Isles Region (-3, -5)
+[13:48:51.452 I] Loading cell Odai Plateau (-5, -5)
+[13:48:56.534 I] Unloading cell Balmora (-3, -3)
+[13:48:56.535 I] Unloading cell West Gash Region (-4, -3)
+[13:48:56.537 I] Unloading cell Bitter Coast Region (-5, -3)
+[13:48:56.544 I] Loading cell Bitter Coast Region (-4, -6)
+[13:48:56.545 I] Loading cell Ascadian Isles Region (-3, -6)
+[13:48:56.547 I] Loading cell Bitter Coast Region (-5, -6)
+[13:49:00.148 I] Unloading cell Ascadian Isles Region (-3, -4)
+[13:49:00.149 I] Unloading cell Ascadian Isles Region (-3, -5)
+[13:49:00.150 I] Unloading cell Ascadian Isles Region (-3, -6)
+[13:49:00.201 I] Loading cell Hla Oad (-6, -5)
+[13:49:00.225 I] Loading cell Bitter Coast Region (-6, -4)
+[13:49:00.262 I] Loading cell Bitter Coast Region (-6, -6)
+[13:49:01.555 I] Unloading cell Ascadian Isles Region (-4, -4)
+[13:49:01.556 I] Unloading cell Bitter Coast Region (-5, -4)
+[13:49:01.560 I] Unloading cell Bitter Coast Region (-6, -4)
+[13:49:01.566 I] Loading cell Bitter Coast Region (-5, -7)
+[13:49:01.569 I] Loading cell Bitter Coast Region (-4, -7)
+[13:49:01.570 I] Loading cell Bitter Coast Region (-6, -7)
+[13:49:01.672 W] Tile position: -42, -58; agent bounds: AgentBounds {AgentShapeType::Aabb, {29.28, 28.48, 66.5}}; delaunayHull: Removing dangling face 47 [31,23,-1].
+[13:49:01.950 W] Tile position: -42, -58; agent bounds: AgentBounds {AgentShapeType::Aabb, {29.28, 28.48, 66.5}}; delaunayHull: Removing dangling face 47 [31,23,-1].
+[13:49:02.266 I] Unhandled effect NiPointLight in "meshes/x/ex_hlaalu_win_01.nif"
+[13:49:08.466 I] Unloading cell Ascadian Isles Region (-4, -5)
+[13:49:08.467 I] Unloading cell Odai Plateau (-5, -5)
+[13:49:08.469 I] Unloading cell Hla Oad (-6, -5)
+[13:49:08.477 I] Loading cell Bitter Coast Region (-5, -8)
+[13:49:08.504 I] Loading cell Bitter Coast Region (-4, -8)
+[13:49:08.507 I] Loading cell Bitter Coast Region (-6, -8)
+[13:49:12.764 I] Unloading cell Bitter Coast Region (-4, -6)
+[13:49:12.765 I] Unloading cell Bitter Coast Region (-4, -7)
+[13:49:12.766 I] Unloading cell Bitter Coast Region (-4, -8)
+[13:49:12.767 I] Unloading cell Bitter Coast Region (-5, -6)
+[13:49:12.767 I] Unloading cell Bitter Coast Region (-6, -6)
+[13:49:12.772 I] Loading cell Bitter Coast Region (-7, -8)
+[13:49:12.774 I] Loading cell Bitter Coast Region (-6, -9)
+[13:49:12.774 I] Loading cell Bitter Coast Region (-7, -7)
+[13:49:12.776 I] Loading cell Bitter Coast Region (-5, -9)
+[13:49:12.791 I] Loading cell Bitter Coast Region (-7, -9)
+[13:49:53.926 I] Playing music/battle/mw battle2.mp3
+[13:49:54.857 I] Unloading cell Bitter Coast Region (-5, -7)
+[13:49:54.859 I] Unloading cell Bitter Coast Region (-6, -7)
+[13:49:54.866 I] Unloading cell Bitter Coast Region (-7, -7)
+[13:49:54.870 I] Loading cell Bitter Coast Region (-6, -10)
+[13:49:54.870 I] Loading cell Bitter Coast Region (-5, -10)
+[13:49:54.874 I] Loading cell Bitter Coast Region (-7, -10)
+[13:49:57.982 I] Playing music/explore/mx_explore_7.mp3
+[13:50:06.184 I] Unloading cell Bitter Coast Region (-5, -10)
+[13:50:06.185 I] Unloading cell Bitter Coast Region (-6, -10)
+[13:50:06.185 I] Unloading cell Bitter Coast Region (-7, -10)
+[13:50:06.194 I] Loading cell Bitter Coast Region (-6, -7)
+[13:50:06.206 I] Loading cell Bitter Coast Region (-5, -7)
+[13:50:06.208 I] Loading cell Bitter Coast Region (-7, -7)
+[13:50:08.656 I] Playing music/battle/mw battle5.mp3
+[13:50:16.365 I] Unloading cell Bitter Coast Region (-5, -7)
+[13:50:16.366 I] Unloading cell Bitter Coast Region (-6, -7)
+[13:50:16.371 I] Unloading cell Bitter Coast Region (-7, -7)
+[13:50:16.371 I] Unloading cell Bitter Coast Region (-7, -8)
+[13:50:16.371 I] Unloading cell Bitter Coast Region (-7, -9)
+[13:50:16.372 I] Loading cell Bitter Coast Region (-4, -9)
+[13:50:16.390 I] Loading cell Bitter Coast Region (-5, -10)
+[13:50:16.391 I] Loading cell Bitter Coast Region (-4, -8)
+[13:50:16.393 I] Loading cell Bitter Coast Region (-4, -10)
+[13:50:16.394 I] Loading cell Bitter Coast Region (-6, -10)
+[13:50:31.575 I] Playing music/explore/mx_explore_3.mp3
+[13:50:31.576 I] Unloading cell Bitter Coast Region (-4, -8)
+[13:50:31.577 I] Unloading cell Bitter Coast Region (-4, -9)
+[13:50:31.580 I] Unloading cell Bitter Coast Region (-4, -10)
+[13:50:31.581 I] Unloading cell Bitter Coast Region (-5, -8)
+[13:50:31.582 I] Unloading cell Bitter Coast Region (-6, -8)
+[13:50:31.583 I] Loading cell Bitter Coast Region (-7, -10)
+[13:50:31.584 I] Loading cell Bitter Coast Region (-6, -11)
+[13:50:31.584 I] Loading cell Bitter Coast Region (-7, -9)
+[13:50:31.584 I] Loading cell Bitter Coast Region (-5, -11)
+[13:50:31.584 I] Loading cell Bitter Coast Region (-7, -11)
+[13:50:33.324 I] Unloading cell Bitter Coast Region (-7, -9)
+[13:50:33.324 I] Unloading cell Bitter Coast Region (-7, -10)
+[13:50:33.325 I] Unloading cell Bitter Coast Region (-7, -11)
+[13:50:33.325 I] Loading cell Bitter Coast Region (-4, -10)
+[13:50:33.326 I] Loading cell Bitter Coast Region (-4, -9)
+[13:50:33.331 I] Loading cell Bitter Coast Region (-4, -11)
+[13:50:39.117 I] Unloading cell Bitter Coast Region (-4, -11)
+[13:50:39.117 I] Unloading cell Bitter Coast Region (-5, -11)
+[13:50:39.117 I] Unloading cell Bitter Coast Region (-6, -11)
+[13:50:39.277 I] Loading cell Bitter Coast Region (-5, -8)
+[13:50:39.302 I] Loading cell Bitter Coast Region (-4, -8)
+[13:50:39.305 I] Loading cell Bitter Coast Region (-6, -8)
+[13:50:40.325 I] Playing music/explore/mx_explore_2.mp3
+[13:50:44.180 I] Unloading cell Bitter Coast Region (-6, -8)
+[13:50:44.181 I] Unloading cell Bitter Coast Region (-6, -9)
+[13:50:44.181 I] Unloading cell Bitter Coast Region (-6, -10)
+[13:50:44.182 I] Loading cell Bitter Coast Region (-3, -9)
+[13:50:44.199 I] Loading cell Bitter Coast Region (-3, -8)
+[13:50:44.222 I] Loading cell Bitter Coast Region (-3, -10)
+[13:50:44.278 I] Warning: fallingScript line 46, column 6 (endif): endif without matching if/elseif
+[13:50:44.320 V] Controller R2_Claw02 present more than once in meshes/r/xsiltstrider.kf, ignoring later version
+[13:50:45.192 I] Unhandled effect NiPointLight in "meshes/x/ex_nord_win_01.nif"
+[13:50:45.193 I] Unhandled effect NiPointLight in "meshes/x/ex_nord_win_02.nif"
+[13:50:48.298 I] Unloading cell Bitter Coast Region (-3, -8)
+[13:50:48.304 I] Unloading cell Bitter Coast Region (-4, -8)
+[13:50:48.305 I] Unloading cell Bitter Coast Region (-5, -8)
+[13:50:48.309 I] Loading cell Bitter Coast Region (-4, -11)
+[13:50:48.309 I] Loading cell Bitter Coast Region (-3, -11)
+[13:50:48.309 I] Loading cell Bitter Coast Region (-5, -11)
+[13:50:53.673 I] Unloading cell Bitter Coast Region (-3, -11)
+[13:50:53.674 I] Unloading cell Bitter Coast Region (-4, -11)
+[13:50:53.674 I] Unloading cell Bitter Coast Region (-5, -11)
+[13:50:53.684 I] Loading cell Bitter Coast Region (-4, -8)
+[13:50:53.687 I] Loading cell Bitter Coast Region (-3, -8)
+[13:50:53.703 I] Loading cell Bitter Coast Region (-5, -8)
+[13:50:55.055 I] Unloading cell Bitter Coast Region (-3, -8)
+[13:50:55.061 I] Unloading cell Bitter Coast Region (-3, -9)
+[13:50:55.063 I] Unloading cell Bitter Coast Region (-3, -10)
+[13:50:55.065 I] Loading cell Bitter Coast Region (-6, -9)
+[13:50:55.066 I] Loading cell Bitter Coast Region (-6, -8)
+[13:50:55.066 I] Loading cell Bitter Coast Region (-6, -10)
+[13:50:57.555 I] Unloading cell Bitter Coast Region (-6, -8)
+[13:50:57.556 I] Unloading cell Bitter Coast Region (-6, -9)
+[13:50:57.556 I] Unloading cell Bitter Coast Region (-6, -10)
+[13:50:57.557 I] Loading cell Bitter Coast Region (-3, -9)
+[13:50:57.564 I] Loading cell Bitter Coast Region (-3, -8)
+[13:50:57.576 I] Loading cell Bitter Coast Region (-3, -10)
+[13:50:57.868 W] Warning: detected OpenGL error 'invalid operation' at after RenderBin::draw(..)
+[13:50:59.903 I] Unloading cell Bitter Coast Region (-3, -8)
+[13:50:59.909 I] Unloading cell Bitter Coast Region (-3, -9)
+[13:50:59.911 I] Unloading cell Bitter Coast Region (-3, -10)
+[13:50:59.930 I] Loading cell Bitter Coast Region (-6, -9)
+[13:50:59.931 I] Loading cell Bitter Coast Region (-6, -8)
+[13:50:59.932 I] Loading cell Bitter Coast Region (-6, -10)
+[13:51:11.014 I] Playing music/battle/mw battle 8.mp3
+[13:51:23.835 I] Playing music/explore/mx_explore_5.mp3
+[13:51:27.633 I] Playing music/battle/mw battle1.mp3
+[13:51:32.078 I] Playing music/explore/mx_explore_6.mp3
+[13:51:38.980 W] Warning: detected OpenGL error 'invalid operation' at after RenderBin::draw(..)
+[13:51:44.239 I] Unloading cell Bitter Coast Region (-6, -8)
+[13:51:44.239 I] Unloading cell Bitter Coast Region (-6, -9)
+[13:51:44.240 I] Unloading cell Bitter Coast Region (-6, -10)
+[13:51:44.241 I] Loading cell Bitter Coast Region (-3, -9)
+[13:51:44.248 I] Loading cell Bitter Coast Region (-3, -8)
+[13:51:44.260 I] Loading cell Bitter Coast Region (-3, -10)
+[13:51:46.211 I] Unloading cell Bitter Coast Region (-3, -10)
+[13:51:46.212 I] Unloading cell Bitter Coast Region (-4, -10)
+[13:51:46.213 I] Unloading cell Bitter Coast Region (-5, -10)
+[13:51:46.215 I] Loading cell Bitter Coast Region (-4, -7)
+[13:51:46.216 I] Loading cell Ascadian Isles Region (-3, -7)
+[13:51:46.218 I] Loading cell Bitter Coast Region (-5, -7)
+[13:51:49.580 I] Unloading cell Ascadian Isles Region (-3, -7)
+[13:51:49.581 I] Unloading cell Bitter Coast Region (-4, -7)
+[13:51:49.581 I] Unloading cell Bitter Coast Region (-5, -7)
+[13:51:49.583 I] Loading cell Bitter Coast Region (-4, -10)
+[13:51:49.584 I] Loading cell Bitter Coast Region (-3, -10)
+[13:51:49.587 I] Loading cell Bitter Coast Region (-5, -10)
+[13:51:51.517 I] Unloading cell Bitter Coast Region (-3, -8)
+[13:51:51.523 I] Unloading cell Bitter Coast Region (-3, -9)
+[13:51:51.525 I] Unloading cell Bitter Coast Region (-3, -10)
+[13:51:51.528 I] Loading cell Bitter Coast Region (-6, -9)
+[13:51:51.529 I] Loading cell Bitter Coast Region (-6, -8)
+[13:51:51.530 I] Loading cell Bitter Coast Region (-6, -10)
+[13:51:59.121 I] Unloading cell Bitter Coast Region (-4, -8)
+[13:51:59.123 I] Unloading cell Bitter Coast Region (-5, -8)
+[13:51:59.125 I] Unloading cell Bitter Coast Region (-6, -8)
+[13:51:59.126 I] Loading cell Bitter Coast Region (-5, -11)
+[13:51:59.126 I] Loading cell Bitter Coast Region (-4, -11)
+[13:51:59.126 I] Loading cell Bitter Coast Region (-6, -11)
+[13:52:01.101 I] Unloading cell Bitter Coast Region (-4, -11)
+[13:52:01.101 I] Unloading cell Bitter Coast Region (-5, -11)
+[13:52:01.101 I] Unloading cell Bitter Coast Region (-6, -11)
+[13:52:01.102 I] Loading cell Bitter Coast Region (-5, -8)
+[13:52:01.105 I] Loading cell Bitter Coast Region (-4, -8)
+[13:52:01.108 I] Loading cell Bitter Coast Region (-6, -8)
+[13:52:07.563 W] Warning: detected OpenGL error 'invalid operation' at after RenderBin::draw(..)
+[13:52:14.414 I] Unloading cell Bitter Coast Region (-4, -8)
+[13:52:14.416 I] Unloading cell Bitter Coast Region (-4, -9)
+[13:52:14.419 I] Unloading cell Bitter Coast Region (-4, -10)
+[13:52:14.420 I] Unloading cell Bitter Coast Region (-5, -10)
+[13:52:14.420 I] Unloading cell Bitter Coast Region (-6, -10)
+[13:52:14.424 I] Loading cell Bitter Coast Region (-6, -7)
+[13:52:14.437 I] Loading cell Bitter Coast Region (-7, -8)
+[13:52:14.438 I] Loading cell Bitter Coast Region (-5, -7)
+[13:52:14.440 I] Loading cell Bitter Coast Region (-7, -7)
+[13:52:14.441 I] Loading cell Bitter Coast Region (-7, -9)
+[13:52:16.310 I] Unloading cell Bitter Coast Region (-7, -7)
+[13:52:16.311 I] Unloading cell Bitter Coast Region (-7, -8)
+[13:52:16.311 I] Unloading cell Bitter Coast Region (-7, -9)
+[13:52:16.312 I] Loading cell Bitter Coast Region (-4, -8)
+[13:52:16.314 I] Loading cell Bitter Coast Region (-4, -7)
+[13:52:16.316 I] Loading cell Bitter Coast Region (-4, -9)
+[13:52:19.511 I] Playing music/battle/mw battle3.mp3
+[13:52:22.896 I] RootCollisionNode is not attached to the root node in meshes/d/in_de_shipdoor_toplevel.nif. Treating it as a common NiTriShape.
+[13:52:23.528 I] Unloading cell Bitter Coast Region (-4, -9)
+[13:52:23.530 I] Unloading cell Bitter Coast Region (-5, -9)
+[13:52:23.532 I] Unloading cell Bitter Coast Region (-6, -9)
+[13:52:23.533 I] Loading cell Bitter Coast Region (-5, -6)
+[13:52:23.534 I] Loading cell Bitter Coast Region (-4, -6)
+[13:52:23.535 I] Loading cell Bitter Coast Region (-6, -6)
+[13:52:23.901 I] Playing music/explore/mx_explore_4.mp3
+[13:52:26.547 I] Unloading cell Bitter Coast Region (-4, -6)
+[13:52:26.547 I] Unloading cell Bitter Coast Region (-4, -7)
+[13:52:26.548 I] Unloading cell Bitter Coast Region (-4, -8)
+[13:52:26.550 I] Loading cell Bitter Coast Region (-7, -7)
+[13:52:26.551 I] Loading cell Bitter Coast Region (-7, -6)
+[13:52:26.558 I] Loading cell Bitter Coast Region (-7, -8)
+[13:52:30.699 I] Unhandled effect NiPointLight in "meshes/x/ex_hlaalu_win_01.nif"
+[13:53:05.125 W] Warning: detected OpenGL error 'invalid operation' at after RenderBin::draw(..)
+[13:53:06.146 I] Playing music/battle/mw battle 4.mp3
+[13:53:08.925 I] Unloading cell Bitter Coast Region (-5, -6)
+[13:53:08.925 I] Unloading cell Bitter Coast Region (-5, -7)
+[13:53:08.926 I] Unloading cell Bitter Coast Region (-5, -8)
+[13:53:08.930 I] Loading cell Bitter Coast Region (-8, -7)
+[13:53:08.930 I] Loading cell Bitter Coast Region (-8, -6)
+[13:53:08.931 I] Loading cell Bitter Coast Region (-8, -8)
+[13:53:14.434 I] Playing music/explore/morrowind title.mp3
+[13:53:15.702 I] Unloading cell Bitter Coast Region (-6, -8)
+[13:53:15.703 I] Unloading cell Bitter Coast Region (-7, -8)
+[13:53:15.703 I] Unloading cell Bitter Coast Region (-8, -8)
+[13:53:15.705 I] Loading cell Bitter Coast Region (-7, -5)
+[13:53:15.711 I] Loading cell Hla Oad (-6, -5)
+[13:53:15.727 I] Loading cell Bitter Coast Region (-8, -5)
+[13:53:16.487 I] Playing music/battle/mw battle2.mp3
+[13:53:20.255 I] RootCollisionNode is not attached to the root node in meshes/d/in_de_shipdoor_toplevel.nif. Treating it as a common NiTriShape.
+[13:53:20.842 I] Playing music/explore/mx_explore_2.mp3
+[13:53:24.037 I] Unloading cell Bitter Coast Region (-6, -7)
+[13:53:24.043 I] Unloading cell Bitter Coast Region (-7, -7)
+[13:53:24.044 I] Unloading cell Bitter Coast Region (-8, -7)
+[13:53:24.045 I] Loading cell Ashurnibibi (-7, -4)
+[13:53:24.052 I] Loading cell Bitter Coast Region (-6, -4)
+[13:53:24.065 I] Loading cell Bitter Coast Region (-8, -4)
+[13:53:26.773 I] Unhandled effect NiPointLight in "meshes/x/ex_hlaalu_win_01.nif"
+[13:53:28.892 I] Unloading cell Bitter Coast Region (-6, -6)
+[13:53:28.898 I] Unloading cell Bitter Coast Region (-7, -6)
+[13:53:28.901 I] Unloading cell Bitter Coast Region (-8, -6)
+[13:53:28.903 I] Loading cell Bitter Coast Region (-7, -3)
+[13:53:28.911 I] Loading cell Bitter Coast Region (-6, -3)
+[13:53:28.926 I] Loading cell Bitter Coast Region (-8, -3)
+[13:53:29.114 I] Playing music/battle/mw battle 7.mp3
+[13:53:33.108 I] Playing music/explore/morrowind title.mp3
+[13:53:33.391 I] Unloading cell Hla Oad (-6, -5)
+[13:53:33.399 I] Unloading cell Bitter Coast Region (-7, -5)
+[13:53:33.402 I] Unloading cell Bitter Coast Region (-8, -3)
+[13:53:33.403 I] Unloading cell Bitter Coast Region (-8, -4)
+[13:53:33.403 I] Unloading cell Bitter Coast Region (-8, -5)
+[13:53:33.405 I] Loading cell Bitter Coast Region (-6, -2)
+[13:53:33.418 I] Loading cell Bitter Coast Region (-5, -3)
+[13:53:33.432 I] Loading cell Bitter Coast Region (-5, -2)
+[13:53:33.453 I] Loading cell Bitter Coast Region (-7, -2)
+[13:53:33.477 I] Loading cell Bitter Coast Region (-5, -4)
+[13:53:37.919 I] Unloading cell Bitter Coast Region (-5, -4)
+[13:53:37.924 I] Unloading cell Bitter Coast Region (-6, -4)
+[13:53:37.931 I] Unloading cell Ashurnibibi (-7, -4)
+[13:53:37.937 I] Loading cell Hlormaren (-6, -1)
+[13:53:37.945 I] Loading cell Bitter Coast Region (-5, -1)
+[13:53:37.960 I] Loading cell Bitter Coast Region (-7, -1)
+[13:53:42.957 I] Unloading cell Bitter Coast Region (-5, -1)
+[13:53:42.967 I] Unloading cell Bitter Coast Region (-5, -2)
+[13:53:42.979 I] Unloading cell Bitter Coast Region (-5, -3)
+[13:53:42.990 I] Loading cell Bitter Coast Region (-8, -2)
+[13:53:43.018 I] Loading cell Bitter Coast Region (-8, -1)
+[13:53:43.037 I] Loading cell Bitter Coast Region (-8, -3)
+[13:53:44.947 I] Unloading cell Bitter Coast Region (-6, -3)
+[13:53:44.954 I] Unloading cell Bitter Coast Region (-7, -3)
+[13:53:44.957 I] Unloading cell Bitter Coast Region (-8, -3)
+[13:53:44.959 I] Loading cell Bitter Coast Region (-7, 0)
+[13:53:44.968 I] Loading cell Bitter Coast Region (-6, 0)
+[13:53:44.983 I] Loading cell Bitter Coast Region (-8, 0)
+[13:53:53.844 I] Changing to interior
+[13:53:53.844 I] Unloading cell Bitter Coast Region (-6, 0)
+[13:53:53.855 I] Unloading cell Hlormaren (-6, -1)
+[13:53:53.859 I] Unloading cell Bitter Coast Region (-6, -2)
+[13:53:53.867 I] Unloading cell Bitter Coast Region (-7, 0)
+[13:53:53.871 I] Unloading cell Bitter Coast Region (-7, -1)
+[13:53:53.876 I] Unloading cell Bitter Coast Region (-7, -2)
+[13:53:53.879 I] Unloading cell Bitter Coast Region (-8, 0)
+[13:53:53.880 I] Unloading cell Bitter Coast Region (-8, -1)
+[13:53:53.884 I] Unloading cell Bitter Coast Region (-8, -2)
+[13:53:53.893 I] Loading cell Hlormaren, Sewers
+[13:53:54.947 I] Playing music/battle/mw battle1.mp3
+[13:53:56.492 I] Unloading cell Hlormaren, Sewers
+[13:53:56.494 I] Loading cell Bitter Coast Region (-7, -1)
+[13:53:56.501 I] Loading cell Bitter Coast Region (-7, 0)
+[13:53:56.509 I] Loading cell Hlormaren (-6, -1)
+[13:53:56.515 I] Loading cell Bitter Coast Region (-8, -1)
+[13:53:56.524 I] Loading cell Bitter Coast Region (-7, -2)
+[13:53:56.532 I] Loading cell Bitter Coast Region (-6, 0)
+[13:53:56.547 I] Loading cell Bitter Coast Region (-8, 0)
+[13:53:56.551 I] Loading cell Bitter Coast Region (-6, -2)
+[13:53:56.562 I] Loading cell Bitter Coast Region (-8, -2)
+[13:53:56.580 W] Warning: detected OpenGL error 'invalid operation' at after RenderBin::draw(..)
+[13:53:58.501 W] Warning: detected OpenGL error 'invalid operation' at after RenderBin::draw(..)
+[13:54:03.219 I] Playing music/explore/mx_explore_1.mp3
+[13:54:03.630 I] Unloading cell Bitter Coast Region (-6, 0)
+[13:54:03.640 I] Unloading cell Bitter Coast Region (-7, 0)
+[13:54:03.644 I] Unloading cell Bitter Coast Region (-8, 0)
+[13:54:03.648 I] Loading cell Bitter Coast Region (-7, -3)
+[13:54:03.652 I] Loading cell Bitter Coast Region (-6, -3)
+[13:54:03.665 I] Loading cell Bitter Coast Region (-8, -3)
+[13:54:05.657 I] Unloading cell Bitter Coast Region (-6, -3)
+[13:54:05.664 I] Unloading cell Bitter Coast Region (-7, -3)
+[13:54:05.667 I] Unloading cell Bitter Coast Region (-8, -3)
+[13:54:05.670 I] Loading cell Bitter Coast Region (-7, 0)
+[13:54:05.677 I] Loading cell Bitter Coast Region (-6, 0)
+[13:54:05.695 I] Loading cell Bitter Coast Region (-8, 0)
+[13:54:13.381 I] Unloading cell Bitter Coast Region (-6, -2)
+[13:54:13.391 I] Unloading cell Bitter Coast Region (-7, -2)
+[13:54:13.395 I] Unloading cell Bitter Coast Region (-8, -2)
+[13:54:13.398 I] Loading cell Bitter Coast Region (-7, 1)
+[13:54:13.419 I] Loading cell Bitter Coast Region (-6, 1)
+[13:54:13.433 I] Loading cell Bitter Coast Region (-8, 1)
+[13:54:19.040 I] Unloading cell Hlormaren (-6, -1)
+[13:54:19.043 I] Unloading cell Bitter Coast Region (-7, -1)
+[13:54:19.048 I] Unloading cell Bitter Coast Region (-8, -1)
+[13:54:19.055 I] Loading cell Bitter Coast Region (-7, 2)
+[13:54:19.061 I] Loading cell Bitter Coast Region (-6, 2)
+[13:54:19.071 I] Loading cell Bitter Coast Region (-8, 2)
+[13:54:20.034 I] RootCollisionNode is not attached to the root node in meshes/x/ex_longboat.nif. Treating it as a common NiTriShape.
+[13:54:23.317 I] Playing music/battle/mw battle5.mp3
+[13:54:24.609 I] Unloading cell Bitter Coast Region (-6, 2)
+[13:54:24.614 I] Unloading cell Bitter Coast Region (-6, 1)
+[13:54:24.621 I] Unloading cell Bitter Coast Region (-6, 0)
+[13:54:24.630 I] Loading cell Bitter Coast Region (-9, 1)
+[13:54:24.631 I] Loading cell Bitter Coast Region (-9, 0)
+[13:54:24.634 I] Loading cell Bitter Coast Region (-9, 2)
+[13:54:24.950 I] Playing music/explore/mx_explore_7.mp3
+[13:54:27.179 I] Unloading cell Bitter Coast Region (-7, 0)
+[13:54:27.184 I] Unloading cell Bitter Coast Region (-8, 0)
+[13:54:27.185 I] Unloading cell Bitter Coast Region (-9, 0)
+[13:54:27.187 I] Loading cell Gnaar Mok (-8, 3)
+[13:54:27.202 I] Loading cell Bitter Coast Region (-7, 3)
+[13:54:27.214 I] Loading cell Bitter Coast Region (-9, 3)
+[13:54:30.471 I] Unloading cell Bitter Coast Region (-7, 3)
+[13:54:30.477 I] Unloading cell Gnaar Mok (-8, 3)
+[13:54:30.486 I] Unloading cell Bitter Coast Region (-9, 3)
+[13:54:30.488 I] Unloading cell Bitter Coast Region (-9, 2)
+[13:54:30.489 I] Unloading cell Bitter Coast Region (-9, 1)
+[13:54:30.491 I] Loading cell Bitter Coast Region (-7, 0)
+[13:54:30.498 I] Loading cell Bitter Coast Region (-6, 1)
+[13:54:30.510 I] Loading cell Bitter Coast Region (-6, 0)
+[13:54:30.526 I] Loading cell Bitter Coast Region (-8, 0)
+[13:54:30.530 I] Loading cell Bitter Coast Region (-6, 2)
+[13:54:31.964 I] Playing music/battle/mw battle 4.mp3
+[13:54:33.644 I] Playing music/explore/mx_explore_4.mp3
+[13:55:09.056 I] Playing music/battle/mw battle 8.mp3
+[13:56:29.047 I] Unloading cell Bitter Coast Region (-6, 0)
+[13:56:29.060 I] Unloading cell Bitter Coast Region (-7, 0)
+[13:56:29.064 I] Unloading cell Bitter Coast Region (-8, 0)
+[13:56:29.069 I] Loading cell Bitter Coast Region (-7, 3)
+[13:56:29.081 I] Loading cell Bitter Coast Region (-6, 3)
+[13:56:29.092 I] Loading cell Gnaar Mok (-8, 3)
+[13:56:29.823 I] Playing music/explore/mx_explore_5.mp3
+[13:56:34.091 I] Unloading cell Bitter Coast Region (-6, 3)
+[13:56:34.097 I] Unloading cell Bitter Coast Region (-6, 2)
+[13:56:34.103 I] Unloading cell Bitter Coast Region (-6, 1)
+[13:56:34.108 I] Unloading cell Bitter Coast Region (-7, 1)
+[13:56:34.111 I] Unloading cell Bitter Coast Region (-8, 1)
+[13:56:34.115 I] Loading cell Bitter Coast Region (-9, 3)
+[13:56:34.116 I] Loading cell Bitter Coast Region (-8, 4)
+[13:56:34.123 I] Loading cell Bitter Coast Region (-9, 2)
+[13:56:34.126 I] Loading cell Bitter Coast Region (-7, 4)
+[13:56:34.142 I] Loading cell Khartag Point (-9, 4)
+[13:56:35.534 I] Unloading cell Khartag Point (-9, 4)
+[13:56:35.536 I] Unloading cell Bitter Coast Region (-9, 3)
+[13:56:35.537 I] Unloading cell Bitter Coast Region (-9, 2)
+[13:56:35.540 I] Loading cell Bitter Coast Region (-6, 3)
+[13:56:35.550 I] Loading cell Bitter Coast Region (-6, 2)
+[13:56:35.560 I] Loading cell West Gash Region (-6, 4)
+[13:56:39.215 I] Unloading cell West Gash Region (-6, 4)
+[13:56:39.216 I] Unloading cell Bitter Coast Region (-7, 4)
+[13:56:39.220 I] Unloading cell Bitter Coast Region (-8, 4)
+[13:56:39.225 I] Loading cell Bitter Coast Region (-7, 1)
+[13:56:39.234 I] Loading cell Bitter Coast Region (-6, 1)
+[13:56:39.246 I] Loading cell Bitter Coast Region (-8, 1)
+[13:56:41.745 I] Unloading cell Bitter Coast Region (-6, 3)
+[13:56:41.753 I] Unloading cell Bitter Coast Region (-6, 2)
+[13:56:41.763 I] Unloading cell Bitter Coast Region (-6, 1)
+[13:56:41.776 I] Loading cell Bitter Coast Region (-9, 2)
+[13:56:41.780 I] Loading cell Bitter Coast Region (-9, 1)
+[13:56:41.781 I] Loading cell Bitter Coast Region (-9, 3)
+[13:56:46.618 I] Unloading cell Bitter Coast Region (-7, 3)
+[13:56:46.626 I] Unloading cell Bitter Coast Region (-7, 2)
+[13:56:46.629 I] Unloading cell Bitter Coast Region (-7, 1)
+[13:56:46.635 I] Loading cell Bitter Coast Region (-10, 2)
+[13:56:46.636 I] Loading cell Bitter Coast Region (-10, 1)
+[13:56:46.638 I] Loading cell Bitter Coast Region (-10, 3)
+[13:56:50.109 I] Changing to interior
+[13:56:50.109 I] Unloading cell Gnaar Mok (-8, 3)
+[13:56:50.114 I] Unloading cell Bitter Coast Region (-8, 2)
+[13:56:50.117 I] Unloading cell Bitter Coast Region (-8, 1)
+[13:56:50.119 I] Unloading cell Bitter Coast Region (-9, 3)
+[13:56:50.119 I] Unloading cell Bitter Coast Region (-9, 2)
+[13:56:50.121 I] Unloading cell Bitter Coast Region (-9, 1)
+[13:56:50.121 I] Unloading cell Bitter Coast Region (-10, 3)
+[13:56:50.121 I] Unloading cell Bitter Coast Region (-10, 2)
+[13:56:50.121 I] Unloading cell Bitter Coast Region (-10, 1)
+[13:56:50.124 I] Loading cell An Abandoned Shack
+[13:56:55.194 I] Unloading cell An Abandoned Shack
+[13:56:55.194 I] Loading cell Bitter Coast Region (-9, 2)
+[13:56:55.197 I] Loading cell Bitter Coast Region (-9, 1)
+[13:56:55.198 I] Loading cell Bitter Coast Region (-8, 2)
+[13:56:55.208 I] Loading cell Bitter Coast Region (-10, 2)
+[13:56:55.208 I] Loading cell Bitter Coast Region (-9, 3)
+[13:56:55.210 I] Loading cell Bitter Coast Region (-8, 1)
+[13:56:55.214 I] Loading cell Bitter Coast Region (-10, 1)
+[13:56:55.215 I] Loading cell Gnaar Mok (-8, 3)
+[13:56:55.228 I] Loading cell Bitter Coast Region (-10, 3)
+[13:56:55.247 W] Warning: detected OpenGL error 'invalid operation' at after RenderBin::draw(..)
+[13:59:41.172 I] Playing music/explore/mx_explore_6.mp3
+[14:00:57.152 I] Saving shader settings file: "/home/xerxes/.config/openmw/shaders.yaml"
+[14:00:57.152 I] Saving Lua storage "/home/xerxes/.config/openmw/global_storage.bin" (3 bytes)
+[14:00:57.153 I] Saving Lua storage "/home/xerxes/.config/openmw/player_storage.bin" (414 bytes)
+[14:00:57.153 I] Quitting peacefully.

@@ -1,0 +1,7 @@
+[20:08:29.448 I] Crash handler installed
+[20:08:29.515 I] Loading settings file: /home/xerxes/Documents/code/open-source/openmw-gitlab/openmw/build/defaults.bin
+[20:08:29.515 I] Loading settings file: /home/xerxes/.config/openmw/settings.cfg
+[20:08:43.820 V] Changed setting: [Camera] viewing distance = 66764
+[20:08:43.820 V] Created new setting section: Fog
+[20:08:43.820 V] Added new setting: [Fog] sky blending start = 0.8
+[20:08:43.820 I] Updating settings file: /home/xerxes/.config/openmw/settings.cfg

@@ -1,0 +1,686 @@
+*** Fatal Error ***
+ (signal 6)
+Address: 0x3e80000267b
+
+System: Linux TheMany 5.17.5-arch1-1 #1 SMP PREEMPT Wed, 27 Apr 2022 20:56:11 +0000 x86_64
+
+Executing: gdb --quiet --batch --command=/tmp/gdb-respfile-aQtkIY
+[New LWP 9853]
+[New LWP 9863]
+[New LWP 9864]
+[New LWP 9865]
+[New LWP 9866]
+[New LWP 9867]
+[New LWP 9868]
+[New LWP 9869]
+[New LWP 9870]
+[New LWP 9871]
+[New LWP 9872]
+[New LWP 9873]
+[New LWP 9874]
+[New LWP 9875]
+[New LWP 9876]
+[New LWP 9877]
+[New LWP 9878]
+[New LWP 9879]
+[New LWP 9880]
+[New LWP 9881]
+[New LWP 9884]
+[New LWP 9885]
+[New LWP 9886]
+[New LWP 9887]
+[New LWP 9890]
+[New LWP 9891]
+[New LWP 9892]
+[New LWP 9895]
+[New LWP 9896]
+[New LWP 9897]
+[New LWP 9898]
+[New LWP 9899]
+[New LWP 9900]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/libthread_db.so.1".
+0x00007f6712f7c368 in MyGUI::LayerItem::attachToLayerItemNode(MyGUI::ILayerNode*, bool) () from /usr/lib/libMyGUIEngine.so.3.4.1
+
+* Loaded Libraries
+From                To                  Syms Read   Shared Object Library
+0x00007f67155de020  0x00007f671560b55a  Yes         /usr/lib/libosgParticle.so.162
+0x00007f67154e5020  0x00007f6715570fcb  Yes         /usr/lib/libosgViewer.so.162
+0x00007f67153fe020  0x00007f671543440d  Yes         /usr/lib/libosgGA.so.162
+0x00007f671528b020  0x00007f6715345f2c  Yes         /usr/lib/libosgDB.so.162
+0x00007f67150a1020  0x00007f67151ad54c  Yes         /usr/lib/libosgUtil.so.162
+0x00007f6714d8e020  0x00007f6714f3805d  Yes         /usr/lib/libosg.so.162
+0x00007f6714c68020  0x00007f6714c7c4f7  Yes (*)     /usr/lib/libboost_filesystem.so.1.78.0
+0x00007f6714c27020  0x00007f6714c4e08c  Yes (*)     /usr/lib/libboost_program_options.so.1.78.0
+0x00007f6714aad020  0x00007f6714b4dc6a  Yes (*)     /usr/lib/libopenal.so.1
+0x00007f67136cd020  0x00007f67141472eb  Yes (*)     /usr/lib/libavcodec.so.58
+0x00007f67133f2020  0x00007f67135a4a13  Yes (*)     /usr/lib/libavformat.so.58
+0x00007f671311d020  0x00007f671317ef01  Yes (*)     /usr/lib/libavutil.so.56
+0x00007f67130ee020  0x00007f67131018fc  Yes (*)     /usr/lib/libswresample.so.3
+0x00007f6712ec6020  0x00007f6713083988  Yes (*)     /usr/lib/libMyGUIEngine.so.3.4.1
+0x00007f6712cce020  0x00007f6712de28b3  Yes (*)     /usr/lib/libSDL2-2.0.so.0
+0x00007f6712c1b020  0x00007f6712c8ed7a  Yes (*)     /usr/lib/libswscale.so.5
+0x00007f6712ba8020  0x00007f6712bf8a93  Yes         /usr/lib/libosgShadow.so.162
+0x00007f6712af4020  0x00007f6712b40660  Yes         /usr/lib/libosgAnimation.so.162
+0x00007f6712a3f020  0x00007f6712a78dec  Yes         /usr/lib/libosgText.so.162
+0x00007f6712a19020  0x00007f6712a1abbc  Yes         /usr/lib/libOpenThreads.so.21
+0x00007f6712a05020  0x00007f6712a0d12f  Yes (*)     /usr/lib/libboost_iostreams.so.1.78.0
+0x00007f67129b9020  0x00007f67129bba1d  Yes (*)     /usr/lib/libGL.so.1
+0x00007f67128ef130  0x00007f6712959dbc  Yes (*)     /usr/lib/libluajit-5.1.so.2
+0x00007f67128c7020  0x00007f67128e1c97  Yes (*)     /usr/lib/liblz4.so.1
+0x00007f67128b3020  0x00007f67128bce0a  Yes         /usr/lib/libDebugUtils.so.1
+0x00007f6712899020  0x00007f67128a9283  Yes         /usr/lib/libDetour.so.1
+0x00007f6712870020  0x00007f671288c4c9  Yes         /usr/lib/libRecast.so.1
+0x00007f6712743020  0x00007f67128296f6  Yes (*)     /usr/lib/libsqlite3.so.0
+0x00007f6712585020  0x00007f671267b973  Yes (*)     /usr/lib/libicuuc.so.71
+0x00007f67122d1020  0x00007f671247997e  Yes (*)     /usr/lib/libicui18n.so.71
+0x00007f6712185020  0x00007f67121d833a  Yes (*)     /usr/lib/libyaml-cpp.so.0.7
+0x00007f671208e020  0x00007f6712148405  Yes (*)     /usr/lib/libBulletCollision.so.3.22
+0x00007f6712025020  0x00007f671204263b  Yes (*)     /usr/lib/libLinearMath.so.3.22
+0x00007f6711e92020  0x00007f6711f9a0e3  Yes         /usr/lib/libstdc++.so.6
+0x00007f6711d21020  0x00007f6711d9ae18  Yes (*)     /usr/lib/libm.so.6
+0x00007f6711cf9020  0x00007f6711d0a455  Yes         /usr/lib/libgcc_s.so.1
+0x00007f6711b16440  0x00007f6711c8a69d  Yes (*)     /usr/lib/libc.so.6
+0x00007f671565e000  0x00007f6715684535  Yes (*)     /lib64/ld-linux-x86-64.so.2
+0x00007f67119c2020  0x00007f6711a4d46e  Yes (*)     /usr/lib/libX11.so.6
+0x00007f67119a2020  0x00007f67119a29a3  Yes (*)     /usr/lib/libXinerama.so.1
+0x00007f6711996020  0x00007f671199c696  Yes (*)     /usr/lib/libXrandr.so.2
+0x00007f671197d020  0x00007f671198a4fc  Yes (*)     /usr/lib/libz.so.1
+0x00007f671196f020  0x00007f67119702e3  Yes (*)     /usr/lib/libboost_atomic.so.1.78.0
+0x00007f67116aa040  0x00007f6711921e23  Yes (*)     /usr/lib/libvpx.so.7
+0x00007f671169a020  0x00007f67116a0049  Yes (*)     /usr/lib/libwebpmux.so.3
+0x00007f671162d020  0x00007f6711681e0b  Yes (*)     /usr/lib/libwebp.so.7
+0x00007f6711603020  0x00007f671161cfce  Yes (*)     /usr/lib/liblzma.so.5
+0x00007f671147c020  0x00007f6711590241  Yes (*)     /usr/lib/libdav1d.so.5
+0x00007f6711463020  0x00007f671146d1e8  Yes (*)     /usr/lib/libopencore-amrwb.so.0
+0x00007f6710c63050  0x00007f671112f357  Yes (*)     /usr/lib/librsvg-2.so.2
+0x00007f6710b11020  0x00007f6710b42e16  Yes (*)     /usr/lib/libgobject-2.0.so.0
+0x00007f67109e1020  0x00007f6710a72aa3  Yes (*)     /usr/lib/libglib-2.0.so.0
+0x00007f67108b2020  0x00007f67109875de  Yes (*)     /usr/lib/libcairo.so.2
+0x00007f6710054020  0x00007f67107630c9  Yes (*)     /usr/lib/libaom.so.3
+0x00007f6710030020  0x00007f67100382fa  Yes (*)     /usr/lib/libgsm.so.1
+0x00007f670ffbd020  0x00007f670ffeb9e4  Yes (*)     /usr/lib/libmp3lame.so.0
+0x00007f670ff8b020  0x00007f670ffa606f  Yes (*)     /usr/lib/libopencore-amrnb.so.0
+0x00007f670ff30020  0x00007f670ff77f94  Yes (*)     /usr/lib/libopenjp2.so.7
+0x00007f670fed1020  0x00007f670ff14412  Yes (*)     /usr/lib/libopus.so.0
+0x00007f670fc9d050  0x00007f670fe4db8e  Yes (*)     /usr/lib/librav1e.so.0
+0x00007f670fc67020  0x00007f670fc76e46  Yes (*)     /usr/lib/libspeex.so.1
+0x00007f67074b7020  0x00007f67077ef7a8  Yes (*)     /usr/lib/libSvtAv1Enc.so.0
+0x00007f6707462020  0x00007f6707483b7a  Yes (*)     /usr/lib/libtheoraenc.so.1
+0x00007f6707449020  0x00007f670745af84  Yes (*)     /usr/lib/libtheoradec.so.1
+0x00007f670741d020  0x00007f67074337e8  Yes (*)     /usr/lib/libvorbis.so.0
+0x00007f6707382020  0x00007f670738463f  Yes (*)     /usr/lib/libvorbisenc.so.2
+0x00007f67070ae020  0x00007f6707236ac7  Yes (*)     /usr/lib/libx264.so.164
+0x00007f6705e3f020  0x00007f67070024d1  Yes (*)     /usr/lib/libx265.so.199
+0x00007f6705cca020  0x00007f6705d4f0a9  Yes (*)     /usr/lib/libxvidcore.so.4
+0x00007f6705c9b020  0x00007f6705cb4159  Yes (*)     /usr/lib/libva.so.2
+0x00007f6705c8c020  0x00007f6705c916c1  Yes (*)     /usr/lib/libmfx.so.1
+0x00007f6705b2c020  0x00007f6705c30975  Yes (*)     /usr/lib/libxml2.so.2
+0x00007f6705aec020  0x00007f6705af8452  Yes (*)     /usr/lib/libbz2.so.1.0
+0x00007f6705961020  0x00007f6705999b65  Yes (*)     /usr/lib/libmodplug.so.1
+0x00007f6705902020  0x00007f67059446ee  Yes (*)     /usr/lib/libbluray.so.2
+0x00007f670586e080  0x00007f67058e1af1  Yes (*)     /usr/lib/libgmp.so.10
+0x00007f6705698040  0x00007f67057c67bd  Yes (*)     /usr/lib/libgnutls.so.30
+0x00007f67055a6020  0x00007f670563a51f  Yes (*)     /usr/lib/libsrt.so.1.4
+0x00007f6705526020  0x00007f6705564504  Yes (*)     /usr/lib/libssh.so.4
+0x00007f6705514020  0x00007f670551481e  Yes (*)     /usr/lib/libva-drm.so.2
+0x00007f670550d020  0x00007f670550f49b  Yes (*)     /usr/lib/libva-x11.so.2
+0x00007f6705507020  0x00007f6705507e62  Yes (*)     /usr/lib/libvdpau.so.1
+0x00007f67054f4020  0x00007f67054fe4ca  Yes (*)     /usr/lib/libdrm.so.2
+0x00007f6705471040  0x00007f67054af202  Yes (*)     /usr/lib/libsoxr.so.0
+0x00007f6705467020  0x00007f67054670f5  Yes (*)     /usr/lib/libdl.so.2
+0x00007f67053a5020  0x00007f6705426a2c  Yes (*)     /usr/lib/libfreetype.so.6
+0x00007f670534f020  0x00007f670537b01e  Yes (*)     /usr/lib/libfontconfig.so.1
+0x00007f670529d040  0x00007f67053343b2  Yes (*)     /usr/lib/libzstd.so.1
+0x00007f6705221020  0x00007f6705222f57  Yes (*)     /usr/lib/libGLdispatch.so.0
+0x00007f67051ae020  0x00007f67051c7aa1  Yes (*)     /usr/lib/libGLX.so.0
+                                        Yes (*)     /usr/lib/libicudata.so.71
+0x00007f6703488020  0x00007f670349ab86  Yes (*)     /usr/lib/libxcb.so.1
+0x00007f670346b020  0x00007f670347533e  Yes (*)     /usr/lib/libXext.so.6
+0x00007f670345c020  0x00007f67034623a3  Yes (*)     /usr/lib/libXrender.so.1
+0x00007f6703454020  0x00007f67034540f5  Yes (*)     /usr/lib/libpthread.so.0
+0x00007f670344b020  0x00007f670344c199  Yes (*)     /usr/lib/libcairo-gobject.so.2
+0x00007f670340a020  0x00007f6703432ee7  Yes (*)     /usr/lib/libgdk_pixbuf-2.0.so.0
+0x00007f670326b020  0x00007f6703372505  Yes (*)     /usr/lib/libgio-2.0.so.0
+0x00007f6703227020  0x00007f670322d472  Yes (*)     /usr/lib/libpangocairo-1.0.so.0
+0x00007f67031ce020  0x00007f6703201705  Yes (*)     /usr/lib/libpango-1.0.so.0
+0x00007f67031af040  0x00007f67031b4a9a  Yes (*)     /usr/lib/libffi.so.8
+0x00007f6703138020  0x00007f670318dce2  Yes (*)     /usr/lib/libpcre.so.1
+0x00007f6703105020  0x00007f67031288da  Yes (*)     /usr/lib/libpng16.so.16
+0x00007f67030f5020  0x00007f67030f9b7f  Yes (*)     /usr/lib/libxcb-render.so.0
+0x00007f67030eb020  0x00007f67030ebb44  Yes (*)     /usr/lib/libxcb-shm.so.0
+0x00007f670304d020  0x00007f67030ce934  Yes (*)     /usr/lib/libpixman-1.so.0
+0x00007f6703037020  0x00007f67030393be  Yes (*)     /usr/lib/libogg.so.0
+0x00007f6702f3ff90  0x00007f6702f61ee4  Yes (*)     /usr/lib/libmvec.so.1
+0x00007f6702e2f050  0x00007f6702ecd630  Yes (*)     /usr/lib/libp11-kit.so.0
+0x00007f6702d62020  0x00007f6702db2a9a  Yes (*)     /usr/lib/libbrotlienc.so.1
+0x00007f6702d52020  0x00007f6702d5941a  Yes (*)     /usr/lib/libbrotlidec.so.1
+0x00007f6702d31020  0x00007f6702d34f80  Yes (*)     /usr/lib/libidn2.so.0
+0x00007f6702bbe020  0x00007f6702bf2e79  Yes (*)     /usr/lib/libunistring.so.2
+0x00007f6702b9a020  0x00007f6702ba59ef  Yes (*)     /usr/lib/libtasn1.so.6
+0x00007f6702b5c020  0x00007f6702b7cfa8  Yes (*)     /usr/lib/libnettle.so.8
+0x00007f6702b10020  0x00007f6702b220fd  Yes (*)     /usr/lib/libhogweed.so.6
+0x00007f670289a000  0x00007f6702a44e01  Yes (*)     /usr/lib/libcrypto.so.1.1
+0x00007f670281d020  0x00007f670281f5e6  Yes (*)     /usr/lib/libXfixes.so.3
+0x00007f67027e0400  0x00007f670280c453  Yes         /usr/lib/libgomp.so.1
+0x00007f67026f1020  0x00007f670279a703  Yes (*)     /usr/lib/libharfbuzz.so.0
+0x00007f67026b9020  0x00007f67026d7357  Yes (*)     /usr/lib/libexpat.so.1
+0x00007f67026af040  0x00007f67026afd52  Yes (*)     /usr/lib/libXau.so.6
+0x00007f67026a8020  0x00007f67026a9882  Yes (*)     /usr/lib/libXdmcp.so.6
+0x00007f67026a1020  0x00007f67026a208c  Yes (*)     /usr/lib/libgmodule-2.0.so.0
+0x00007f6702622020  0x00007f670266a400  Yes (*)     /usr/lib/libjpeg.so.8
+0x00007f6702595140  0x00007f67025e5d48  Yes (*)     /usr/lib/libtiff.so.5
+0x00007f6702550020  0x00007f670257a083  Yes (*)     /usr/lib/libmount.so.1
+0x00007f6702532020  0x00007f670253c70a  Yes (*)     /usr/lib/libpangoft2-1.0.so.0
+0x00007f670250d020  0x00007f6702511138  Yes (*)     /usr/lib/libfribidi.so.0
+0x00007f6702502020  0x00007f67025059f4  Yes (*)     /usr/lib/libthai.so.0
+0x00007f67024de020  0x00007f67024deb5e  Yes (*)     /usr/lib/libbrotlicommon.so.1
+0x00007f67024bb020  0x00007f67024d4462  Yes (*)     /usr/lib/libgraphite2.so.3
+0x00007f6702485020  0x00007f67024a4aa3  Yes (*)     /usr/lib/libblkid.so.1
+0x00007f6702475020  0x00007f6702478931  Yes (*)     /usr/lib/libdatrie.so.1
+0x00007f67023d9020  0x00007f670240756a  Yes (*)     /usr/lib/libdbus-1.so.3
+0x00007f6702305020  0x00007f6702388c31  Yes (*)     /usr/lib/libsystemd.so.0
+0x00007f6715631020  0x00007f6715635671  Yes (*)     /usr/lib/libcap.so.2
+0x00007f67021b5040  0x00007f67022a359e  Yes (*)     /usr/lib/libgcrypt.so.20
+0x00007f6702184020  0x00007f67021990e3  Yes (*)     /usr/lib/libgpg-error.so.0
+0x00007f6715625020  0x00007f6715629e5e  Yes (*)     /usr/lib/libXcursor.so.1
+0x00007f670216e020  0x00007f6702179319  Yes (*)     /usr/lib/libXi.so.6
+0x00007f6702167020  0x00007f6702167cfd  Yes (*)     /usr/lib/libXss.so.1
+0x00007f6702160020  0x00007f670216282b  Yes (*)     /usr/lib/libXxf86vm.so.1
+0x00007f6701e5c020  0x00007f6701e6a628  Yes (*)     /usr/lib/libusb-1.0.so.0
+0x00007f6701e30020  0x00007f6701e49e01  Yes (*)     /usr/lib/libudev.so.1
+0x00007f6701e23020  0x00007f6701e255cc  Yes         /usr/lib/libatomic.so.1
+0x00007f6702452020  0x00007f67024539ee  Yes (*)     /usr/lib/gconv/UTF-16.so
+0x00007f67014e6020  0x00007f670152a713  Yes (*)     /usr/lib/libGLX_mesa.so.0
+0x00007f670149f020  0x00007f67014ac961  Yes (*)     /usr/lib/libglapi.so.0
+0x00007f670243f020  0x00007f67024476a6  Yes (*)     /usr/lib/libxcb-glx.so.0
+0x00007f670242f020  0x00007f670242f10f  Yes (*)     /usr/lib/libX11-xcb.so.1
+0x00007f6702429020  0x00007f670242a1a6  Yes (*)     /usr/lib/libxcb-dri2.so.0
+0x00007f6702423020  0x00007f6702423e34  Yes (*)     /usr/lib/libxcb-dri3.so.0
+0x00007f6701e1d020  0x00007f6701e1d8a6  Yes (*)     /usr/lib/libxcb-present.so.0
+0x00007f6701e15020  0x00007f6701e171b2  Yes (*)     /usr/lib/libxcb-sync.so.1
+0x00007f6701e0e020  0x00007f6701e0e2ec  Yes (*)     /usr/lib/libxshmfence.so.1
+0x00007f6701e06020  0x00007f6701e086cc  Yes (*)     /usr/lib/libxcb-xfixes.so.0
+0x00007f66ffa90020  0x00007f6700c1dae3  Yes (*)     /usr/lib/dri/radeonsi_dri.so
+0x00007f66f9a26020  0x00007f66fd21d8f3  Yes (*)     /usr/lib/libLLVM-13.so
+0x00007f66f90e1020  0x00007f66f90e7776  Yes (*)     /usr/lib/libsensors.so.5
+0x00007f6701df6020  0x00007f6701dfc045  Yes (*)     /usr/lib/libdrm_radeon.so.1
+0x00007f66f90c6020  0x00007f66f90d6885  Yes (*)     /usr/lib/libelf.so.1
+0x00007f66f90ba020  0x00007f66f90be974  Yes (*)     /usr/lib/libdrm_amdgpu.so.1
+0x00007f66f90af020  0x00007f66f90b2dab  Yes (*)     /usr/lib/libdrm_nouveau.so.2
+0x00007f66f9047020  0x00007f66f9087b9b  Yes (*)     /usr/lib/libvulkan.so.1
+0x00007f66f8fff020  0x00007f66f901b9d8  Yes (*)     /usr/lib/libedit.so.0
+0x00007f66f8f98020  0x00007f66f8fd8dd0  Yes (*)     /usr/lib/libncursesw.so.6
+0x00007f6701577020  0x00007f670157a39a  Yes         /usr/lib/osgPlugins-3.6.5/osgdb_png.so
+0x00007f66f8034020  0x00007f66f803a850  Yes         /usr/lib/osgPlugins-3.6.5/osgdb_dds.so
+0x00007f66f0616020  0x00007f66f0677c8c  Yes (*)     /usr/lib/libpipewire-0.3.so.0
+0x00007f66f8013020  0x00007f66f80253df  Yes (*)     /usr/lib/spa-0.2/support/libspa-support.so
+0x00007f670154c020  0x00007f670154d792  Yes (*)     /usr/lib/spa-0.2/support/libspa-journal.so
+0x00007f66f059d020  0x00007f66f05cbf20  Yes (*)     /usr/lib/libpulse.so.0
+0x00007f66f051b020  0x00007f66f0563593  Yes (*)     /usr/lib/pulseaudio/libpulsecommon-15.0.so
+0x00007f66f048d020  0x00007f66f04e254f  Yes (*)     /usr/lib/libsndfile.so.1
+0x00007f66f800a020  0x00007f66f800c67a  Yes (*)     /usr/lib/libasyncns.so.0
+0x00007f66f0452020  0x00007f66f047ac36  Yes (*)     /usr/lib/libFLAC.so.8
+0x00007f66f0439020  0x00007f66f04411da  Yes (*)     /usr/lib/libresolv.so.2
+0x00007f66f06f0020  0x00007f66f06f33c9  Yes         /usr/lib/osgPlugins-3.6.5/osgdb_tga.so
+(*): Shared library is missing debugging information.
+
+* Threads
+  Id   Target Id                                        Frame 
+* 1    Thread 0x7f6702465040 (LWP 9851) "openmw"        0x00007f6712f7c368 in MyGUI::LayerItem::attachToLayerItemNode(MyGUI::ILayerNode*, bool) () from /usr/lib/libMyGUIEngine.so.3.4.1
+  2    Thread 0x7f6701d7f640 (LWP 9853) "libusb_event"  0x00007f6711bf02af in poll () from /usr/lib/libc.so.6
+  3    Thread 0x7f66f8f81640 (LWP 9863) "openmw:cs0"    0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  4    Thread 0x7f66f3fff640 (LWP 9864) "openmw:disk$0" 0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  5    Thread 0x7f66eb7fe640 (LWP 9865) "openmw:sh0"    0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  6    Thread 0x7f66f37fe640 (LWP 9866) "openmw:sh1"    0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  7    Thread 0x7f66f2ffd640 (LWP 9867) "openmw:sh2"    0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  8    Thread 0x7f66f27fc640 (LWP 9868) "openmw:sh3"    0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  9    Thread 0x7f66f1ffb640 (LWP 9869) "openmw:sh4"    0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  10   Thread 0x7f66f17fa640 (LWP 9870) "openmw:sh5"    0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  11   Thread 0x7f66f0ff9640 (LWP 9871) "openmw:sh6"    0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  12   Thread 0x7f66ebfff640 (LWP 9872) "openmw:sh7"    0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  13   Thread 0x7f66eaffd640 (LWP 9873) "openmw:sh8"    0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  14   Thread 0x7f66ea7fc640 (LWP 9874) "openmw:sh9"    0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  15   Thread 0x7f66e9ffb640 (LWP 9875) "openmw:sh10"   0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  16   Thread 0x7f66e97fa640 (LWP 9876) "openmw:sh11"   0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  17   Thread 0x7f66e8ff9640 (LWP 9877) "openmw:shlo0"  0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  18   Thread 0x7f66bbfff640 (LWP 9878) "openmw:shlo1"  0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  19   Thread 0x7f66bb7fe640 (LWP 9879) "openmw:shlo2"  0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  20   Thread 0x7f66baffd640 (LWP 9880) "openmw:shlo3"  0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  21   Thread 0x7f66ba7fc640 (LWP 9881) "openmw:shlo4"  0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  22   Thread 0x7f66b9ffb640 (LWP 9884) "openmw:gdrv0"  0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  23   Thread 0x7f66b97fa640 (LWP 9885) "openmw"        0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  24   Thread 0x7f66b8ff9640 (LWP 9886) "openmw"        0x0000562482968dd9 in std::_Rb_tree<float, std::pair<float const, Nif::KeyT<osg::Quat> >, std::_Select1st<std::pair<float const, Nif::KeyT<osg::Quat> > >, std::less<float>, std::allocator<std::pair<float const, Nif::KeyT<osg::Quat> > > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<float const, Nif::KeyT<osg::Quat> > >, float const&) ()
+  25   Thread 0x7f6697fff640 (LWP 9887) "openmw"        0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  26   Thread 0x7f66977fe640 (LWP 9890) "openmw"        0x00007f6711bf02af in poll () from /usr/lib/libc.so.6
+  27   Thread 0x7f6696ffd640 (LWP 9891) "openmw"        0x00007f6711bf02af in poll () from /usr/lib/libc.so.6
+  28   Thread 0x7f66967fc640 (LWP 9892) "openmw"        0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  29   Thread 0x7f6695ffb640 (LWP 9895) "openmw"        0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  30   Thread 0x7f66957fa640 (LWP 9896) "openmw"        0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  31   Thread 0x7f666ffff640 (LWP 9897) "openmw"        0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  32   Thread 0x7f666f7fe640 (LWP 9898) "openmw"        0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+  33   Thread 0x7f666effd640 (LWP 9899) "openmw"        0x00007f6711bc74cf in wait4 () from /usr/lib/libc.so.6
+  34   Thread 0x7f666e7fc640 (LWP 9900) "openmw"        0x00007f6711b7415a in __futex_abstimed_wait_common () from /usr/lib/libc.so.6
+
+* FPU Status
+  R7: Empty   0x00000000000000000000
+  R6: Empty   0x00000000000000000000
+  R5: Empty   0x00000000000000000000
+  R4: Empty   0x00000000000000000000
+  R3: Empty   0x00000000000000000000
+  R2: Empty   0x00000000000000000000
+  R1: Empty   0x00000000000000000000
+=>R0: Empty   0x00000000000000000000
+
+Status Word:         0x0000                                            
+                       TOP: 0
+Control Word:        0x037f   IM DM ZM OM UM PM
+                       PC: Extended Precision (64-bits)
+                       RC: Round to nearest
+Tag Word:            0xffff
+Instruction Pointer: 0x00:0x00000000
+Operand Pointer:     0x00:0x00000000
+Opcode:              0x0000
+
+* Registers
+rax            0x5624828b8830      94714808993840
+rbx            0x56248635a158      94714870473048
+rcx            0x56248c185a80      94714969217664
+rdx            0x6                 6
+rsi            0xba0               2976
+rdi            0x562487c1bac0      94714896431808
+rbp            0x562488eeda38      0x562488eeda38
+rsp            0x7ffddf7ecaa0      0x7ffddf7ecaa0
+r8             0x1                 1
+r9             0x1c00              7168
+r10            0x108               264
+r11            0x2600              9728
+r12            0x56248896b960      94714910390624
+r13            0x0                 0
+r14            0x7ffddf7ecb40      140728353082176
+r15            0x7ffddf7ecb50      140728353082192
+rip            0x7f6712f7c368      0x7f6712f7c368 <MyGUI::LayerItem::attachToLayerItemNode(MyGUI::ILayerNode*, bool)+56>
+eflags         0x200246            [ PF ZF IF ID ]
+cs             0x33                51
+ss             0x2b                43
+ds             0x0                 0
+es             0x0                 0
+fs             0x0                 0
+gs             0x0                 0
+
+* Backtrace
+
+Thread 34 (Thread 0x7f666e7fc640 (LWP 9900) "openmw"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76f32 in pthread_cond_clockwait@GLIBC_2.30 () at /usr/lib/libc.so.6
+#2  0x000056248298c130 in DetourNavigator::AsyncNavMeshUpdater::getNextJob() ()
+#3  0x000056248298d6fd in DetourNavigator::AsyncNavMeshUpdater::process() ()
+#4  0x00007f6711ece4d4 in std::execute_native_thread_routine(void*) (__p=0x56248c1f7440) at /usr/src/debug/gcc/libstdc++-v3/src/c++11/thread.cc:82
+#5  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#6  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 33 (Thread 0x7f666effd640 (LWP 9899) "openmw"):
+#0  0x00007f6711bc74cf in wait4 () at /usr/lib/libc.so.6
+#1  0x000056248291b56d in  ()
+#2  0x00007f6711b2c560 in <signal handler called> () at /usr/lib/libc.so.6
+#3  0x00007f6711b7934c in __pthread_kill_implementation () at /usr/lib/libc.so.6
+#4  0x00007f6711b2c4b8 in raise () at /usr/lib/libc.so.6
+#5  0x00007f6711b16534 in abort () at /usr/lib/libc.so.6
+#6  0x00007f6711e927ee in __gnu_cxx::__verbose_terminate_handler() () at /usr/src/debug/gcc/libstdc++-v3/libsupc++/vterminate.cc:95
+        terminating = true
+        t = <optimized out>
+#7  0x00007f6711e9ec4c in __cxxabiv1::__terminate(void (*)()) (handler=<optimized out>) at /usr/src/debug/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+#8  0x00007f6711e9dbfa in __cxa_call_terminate(_Unwind_Exception*) (ue_header=0x7f6674074440) at /usr/src/debug/gcc/libstdc++-v3/libsupc++/eh_call.cc:54
+        xh = 0x7f66740743f0
+#9  0x00007f6711e9e37b in __cxxabiv1::__gxx_personality_v0(int, _Unwind_Action, _Unwind_Exception_Class, _Unwind_Exception*, _Unwind_Context*) (version=<optimized out>, actions=6, exception_class=5138137972254386944, ue_header=0x7f6674074440, context=<optimized out>) at /usr/src/debug/gcc/libstdc++-v3/libsupc++/eh_personality.cc:685
+        found_type = <optimized out>
+        info = {Start = 140077925646864, LPStart = 94714812768353, ttype_base = 94714811076038, TType = 0x562482ab4dd1 "\f\a\b\220\001", action_table = 0x7f666effbf50 "", ttype_encoding = 158 '\236', call_site_encoding = 93 ']'}
+        language_specific_data = <optimized out>
+        action_record = <optimized out>
+        p = <optimized out>
+        landing_pad = <optimized out>
+        ip = <optimized out>
+        handler_switch_value = <optimized out>
+        thrown_ptr = 0x0
+        foreign_exception = <optimized out>
+        ip_before_insn = 0
+        xh = 0x7f66740743f0
+#10 0x00007f6711d06f64 in _Unwind_RaiseException_Phase2 (exc=0x7f6674074440, context=0x7f666effc210, frames_p=0x7f666effc118) at /usr/src/debug/gcc/libgcc/unwind.inc:64
+        fs = {regs = {reg = {{loc = {reg = 0, offset = 0, exp = 0x0}, how = REG_UNSAVED}, {loc = {reg = 0, offset = 0, exp = 0x0}, how = REG_UNSAVED}, {loc = {reg = 0, offset = 0, exp = 0x0}, how = REG_UNSAVED}, {loc = {reg = 18446744073709551560, offset = -56, exp = 0xffffffffffffffc8 <error: Cannot access memory at address 0xffffffffffffffc8>}, how = REG_SAVED_OFFSET}, {loc = {reg = 0, offset = 0, exp = 0x0}, how = REG_UNSAVED}, {loc = {reg = 0, offset = 0, exp = 0x0}, how = REG_UNSAVED}, {loc = {reg = 18446744073709551568, offset = -48, exp = 0xffffffffffffffd0 <error: Cannot access memory at address 0xffffffffffffffd0>}, how = REG_SAVED_OFFSET}, {loc = {reg = 0, offset = 0, exp = 0x0}, how = REG_UNSAVED}, {loc = {reg = 0, offset = 0, exp = 0x0}, how = REG_UNSAVED}, {loc = {reg = 0, offset = 0, exp = 0x0}, how = REG_UNSAVED}, {loc = {reg = 0, offset = 0, exp = 0x0}, how = REG_UNSAVED}, {loc = {reg = 0, offset = 0, exp = 0x0}, how = REG_UNSAVED}, {loc = {reg = 18446744073709551576, offset = -40, exp = 0xffffffffffffffd8 <error: Cannot access memory at address 0xffffffffffffffd8>}, how = REG_SAVED_OFFSET}, {loc = {reg = 18446744073709551584, offset = -32, exp = 0xffffffffffffffe0 <error: Cannot access memory at address 0xffffffffffffffe0>}, how = REG_SAVED_OFFSET}, {loc = {reg = 18446744073709551592, offset = -24, exp = 0xffffffffffffffe8 <error: Cannot access memory at address 0xffffffffffffffe8>}, how = REG_SAVED_OFFSET}, {loc = {reg = 18446744073709551600, offset = -16, exp = 0xfffffffffffffff0 <error: Cannot access memory at address 0xfffffffffffffff0>}, how = REG_SAVED_OFFSET}, {loc = {reg = 18446744073709551608, offset = -8, exp = 0xfffffffffffffff8 <error: Cannot access memory at address 0xfffffffffffffff8>}, how = REG_SAVED_OFFSET}, {loc = {reg = 0, offset = 0, exp = 0x0}, how = REG_UNSAVED}}, prev = 0x0, cfa_offset = 160, cfa_reg = 7, cfa_exp = 0x0, cfa_how = CFA_REG_OFFSET}, pc = 0x5624829922b9 <DetourNavigator::DbWorker::run()+425>, personality = 0x7f6711e9e2e0 <__cxxabiv1::__gxx_personality_v0(int, _Unwind_Action, _Unwind_Exception_Class, _Unwind_Exception*, _Unwind_Context*)>, data_align = -8, code_align = 1, retaddr_column = 16, fde_encoding = 27 '\033', lsda_encoding = 27 '\033', saw_z = 1 '\001', signal_frame = 0 '\000', eh_ptr = 0x0}
+        match_handler = 4
+        code = _URC_NO_REASON
+        frames = 3
+#11 0x00007f6711d079ae in _Unwind_Resume (exc=0x7f6674074440) at /usr/src/debug/gcc/libgcc/unwind.inc:241
+        this_context = {reg = {0x7f666effc308, 0x7f666effc310, 0x0, 0x7f666effc318, 0x0, 0x0, 0x7f666effc340, 0x0, 0x0, 0x0, 0x0, 0x0, 0x7f666effc320, 0x7f666effc328, 0x7f666effc330, 0x7f666effc338, 0x7f666effc348, 0x0}, cfa = 0x7f666effc350, ra = 0x562481ef053a, lsda = 0x0, bases = {tbase = 0x0, dbase = 0x0, func = 0x7f6711d07880 <_Unwind_Resume>}, flags = 4611686018427387904, version = 0, args_size = 0, by_value = '\000' <repeats 17 times>}
+        cur_context = {reg = {0x7f666effc308, 0x7f666effc310, 0x0, 0x7f666effc458, 0x0, 0x0, 0x7f666effc460, 0x0, 0x0, 0x0, 0x0, 0x0, 0x7f666effc490, 0x7f666effc470, 0x7f666effc478, 0x7f666effc480, 0x7f666effc498, 0x0}, cfa = 0x7f666effc4a0, ra = 0x562482992157 <DetourNavigator::DbWorker::run()+71>, lsda = 0x562482cff900, bases = {tbase = 0x0, dbase = 0x0, func = 0x562482992110 <DetourNavigator::DbWorker::run()>}, flags = 4611686018427387904, version = 0, args_size = 0, by_value = '\000' <repeats 17 times>}
+        code = <optimized out>
+        frames = 0
+#12 0x0000562481ef053a in  ()
+#13 0x0000562482929097 in DetourNavigator::NavMeshDb::startTransaction(Sqlite3::TransactionMode) ()
+#14 0x0000562482992157 in DetourNavigator::DbWorker::run() ()
+#15 0x00007f6711ece4d4 in std::execute_native_thread_routine(void*) (__p=0x56248c1de750) at /usr/src/debug/gcc/libstdc++-v3/src/c++11/thread.cc:82
+#16 0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#17 0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 32 (Thread 0x7f666f7fe640 (LWP 9898) "openmw"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f6711ec7c51 in __gthread_cond_wait (__mutex=<optimized out>, __cond=<optimized out>) at /usr/src/debug/gcc-build/x86_64-pc-linux-gnu/libstdc++-v3/include/x86_64-pc-linux-gnu/bits/gthr-default.h:865
+        __e = <optimized out>
+#3  std::__condvar::wait(std::mutex&) (__m=<optimized out>, this=<optimized out>) at /usr/src/debug/gcc-build/x86_64-pc-linux-gnu/libstdc++-v3/include/bits/std_mutex.h:155
+        __e = <optimized out>
+#4  std::condition_variable::wait(std::unique_lock<std::mutex>&) (this=<optimized out>, __lock=<optimized out>) at /usr/src/debug/gcc/libstdc++-v3/src/c++11/condition_variable.cc:41
+#5  0x00005624825174f3 in void std::_V2::condition_variable_any::wait<std::shared_lock<std::shared_mutex> >(std::shared_lock<std::shared_mutex>&) ()
+#6  0x0000562482514f98 in MWPhysics::PhysicsTaskScheduler::worker() ()
+#7  0x00007f6711ece4d4 in std::execute_native_thread_routine(void*) (__p=0x56248c121250) at /usr/src/debug/gcc/libstdc++-v3/src/c++11/thread.cc:82
+#8  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#9  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 31 (Thread 0x7f666ffff640 (LWP 9897) "openmw"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f6711ec7c51 in __gthread_cond_wait (__mutex=<optimized out>, __cond=<optimized out>) at /usr/src/debug/gcc-build/x86_64-pc-linux-gnu/libstdc++-v3/include/x86_64-pc-linux-gnu/bits/gthr-default.h:865
+        __e = <optimized out>
+#3  std::__condvar::wait(std::mutex&) (__m=<optimized out>, this=<optimized out>) at /usr/src/debug/gcc-build/x86_64-pc-linux-gnu/libstdc++-v3/include/bits/std_mutex.h:155
+        __e = <optimized out>
+#4  std::condition_variable::wait(std::unique_lock<std::mutex>&) (this=<optimized out>, __lock=<optimized out>) at /usr/src/debug/gcc/libstdc++-v3/src/c++11/condition_variable.cc:41
+#5  0x00005624825174f3 in void std::_V2::condition_variable_any::wait<std::shared_lock<std::shared_mutex> >(std::shared_lock<std::shared_mutex>&) ()
+#6  0x0000562482514f98 in MWPhysics::PhysicsTaskScheduler::worker() ()
+#7  0x00007f6711ece4d4 in std::execute_native_thread_routine(void*) (__p=0x56248655a880) at /usr/src/debug/gcc/libstdc++-v3/src/c++11/thread.cc:82
+#8  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#9  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 30 (Thread 0x7f66957fa640 (LWP 9896) "openmw"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f6711ec7c51 in __gthread_cond_wait (__mutex=<optimized out>, __cond=<optimized out>) at /usr/src/debug/gcc-build/x86_64-pc-linux-gnu/libstdc++-v3/include/x86_64-pc-linux-gnu/bits/gthr-default.h:865
+        __e = <optimized out>
+#3  std::__condvar::wait(std::mutex&) (__m=<optimized out>, this=<optimized out>) at /usr/src/debug/gcc-build/x86_64-pc-linux-gnu/libstdc++-v3/include/bits/std_mutex.h:155
+        __e = <optimized out>
+#4  std::condition_variable::wait(std::unique_lock<std::mutex>&) (this=<optimized out>, __lock=<optimized out>) at /usr/src/debug/gcc/libstdc++-v3/src/c++11/condition_variable.cc:41
+#5  0x00005624825174f3 in void std::_V2::condition_variable_any::wait<std::shared_lock<std::shared_mutex> >(std::shared_lock<std::shared_mutex>&) ()
+#6  0x0000562482514f98 in MWPhysics::PhysicsTaskScheduler::worker() ()
+#7  0x00007f6711ece4d4 in std::execute_native_thread_routine(void*) (__p=0x56248b1020f0) at /usr/src/debug/gcc/libstdc++-v3/src/c++11/thread.cc:82
+#8  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#9  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 29 (Thread 0x7f6695ffb640 (LWP 9895) "openmw"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f6711ec7c51 in __gthread_cond_wait (__mutex=<optimized out>, __cond=<optimized out>) at /usr/src/debug/gcc-build/x86_64-pc-linux-gnu/libstdc++-v3/include/x86_64-pc-linux-gnu/bits/gthr-default.h:865
+        __e = <optimized out>
+#3  std::__condvar::wait(std::mutex&) (__m=<optimized out>, this=<optimized out>) at /usr/src/debug/gcc-build/x86_64-pc-linux-gnu/libstdc++-v3/include/bits/std_mutex.h:155
+        __e = <optimized out>
+#4  std::condition_variable::wait(std::unique_lock<std::mutex>&) (this=<optimized out>, __lock=<optimized out>) at /usr/src/debug/gcc/libstdc++-v3/src/c++11/condition_variable.cc:41
+#5  0x00005624825174f3 in void std::_V2::condition_variable_any::wait<std::shared_lock<std::shared_mutex> >(std::shared_lock<std::shared_mutex>&) ()
+#6  0x0000562482514f98 in MWPhysics::PhysicsTaskScheduler::worker() ()
+#7  0x00007f6711ece4d4 in std::execute_native_thread_routine(void*) (__p=0x5624871bd3b0) at /usr/src/debug/gcc/libstdc++-v3/src/c++11/thread.cc:82
+#8  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#9  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 28 (Thread 0x7f66967fc640 (LWP 9892) "openmw"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b7f518 in __new_sem_wait_slow64.constprop.0 () at /usr/lib/libc.so.6
+#2  0x00007f6714ac9839 in  () at /usr/lib/libopenal.so.1
+#3  0x00007f6711ece4d4 in std::execute_native_thread_routine(void*) (__p=0x562484cea080) at /usr/src/debug/gcc/libstdc++-v3/src/c++11/thread.cc:82
+#4  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#5  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 27 (Thread 0x7f6696ffd640 (LWP 9891) "openmw"):
+#0  0x00007f6711bf02af in poll () at /usr/lib/libc.so.6
+#1  0x00007f6714b1ff52 in  () at /usr/lib/libopenal.so.1
+#2  0x00007f66f05ad751 in pa_mainloop_poll () at /usr/lib/libpulse.so.0
+#3  0x00007f66f05b7afd in pa_mainloop_iterate () at /usr/lib/libpulse.so.0
+#4  0x00007f66f05b7bb1 in pa_mainloop_run () at /usr/lib/libpulse.so.0
+#5  0x00007f6714b20101 in  () at /usr/lib/libopenal.so.1
+#6  0x00007f6711ece4d4 in std::execute_native_thread_routine(void*) (__p=0x562483b1f650) at /usr/src/debug/gcc/libstdc++-v3/src/c++11/thread.cc:82
+#7  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#8  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 26 (Thread 0x7f66977fe640 (LWP 9890) "openmw"):
+#0  0x00007f6711bf02af in poll () at /usr/lib/libc.so.6
+#1  0x00007f6714b1ff52 in  () at /usr/lib/libopenal.so.1
+#2  0x00007f66f05ad751 in pa_mainloop_poll () at /usr/lib/libpulse.so.0
+#3  0x00007f66f05b7afd in pa_mainloop_iterate () at /usr/lib/libpulse.so.0
+#4  0x00007f66f05b7bb1 in pa_mainloop_run () at /usr/lib/libpulse.so.0
+#5  0x00007f6714b20101 in  () at /usr/lib/libopenal.so.1
+#6  0x00007f6711ece4d4 in std::execute_native_thread_routine(void*) (__p=0x562484cf2ec0) at /usr/src/debug/gcc/libstdc++-v3/src/c++11/thread.cc:82
+#7  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#8  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 25 (Thread 0x7f6697fff640 (LWP 9887) "openmw"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76f32 in pthread_cond_clockwait@GLIBC_2.30 () at /usr/lib/libc.so.6
+#2  0x00005624823d8908 in std::thread::_State_impl<std::thread::_Invoker<std::tuple<MWSound::OpenAL_Output::StreamThread::StreamThread()::{lambda()#1}> > >::_M_run() ()
+#3  0x00007f6711ece4d4 in std::execute_native_thread_routine(void*) (__p=0x562483afced0) at /usr/src/debug/gcc/libstdc++-v3/src/c++11/thread.cc:82
+#4  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#5  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 24 (Thread 0x7f66b8ff9640 (LWP 9886) "openmw"):
+#0  0x0000562482968dd9 in std::_Rb_tree<float, std::pair<float const, Nif::KeyT<osg::Quat> >, std::_Select1st<std::pair<float const, Nif::KeyT<osg::Quat> > >, std::less<float>, std::allocator<std::pair<float const, Nif::KeyT<osg::Quat> > > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<float const, Nif::KeyT<osg::Quat> > >, float const&) ()
+#1  0x0000562482968f6a in  ()
+#2  0x00005624829691a8 in Nif::KeyMapT<osg::Quat, &Nif::NIFStream::getQuaternion>::read(Nif::NIFStream*, bool) ()
+#3  0x0000562482961838 in Nif::NiKeyframeData::read(Nif::NIFStream*) ()
+#4  0x00005624827ccac1 in Nif::NIFFile::parse(std::unique_ptr<std::istream, std::default_delete<std::istream> >&&) ()
+#5  0x00005624827cdaa5 in Nif::NIFFile::NIFFile(std::unique_ptr<std::istream, std::default_delete<std::istream> >&&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) ()
+#6  0x000056248272dd01 in Resource::KeyframeManager::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) ()
+#7  0x0000562481f2cbc9 in MWRender::PreloadCommonAssetsWorkItem::doWork() ()
+#8  0x000056248277fd22 in SceneUtil::WorkThread::run() ()
+#9  0x00007f6711ece4d4 in std::execute_native_thread_routine(void*) (__p=0x562484a8b500) at /usr/src/debug/gcc/libstdc++-v3/src/c++11/thread.cc:82
+#10 0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#11 0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 23 (Thread 0x7f66b97fa640 (LWP 9885) "openmw"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f6712a1a884 in OpenThreads::Condition::wait(OpenThreads::Mutex*) (this=this@entry=0x562483b28c58, mutex=mutex@entry=0x562483b28c40) at /usr/src/debug/osg/src/OpenThreads/pthreads/PThreadCondition.cpp:137
+        pd = <optimized out>
+        mpd = <optimized out>
+#3  0x00007f671551a68c in osgViewer::Renderer::ThreadSafeQueue::takeFront() (this=0x562483b28c40) at /usr/src/debug/osg/src/osgViewer/Renderer.cpp:337
+        lock = {m_lock = @0x562483b28c40}
+#4  0x00007f671551b2a1 in osgViewer::Renderer::draw() (this=0x562483b28ba0) at /usr/src/debug/osg/src/osgViewer/Renderer.cpp:722
+        sceneView = <optimized out>
+#5  0x00007f6714e1e7f9 in osg::GraphicsContext::runOperations() (this=0x562483e00550) at /usr/src/debug/osg/src/osg/GraphicsContext.cpp:696
+        camera = <optimized out>
+        itr = 0x562483b3d2b0
+        camerasCopy = std::vector of length 1, capacity 1 = {0x562483b3d2b0}
+#6  0x00007f6714e6ff05 in osg::OperationThread::run() (this=this@entry=0x56248423ca30) at /usr/src/debug/osg/src/osg/OperationThread.cpp:438
+        operation = {_ptr = 0x56248423ccb0}
+        operationQueue = {_ptr = 0x56248423cb60}
+        firstTime = false
+#7  0x00007f6714e20740 in osg::GraphicsThread::run() (this=0x56248423ca30) at /usr/src/debug/osg/src/osg/GraphicsThread.cpp:38
+        graphicsContext = <optimized out>
+#8  0x00007f6712a1a2d8 in OpenThreads::ThreadPrivateActions::StartThread(void*) (data=0x56248423ca48) at /usr/src/debug/osg/src/OpenThreads/pthreads/PThread.cpp:221
+        thread = 0x56248423ca48
+        pd = 0x562483f2f9f0
+        tcs = {thread = 0x56248423ca48, runflag = 0x562483f2fa00}
+        status = <optimized out>
+#9  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#10 0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 22 (Thread 0x7f66b9ffb640 (LWP 9884) "openmw:gdrv0"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f66ffac52ac in  () at /usr/lib/dri/radeonsi_dri.so
+#3  0x00007f66ffabe93c in  () at /usr/lib/dri/radeonsi_dri.so
+#4  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#5  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 21 (Thread 0x7f66ba7fc640 (LWP 9881) "openmw:shlo4"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f66ffac52ac in  () at /usr/lib/dri/radeonsi_dri.so
+#3  0x00007f66ffabe93c in  () at /usr/lib/dri/radeonsi_dri.so
+#4  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#5  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 20 (Thread 0x7f66baffd640 (LWP 9880) "openmw:shlo3"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f66ffac52ac in  () at /usr/lib/dri/radeonsi_dri.so
+#3  0x00007f66ffabe93c in  () at /usr/lib/dri/radeonsi_dri.so
+#4  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#5  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 19 (Thread 0x7f66bb7fe640 (LWP 9879) "openmw:shlo2"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f66ffac52ac in  () at /usr/lib/dri/radeonsi_dri.so
+#3  0x00007f66ffabe93c in  () at /usr/lib/dri/radeonsi_dri.so
+#4  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#5  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 18 (Thread 0x7f66bbfff640 (LWP 9878) "openmw:shlo1"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f66ffac52ac in  () at /usr/lib/dri/radeonsi_dri.so
+#3  0x00007f66ffabe93c in  () at /usr/lib/dri/radeonsi_dri.so
+#4  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#5  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 17 (Thread 0x7f66e8ff9640 (LWP 9877) "openmw:shlo0"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f66ffac52ac in  () at /usr/lib/dri/radeonsi_dri.so
+#3  0x00007f66ffabe93c in  () at /usr/lib/dri/radeonsi_dri.so
+#4  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#5  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 16 (Thread 0x7f66e97fa640 (LWP 9876) "openmw:sh11"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f66ffac52ac in  () at /usr/lib/dri/radeonsi_dri.so
+#3  0x00007f66ffabe93c in  () at /usr/lib/dri/radeonsi_dri.so
+#4  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#5  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 15 (Thread 0x7f66e9ffb640 (LWP 9875) "openmw:sh10"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f66ffac52ac in  () at /usr/lib/dri/radeonsi_dri.so
+#3  0x00007f66ffabe93c in  () at /usr/lib/dri/radeonsi_dri.so
+#4  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#5  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 14 (Thread 0x7f66ea7fc640 (LWP 9874) "openmw:sh9"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f66ffac52ac in  () at /usr/lib/dri/radeonsi_dri.so
+#3  0x00007f66ffabe93c in  () at /usr/lib/dri/radeonsi_dri.so
+#4  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#5  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 13 (Thread 0x7f66eaffd640 (LWP 9873) "openmw:sh8"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f66ffac52ac in  () at /usr/lib/dri/radeonsi_dri.so
+#3  0x00007f66ffabe93c in  () at /usr/lib/dri/radeonsi_dri.so
+#4  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#5  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 12 (Thread 0x7f66ebfff640 (LWP 9872) "openmw:sh7"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f66ffac52ac in  () at /usr/lib/dri/radeonsi_dri.so
+#3  0x00007f66ffabe93c in  () at /usr/lib/dri/radeonsi_dri.so
+#4  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#5  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 11 (Thread 0x7f66f0ff9640 (LWP 9871) "openmw:sh6"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f66ffac52ac in  () at /usr/lib/dri/radeonsi_dri.so
+#3  0x00007f66ffabe93c in  () at /usr/lib/dri/radeonsi_dri.so
+#4  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#5  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 10 (Thread 0x7f66f17fa640 (LWP 9870) "openmw:sh5"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f66ffac52ac in  () at /usr/lib/dri/radeonsi_dri.so
+#3  0x00007f66ffabe93c in  () at /usr/lib/dri/radeonsi_dri.so
+#4  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#5  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 9 (Thread 0x7f66f1ffb640 (LWP 9869) "openmw:sh4"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f66ffac52ac in  () at /usr/lib/dri/radeonsi_dri.so
+#3  0x00007f66ffabe93c in  () at /usr/lib/dri/radeonsi_dri.so
+#4  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#5  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 8 (Thread 0x7f66f27fc640 (LWP 9868) "openmw:sh3"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f66ffac52ac in  () at /usr/lib/dri/radeonsi_dri.so
+#3  0x00007f66ffabe93c in  () at /usr/lib/dri/radeonsi_dri.so
+#4  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#5  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 7 (Thread 0x7f66f2ffd640 (LWP 9867) "openmw:sh2"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f66ffac52ac in  () at /usr/lib/dri/radeonsi_dri.so
+#3  0x00007f66ffabe93c in  () at /usr/lib/dri/radeonsi_dri.so
+#4  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#5  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 6 (Thread 0x7f66f37fe640 (LWP 9866) "openmw:sh1"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f66ffac52ac in  () at /usr/lib/dri/radeonsi_dri.so
+#3  0x00007f66ffabe93c in  () at /usr/lib/dri/radeonsi_dri.so
+#4  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#5  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 5 (Thread 0x7f66eb7fe640 (LWP 9865) "openmw:sh0"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f66ffac52ac in  () at /usr/lib/dri/radeonsi_dri.so
+#3  0x00007f66ffabe93c in  () at /usr/lib/dri/radeonsi_dri.so
+#4  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#5  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 4 (Thread 0x7f66f3fff640 (LWP 9864) "openmw:disk$0"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f66ffac52ac in  () at /usr/lib/dri/radeonsi_dri.so
+#3  0x00007f66ffabe93c in  () at /usr/lib/dri/radeonsi_dri.so
+#4  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#5  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 3 (Thread 0x7f66f8f81640 (LWP 9863) "openmw:cs0"):
+#0  0x00007f6711b7415a in __futex_abstimed_wait_common () at /usr/lib/libc.so.6
+#1  0x00007f6711b76960 in pthread_cond_wait@@GLIBC_2.3.2 () at /usr/lib/libc.so.6
+#2  0x00007f66ffac52ac in  () at /usr/lib/dri/radeonsi_dri.so
+#3  0x00007f66ffabe93c in  () at /usr/lib/dri/radeonsi_dri.so
+#4  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#5  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 2 (Thread 0x7f6701d7f640 (LWP 9853) "libusb_event"):
+#0  0x00007f6711bf02af in poll () at /usr/lib/libc.so.6
+#1  0x00007f6701e63a95 in  () at /usr/lib/libusb-1.0.so.0
+#2  0x00007f6711b775c2 in start_thread () at /usr/lib/libc.so.6
+#3  0x00007f6711bfc584 in clone () at /usr/lib/libc.so.6
+
+Thread 1 (Thread 0x7f6702465040 (LWP 9851) "openmw"):
+#0  0x00007f6712f7c368 in MyGUI::LayerItem::attachToLayerItemNode(MyGUI::ILayerNode*, bool) () at /usr/lib/libMyGUIEngine.so.3.4.1
+#1  0x00007f6712f7cb7e in MyGUI::LayerItem::addChildItem(MyGUI::LayerItem*) () at /usr/lib/libMyGUIEngine.so.3.4.1
+#2  0x00007f671306641f in MyGUI::Widget::_updateChilds() () at /usr/lib/libMyGUIEngine.so.3.4.1
+#3  0x0000562482062d6e in MWGui::LocalMapBase::init(MyGUI::ScrollView*, MyGUI::ImageBox*, int) ()
+#4  0x0000562482066ca2 in MWGui::MapWindow::MapWindow(MWGui::CustomMarkerCollection&, MWGui::DragAndDrop*, MWRender::LocalMap*, SceneUtil::WorkQueue*) ()
+#5  0x000056248201f5a3 in MWGui::WindowManager::initUI() ()
+#6  0x00005624825feb99 in OMW::Engine::prepareEngine(Settings::Manager&) ()
+#7  0x00005624826015f4 in OMW::Engine::go() ()
+#8  0x00005624825f8502 in runApplication(int, char**) ()
+#9  0x000056248286498e in wrapApplication(int (*)(int, char**), int, char**, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool) ()
+#10 0x0000562481f165ce in main ()
+[Inferior 1 (process 9851) detached]
+../../gdb/gdbtypes.c:5575: internal-error: Unexpected type field location kind: 4
+A problem internal to GDB has been detected,
+further debugging may prove unreliable.
+Quit this debugging session? (y or n) [answered Y; input not from terminal]
+
+Failed to create a crash report. Please make sure that 'gdb' is installed and present in PATH then crash again.
+Current PATH: /usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/xerxes/bin

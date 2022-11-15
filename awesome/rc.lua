@@ -12,7 +12,7 @@ require("awful.autofocus")
 require("awful.hotkeys_popup.keys")
 require("error-handling")
 
-local current_theme = "onedark"
+local current_theme = "everforest"
 
 RC = {}
 RC.colors = require("theme/" .. current_theme .. "/colors")
@@ -28,7 +28,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 beautiful.useless_gap = 3
 beautiful.gap_single_client = true
-beautiful.wallpaper = "~/Pictures/desert-with-pyramids-wallpaper.png"
+beautiful.wallpaper = "~/Pictures/"
 modkey = RC.vars.modkey
 awful.layout.layouts = RC.vars.layouts
 terminal = RC.vars.terminal
@@ -73,10 +73,12 @@ RC.rules = require("rules")
 awful.rules.rules = RC.rules
 client.connect_signal("manage", function(c)
     c.shape = gears.shape.rounded_rect
-    awful.spawn.with_shell("compton")
-    awful.spawn.with_shell("feh --bg-fill ~/Pictures/BladeRunnerWallpaper1.jpg")
+    awful.spawn.with_shell("picom")
+    awful.spawn.with_shell("feh --bg-fill ~/Pictures/FoggyForest.jpg")
     awful.spawn.with_shell(
         "xrandr --output DisplayPort-1 --auto --output HDMI-A-0 --primary --left-of DisplayPort-1")
+    awful.spawn
+        .with_shell("/home/xerxes/Documents/code/scripts/openrgbPatch.sh")
 end)
 -- }}}
 

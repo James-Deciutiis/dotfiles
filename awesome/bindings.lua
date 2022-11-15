@@ -127,6 +127,11 @@ end, {description = "restore minimized", group = "client"}), -- Prompt
 awful.key({modkey}, "r", function() awful.util.spawn("rofi -show run") end,
           {description = "run prompt", group = "launcher"}),
 
+                                       awful.key({modkey}, "a", function()
+    awful.util.spawn(
+        "/home/xerxes/Documents/code/scripts/runRofiCommandsInBash.sh")
+end, {description = "run prompt to bash", group = "launcher"}),
+
                                        awful.key({modkey}, "x", function()
     awful.prompt.run {
         prompt = "Run Lua code: ",

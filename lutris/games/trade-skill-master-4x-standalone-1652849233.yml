@@ -1,0 +1,9 @@
+game:
+  arch: win64
+  exe: drive_c/Program Files (x86)/TradeSkillMaster Application/app/TSMApplication.exe
+  prefix: /home/xerxes/Games/trade-skill-master
+  working_dir: /home/xerxes/Games/trade-skill-master
+system:
+  terminal: true
+wine:
+  version: lutris-fshack-7.2-x86_64
