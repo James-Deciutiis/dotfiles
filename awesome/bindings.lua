@@ -1,5 +1,6 @@
 local gears = require("gears")
 local awful = require("awful")
+local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 local hotkeys_popup = require("awful.hotkeys_popup")
 local naughty = require("naughty")
 
@@ -11,8 +12,13 @@ bindings.globalkeys = gears.table.join(awful.key({modkey}, "s",
                                                  hotkeys_popup.show_help, {
     description = "show help",
     group = "awesome"
-}), awful.key({modkey}, "y", function() naughty.toggle() end,
-              {description = "Toggle", group = "hotkeys"}),
+}), awful.key({modkey}, "]", function() volume_widget:inc(5) end), awful.key(
+                                           {modkey}, "[",
+                                           function() volume_widget:dec(5) end),
+                                       awful.key({modkey}, "\\", function()
+    volume_widget:toggle()
+end), awful.key({modkey}, "y", function() naughty.toggle() end,
+                {description = "Toggle", group = "hotkeys"}),
                                        awful.key({modkey}, "Left",
                                                  awful.tag.viewprev, {
     description = "view previous",
@@ -128,8 +134,7 @@ awful.key({modkey}, "r", function() awful.util.spawn("rofi -show run") end,
           {description = "run prompt", group = "launcher"}),
 
                                        awful.key({modkey}, "a", function()
-    awful.util.spawn(
-        "/home/magi/documents/scripts/runRofiCommandsInBash.sh")
+    awful.util.spawn("/home/magi/documents/scripts/runRofiCommandsInBash.sh")
 end, {description = "run prompt to bash", group = "launcher"}),
 
                                        awful.key({modkey}, "x", function()

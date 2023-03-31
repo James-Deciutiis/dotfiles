@@ -1,4 +1,3 @@
-local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 local calendar_widget = require("awesome-wm-widgets.calendar-widget.calendar")
 local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 local gears = require("gears")
@@ -33,8 +32,7 @@ local tasklist_buttons = gears.table.join(
         awful.client.focus.byidx(-1)
     end))
 
--- Create a taglist widget
-mywidgets.taglist = function(s)
+mywidgets.default_taglist = function(s)
     return awful.widget.taglist {
         screen = s,
         filter = awful.widget.taglist.filter.all,
@@ -42,8 +40,7 @@ mywidgets.taglist = function(s)
     }
 end
 
--- Create a tasklist widget
-mywidgets.tasklist = function(s)
+mywidgets.default_tasklist = function(s)
     return awful.widget.tasklist {
         screen = s,
         filter = awful.widget.tasklist.filter.currenttags,
@@ -51,24 +48,29 @@ mywidgets.tasklist = function(s)
     }
 end
 
+mywidgets.mywidget_container = function(widget, bgcolor, fgcolor)
+    return {
+        {
+            {
+                {layout = wibox.layout.fixed.horizontal, widget},
+                left = 10,
+                right = 10,
+                widget = wibox.container.margin
+            },
+            shape = gears.shape.rounded_rect,
+            bg = bgcolor,
+            fg = fgcolor,
+            shape_border_color = colors['color0'],
+            shape_border_width = 1,
+            widget = wibox.container.background
+        },
+        layout = wibox.layout.fixed.horizontal
+    }
+end
+
 mywidgets.mytaglist = function(s)
     awful.tag({"HOME", "WEB", "EDIT", "READ", "CHAT", "MISC"}, s,
               awful.layout.layouts[1])
-
-    -- Create an imagebox widget which will contain an icon indicating which layout we're using.
-    -- We need one layoutbox per screen.
-    s.mylayoutbox = awful.widget.layoutbox(s)
-    s.mylayoutbox:buttons(gears.table.join(
-                              awful.button({}, 1,
-                                           function() awful.layout.inc(1) end),
-                              awful.button({}, 3,
-                                           function()
-            awful.layout.inc(-1)
-        end), awful.button({}, 4, function() awful.layout.inc(1) end),
-                              awful.button({}, 5,
-                                           function()
-            awful.layout.inc(-1)
-        end)))
 
     return awful.widget.taglist {
         screen = s,
@@ -125,18 +127,9 @@ mywidgets.mytaglist = function(s)
     }
 end
 
-mywidgets.clockwidget = function()
-    return calendar_widget({
-        theme = 'nord',
-        placement = 'top_right',
-        start_sunday = true,
-        radius = 8,
-        previous_month_button = 1,
-        next_month_button = 3
-    })
+mywidgets.tbox_seperator = function(string)
+    return wibox.widget.textbox(string and string or "  ")
 end
-
-mywidgets.tbox_seperator = function() return wibox.widget.textbox(" | ") end
 
 mywidgets.my_systray = function()
     return {
@@ -165,8 +158,16 @@ end
 
 mywidgets.mytextclock = function()
     local clock = wibox.widget.textclock()
+    local cal = calendar_widget({
+        theme = 'nord',
+        placement = 'top_right',
+        start_sunday = true,
+        radius = 8,
+        previous_month_button = 1,
+        next_month_button = 3
+    })
     clock:connect_signal("button::press", function(_, _, _, button)
-        if button == 1 then cw.toggle() end
+        if button == 1 then cal.toggle() end
     end)
 
     return clock
