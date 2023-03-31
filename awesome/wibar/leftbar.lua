@@ -1,40 +1,30 @@
-local gears = require("gears")
-local naughty = require("naughty")
-local awful = require("awful")
 local wibox = require("wibox")
-local beautiful = require("beautiful")
+local gears = require("gears")
 local mywidgets = RC.mywidgets
 local colors = RC.colors
 
 local leftbar = {}
 leftbar.makeLeftbar = function(s)
-    awful.tag({" HOME ", "  WEB ", "  EDIT ", "  READ ", "  CHAT ", "  MISC "},
-              s, awful.layout.layouts[1])
-
     return {
         {
-            { -- taglist
-                {
-                    {
-                        mywidgets.mytaglist(s),
-                        layout = wibox.layout.fixed.horizontal
-                    },
-                    left = 10,
-                    right = 10,
-                    top = 1.5,
-                    bottom = 1.5,
-                    widget = wibox.container.margin
+            {
+                layout = wibox.layout.align.horizontal,
+                { -- Left widgets
+                    mywidgets.mytaglist(s),
+                    layout = wibox.layout.align.horizontal
                 },
-                shape = gears.shape.rounded_rect,
-                bg = colors['color0'],
-                fg = colors['color4'],
-                shape_border_color = colors['color4'],
-                shape_border_width = 4,
-                widget = wibox.container.background
+                left = 10,
+                right = 10,
+                top = 3,
+                bottom = 3,
+                widget = wibox.container.margin
             },
-            shape_clip = true,
             shape = gears.shape.rectangle,
-            layout = wibox.layout.fixed.horizontal
+            bg = colors['color0'],
+            fg = colors['color2'],
+            shape_border_color = colors['color0'],
+            shape_border_width = 4,
+            widget = wibox.container.background
         },
         layout = wibox.layout.fixed.horizontal
     }

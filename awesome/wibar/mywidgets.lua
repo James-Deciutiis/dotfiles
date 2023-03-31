@@ -1,3 +1,6 @@
+local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
+local calendar_widget = require("awesome-wm-widgets.calendar-widget.calendar")
+local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 local gears = require("gears")
 local awful = require("awful")
 local wibox = require("wibox")
@@ -30,6 +33,164 @@ local tasklist_buttons = gears.table.join(
         awful.client.focus.byidx(-1)
     end))
 
+-- Create a taglist widget
+mywidgets.taglist = function(s)
+    return awful.widget.taglist {
+        screen = s,
+        filter = awful.widget.taglist.filter.all,
+        buttons = taglist_buttons
+    }
+end
+
+-- Create a tasklist widget
+mywidgets.tasklist = function(s)
+    return awful.widget.tasklist {
+        screen = s,
+        filter = awful.widget.tasklist.filter.currenttags,
+        buttons = tasklist_buttons
+    }
+end
+
+mywidgets.mytaglist = function(s)
+    awful.tag({"HOME", "WEB", "EDIT", "READ", "CHAT", "MISC"}, s,
+              awful.layout.layouts[1])
+
+    -- Create an imagebox widget which will contain an icon indicating which layout we're using.
+    -- We need one layoutbox per screen.
+    s.mylayoutbox = awful.widget.layoutbox(s)
+    s.mylayoutbox:buttons(gears.table.join(
+                              awful.button({}, 1,
+                                           function() awful.layout.inc(1) end),
+                              awful.button({}, 3,
+                                           function()
+            awful.layout.inc(-1)
+        end), awful.button({}, 4, function() awful.layout.inc(1) end),
+                              awful.button({}, 5,
+                                           function()
+            awful.layout.inc(-1)
+        end)))
+
+    return awful.widget.taglist {
+        screen = s,
+        filter = awful.widget.taglist.filter.all,
+        buttons = taglist_buttons,
+        widget_template = {
+            {
+                {
+                    {id = 'index_role', widget = wibox.widget.textbox},
+                    {id = 'text_role', widget = wibox.widget.textbox},
+                    {id = 'icon_role', widget = wibox.widget.imagebox},
+                    layout = wibox.layout.fixed.horizontal
+                },
+                left = 7,
+                right = 7,
+                widget = wibox.container.margin
+            },
+            widget = wibox.container.background,
+            create_callback = function(self, c3, index)
+                self:get_children_by_id('index_role')[1].markup = '<b> ' ..
+                                                                      index ..
+                                                                      ' </b>'
+                self.shape = gears.shape.rectangle
+                self.shape_border_width = 4
+                self.shape_border_color =
+                    c3.selected and colors['color2'] or colors['color0']
+
+                self.bg = c3.selected and colors['color2'] or colors['color0']
+                self.bg = c3.urgent and colors['color1'] or self.bg
+
+                self:connect_signal('mouse::enter',
+                                    function()
+                    self.bg = colors['color2']
+                end)
+                self.shape_border_color =
+                    c3.selected and colors['color2'] or colors['color0']
+
+                self:connect_signal('mouse::leave', function()
+                    self.bg = c3.selected and colors['color2'] or
+                                  colors['color0']
+                    self.shape_border_color =
+                        c3.selected and colors['color2'] or colors['color0']
+                end)
+            end,
+
+            update_callback = function(self, c3, index)
+                self:get_children_by_id('index_role')[1].markup = '<b> ' ..
+                                                                      index ..
+                                                                      ' </b>'
+
+                self.bg = c3.selected and colors['color2'] or colors['color0']
+                self.bg = c3.urgent and colors['color1'] or self.bg
+                self.shape_border_color =
+                    c3.selected and colors['color2'] or colors['color0']
+            end
+        },
+        layout = wibox.layout.fixed.horizontal
+    }
+end
+
+mywidgets.clockwidget = function()
+    return calendar_widget({
+        theme = 'nord',
+        placement = 'top_right',
+        start_sunday = true,
+        radius = 8,
+        previous_month_button = 1,
+        next_month_button = 3
+    })
+end
+
+mywidgets.tbox_seperator = function() return wibox.widget.textbox(" | ") end
+
+mywidgets.my_systray = function()
+    return {
+        {
+            {
+                tbox_seperator,
+                wibox.widget {
+                    wibox.widget.systray(),
+                    left = 10,
+                    top = 2,
+                    bottom = 2,
+                    right = 10,
+                    widget = wibox.container.margin
+                },
+
+                layout = wibox.layout.fixed.horizontal
+            },
+            bg = colors["color0"],
+            shape = gears.shape.rectangle,
+            shape_clip = true,
+            widget = wibox.container.background
+        },
+        layout = wibox.layout.fixed.horizontal
+    }
+end
+
+mywidgets.mytextclock = function()
+    local clock = wibox.widget.textclock()
+    clock:connect_signal("button::press", function(_, _, _, button)
+        if button == 1 then cw.toggle() end
+    end)
+
+    return clock
+end
+
+mywidgets.mylayoutbox = function(s)
+    local layoutbox = awful.widget.layoutbox(s)
+    layoutbox:buttons(gears.table.join(awful.button({}, 1, function()
+        awful.layout.inc(1)
+    end), awful.button({}, 3, function() awful.layout.inc(-1) end),
+                                       awful.button({}, 4, function()
+        awful.layout.inc(1)
+    end), awful.button({}, 5, function() awful.layout.inc(-1) end)))
+
+    return layoutbox
+end
+
+mywidgets.myvolumewidget =
+    function() return volume_widget {widget_type = "arc"} end
+
 mywidgets.tasklist = function(s)
     return awful.widget.tasklist {
         screen = s,
@@ -37,11 +198,8 @@ mywidgets.tasklist = function(s)
         buttons = tasklist_buttons,
         style = {
             bg_normal = colors['color0'],
-            bg_focus = colors['color5'],
-            bg_urgent = colors['color3'],
-            shape_border_color_focus = colors['color4'],
-            shape_border_color = colors['color0'],
-            shape_border_width = 2,
+            bg_focus = colors['color2'],
+            bg_urgent = colors['color1'],
             shape = gears.shape.rounded_rect
         },
         layout = {layout = wibox.layout.grid.horizontal, spacing = 15},
@@ -61,78 +219,6 @@ mywidgets.tasklist = function(s)
                 self:get_children_by_id("clienticon")[1].client = c
             end
         }
-    }
-end
-
-mywidgets.mytaglist = function(s)
-    return awful.widget.taglist {
-        screen = s,
-        filter = awful.widget.taglist.filter.all,
-        buttons = taglist_buttons,
-        widget_template = {
-            {
-                {
-                    {
-                        {
-                            {id = 'index_role', widget = wibox.widget.textbox},
-                            right = 6,
-                            left = 1,
-                            margins = 2,
-                            widget = wibox.container.margin
-                        },
-                        bg = colors['color0'],
-                        shape = gears.shape.circle,
-                        widget = wibox.container.background
-                    },
-                    {id = 'icon_role', widget = wibox.widget.imagebox},
-                    {id = 'text_role', widget = wibox.widget.textbox},
-                    layout = wibox.layout.fixed.horizontal
-                },
-                left = 7,
-                right = 7,
-                widget = wibox.container.margin
-            },
-            widget = wibox.container.background,
-            create_callback = function(self, c3, index)
-                self:get_children_by_id('index_role')[1].markup = '<b> ' ..
-                                                                      index ..
-                                                                      ' </b>'
-                self.shape = gears.shape.rounded_bar
-                self.shape_border_width = 2
-
-                self.bg = c3.selected and colors['color5'] or colors['color0']
-                self.shape_border_color =
-                    c3.selected and colors['color4'] or colors['color0']
-                self.bg = c3.urgent and colors['color3'] or self.bg
-
-                self:connect_signal('mouse::enter', function()
-                    self.shape_border_color = colors['color4']
-                    self.bg = colors['color13']
-                end)
-
-                self:connect_signal('mouse::leave', function()
-                    self.bg = c3.selected and colors['color5'] or
-                                  colors['color0']
-                    self.shape_border_color =
-                        c3.selected and colors['color4'] or colors['color0']
-                end)
-            end,
-
-            update_callback = function(self, c3, index)
-                self:get_children_by_id('index_role')[1].markup = '<b> ' ..
-                                                                      index ..
-                                                                      ' </b>'
-
-                self.bg = c3.selected and colors['color5'] or colors['color0']
-                self.shape_border_color =
-                    c3.selected and colors['color4'] or colors['color0']
-                self.bg = c3.urgent and colors['color3'] or self.bg
-                self.shape_border_color =
-                    c3.urgent and colors['color4'] or self.shape_border_color
-
-            end
-        },
-        layout = wibox.layout.fixed.horizontal
     }
 end
 

@@ -18,7 +18,7 @@ client.connect_signal("manage", function(c)
 end)
 
 client.connect_signal("property::fullscreen", function(c)
-    c.shape = c.fullscreen and gears.shape.rectangle or gears.shape.rounded_rect
+    c.shape = c.fullscreen and gears.shape.rectangle or gears.shape.rectangle
 end)
 
 -- Add a titlebar if titlebars_enabled is set to true in the rules.

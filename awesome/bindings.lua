@@ -129,7 +129,7 @@ awful.key({modkey}, "r", function() awful.util.spawn("rofi -show run") end,
 
                                        awful.key({modkey}, "a", function()
     awful.util.spawn(
-        "/home/xerxes/Documents/code/scripts/runRofiCommandsInBash.sh")
+        "/home/magi/documents/scripts/runRofiCommandsInBash.sh")
 end, {description = "run prompt to bash", group = "launcher"}),
 
                                        awful.key({modkey}, "x", function()

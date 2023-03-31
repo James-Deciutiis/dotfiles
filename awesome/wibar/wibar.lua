@@ -6,7 +6,7 @@ local beautiful = require("beautiful")
 
 local centerPadding = 1000
 local outterPadding = 10
-local mywidgets = RC.mywidgets
+-- local mywidgets = RC.mywidgets
 local leftbar = RC.leftbar
 local middlebar = RC.middlebar
 local rightbar = RC.rightbar
@@ -20,39 +20,62 @@ local function set_wallpaper(s)
     end
 end
 
-local function spacingWidget(width)
-    return wibox.widget {
-        forced_width = width,
-        color = '#ffff100',
-        shape = gears.shape.rectangle,
-        widget = wibox.widget.separator
-    }
-end
+local taglist_buttons = gears.table.join(
+                            awful.button({}, 1, function(t) t:view_only() end),
+                            awful.button({modkey}, 1, function(t)
+        if client.focus then client.focus:move_to_tag(t) end
+    end), awful.button({}, 3, awful.tag.viewtoggle),
+                            awful.button({modkey}, 3, function(t)
+        if client.focus then client.focus:toggle_tag(t) end
+    end), awful.button({}, 4, function(t) awful.tag.viewnext(t.screen) end),
+                            awful.button({}, 5, function(t)
+        awful.tag.viewprev(t.screen)
+    end))
 
+local tasklist_buttons = gears.table.join(
+                             awful.button({}, 1, function(c)
+        if c == client.focus then
+            c.minimized = true
+        else
+            c:emit_signal("request::activate", "tasklist", {raise = true})
+        end
+    end), awful.button({}, 3, function()
+        awful.menu.client_list({theme = {width = 250}})
+    end), awful.button({}, 4, function() awful.client.focus.byidx(1) end),
+                             awful.button({}, 5, function()
+        awful.client.focus.byidx(-1)
+    end))
+
+mytextclock = wibox.widget.textclock()
+
+-- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
 screen.connect_signal("property::geometry", set_wallpaper)
 awful.screen.connect_for_each_screen(function(s)
+    -- Wallpaper
     set_wallpaper(s)
 
     s.leftbar = leftbar.makeLeftbar(s)
     middlebar.init(s)
     s.rightbar = rightbar.makeRightbar(s)
 
+    -- Create the wibox
     s.mywibox = awful.wibar({
         position = "top",
         screen = s,
-        bg = beautiful.bg_normal .. "0",
-        border_width = 5,
-        height = 30
+        bg = colors['color0'],
+        border_width = 7,
+        height = 25
     })
 
+    -- Add widgets to the wibox
     s.mywibox:setup{
-        {
-            layout = wibox.layout.align.horizontal,
-            {s.leftbar, layout = wibox.layout.align.horizontal},
-            spacingWidget(centerPadding),
-            {s.rightbar, layout = wibox.layout.align.horizontal}
+        layout = wibox.layout.align.horizontal,
+        { -- Left widgets
+            s.leftbar,
+            layout = wibox.layout.align.horizontal
         },
-        margins = 1.5,
-        widget = wibox.container.margin
+        s.mytasklist, -- Middle widget
+        --- { ---- Right widgets 
+        {s.rightbar, layout = wibox.layout.fixed.horizontal}
     }
 end)

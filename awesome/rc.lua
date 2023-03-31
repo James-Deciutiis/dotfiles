@@ -28,7 +28,6 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 beautiful.useless_gap = 3
 beautiful.gap_single_client = true
-beautiful.wallpaper = "~/Pictures/"
 modkey = RC.vars.modkey
 awful.layout.layouts = RC.vars.layouts
 terminal = RC.vars.terminal
@@ -50,6 +49,9 @@ menubar.utils.terminal = RC.vars.terminal
 -- }}}
 
 -- {{{ Wibar
+beautiful.bg_systray = RC.colors['color0']
+beautiful.systray_icon_spacing = 3
+
 require("wibar.wibar")
 -- }}}
 
@@ -72,13 +74,9 @@ root.keys(globalkeys)
 RC.rules = require("rules")
 awful.rules.rules = RC.rules
 client.connect_signal("manage", function(c)
-    c.shape = gears.shape.rounded_rect
+    c.shape = gears.shape.rectangle
+    awful.spawn.with_shell("feh --bg-fill ~/pictures/nerv-wallpaper-blue.png")
     awful.spawn.with_shell("picom")
-    awful.spawn.with_shell("feh --bg-fill ~/Pictures/FoggyForest.jpg")
-    awful.spawn.with_shell(
-        "xrandr --output DisplayPort-1 --auto --output HDMI-A-0 --primary --left-of DisplayPort-1")
-    awful.spawn
-        .with_shell("/home/xerxes/Documents/code/scripts/openrgbPatch.sh")
 end)
 -- }}}
 
@@ -91,7 +89,6 @@ require("signals")
 naughty.config.presets.normal.bg = RC.colors['color0']
 naughty.config.presets.normal.border_color = RC.colors['color4']
 naughty.config.presets.normal.shape = gears.shape.rounded_rect
-naughty.config.presets.normal.border_width = 4
 
 -- for testing naughty.notify({title = "Achtung!", message = "You're idling", timeout = 0})
 -- }}}
