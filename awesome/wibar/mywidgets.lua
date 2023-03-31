@@ -77,20 +77,15 @@ mywidgets.mytaglist = function(s)
         widget_template = {
             {
                 {
-                    {id = 'index_role', widget = wibox.widget.textbox},
                     {id = 'text_role', widget = wibox.widget.textbox},
-                    {id = 'icon_role', widget = wibox.widget.imagebox},
                     layout = wibox.layout.fixed.horizontal
                 },
-                left = 7,
-                right = 7,
+                left = 10,
+                right = 10,
                 widget = wibox.container.margin
             },
             widget = wibox.container.background,
-            create_callback = function(self, c3, index)
-                self:get_children_by_id('index_role')[1].markup = '<b> ' ..
-                                                                      index ..
-                                                                      ' </b>'
+            create_callback = function(self, c3)
                 self.shape = gears.shape.rectangle
                 self.shape_border_width = 4
                 self.shape_border_color =
@@ -98,6 +93,7 @@ mywidgets.mytaglist = function(s)
 
                 self.bg = c3.selected and colors['color2'] or colors['color0']
                 self.bg = c3.urgent and colors['color1'] or self.bg
+                self.fg = c3.selected and colors['color0'] or colors['color2']
 
                 self:connect_signal('mouse::enter',
                                     function()
@@ -105,24 +101,24 @@ mywidgets.mytaglist = function(s)
                 end)
                 self.shape_border_color =
                     c3.selected and colors['color2'] or colors['color0']
+                self.fg = c3.selected and colors['color0'] or colors['color2']
 
                 self:connect_signal('mouse::leave', function()
                     self.bg = c3.selected and colors['color2'] or
                                   colors['color0']
                     self.shape_border_color =
                         c3.selected and colors['color2'] or colors['color0']
+                    self.fg = c3.selected and colors['color0'] or
+                                  colors['color2']
                 end)
             end,
 
-            update_callback = function(self, c3, index)
-                self:get_children_by_id('index_role')[1].markup = '<b> ' ..
-                                                                      index ..
-                                                                      ' </b>'
-
+            update_callback = function(self, c3)
                 self.bg = c3.selected and colors['color2'] or colors['color0']
                 self.bg = c3.urgent and colors['color1'] or self.bg
                 self.shape_border_color =
                     c3.selected and colors['color2'] or colors['color0']
+                self.fg = c3.selected and colors['color0'] or colors['color2']
             end
         },
         layout = wibox.layout.fixed.horizontal
@@ -207,13 +203,11 @@ mywidgets.tasklist = function(s)
             {
                 {id = "clienticon", widget = awful.widget.clienticon},
                 id = "clienticon_margin_role",
-                top = 2,
-                left = 7.5,
-                bottom = 2,
+                left = 4.5,
                 widget = wibox.container.margin
             },
             id = "background_role",
-            forced_width = 30,
+            forced_width = 20,
             widget = wibox.container.background,
             create_callback = function(self, c)
                 self:get_children_by_id("clienticon")[1].client = c

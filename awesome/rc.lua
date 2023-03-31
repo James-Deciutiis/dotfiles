@@ -49,9 +49,6 @@ menubar.utils.terminal = RC.vars.terminal
 -- }}}
 
 -- {{{ Wibar
-beautiful.bg_systray = RC.colors['color0']
-beautiful.systray_icon_spacing = 3
-
 require("wibar.wibar")
 -- }}}
 
@@ -75,7 +72,8 @@ RC.rules = require("rules")
 awful.rules.rules = RC.rules
 client.connect_signal("manage", function(c)
     c.shape = gears.shape.rectangle
-    awful.spawn.with_shell("feh --bg-fill ~/pictures/nerv-wallpaper-blue.png")
+    awful.spawn.with_shell(
+        "feh --bg-fill ~/pictures/greek-mountain-building.jpg")
     awful.spawn.with_shell("picom")
 end)
 -- }}}
