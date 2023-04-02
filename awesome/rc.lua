@@ -85,8 +85,9 @@ require("signals")
 -- {{{ Notifications
 
 naughty.config.presets.normal.bg = RC.colors['color0']
-naughty.config.presets.normal.border_color = RC.colors['color4']
-naughty.config.presets.normal.shape = gears.shape.rounded_rect
+naughty.config.presets.normal.border_color = RC.colors['color2']
+naughty.config.presets.normal.shape = gears.shape.rectangle
+naughty.config.presets.normal.border_width = 4
 
 -- for testing naughty.notify({title = "Achtung!", message = "You're idling", timeout = 0})
 -- }}}
