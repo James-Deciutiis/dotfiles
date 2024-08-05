@@ -91,36 +91,36 @@ mywidgets.mytaglist = function(s)
                 self.shape = gears.shape.rectangle
                 self.shape_border_width = 4
                 self.shape_border_color =
-                    c3.selected and colors['color2'] or colors['color0']
+                    c3.selected and colors['color4'] or colors['color0']
 
-                self.bg = c3.selected and colors['color2'] or colors['color0']
+                self.bg = c3.selected and colors['color4'] or colors['color0']
                 self.bg = c3.urgent and colors['color1'] or self.bg
-                self.fg = c3.selected and colors['color0'] or colors['color2']
+                self.fg = c3.selected and colors['color0'] or colors['color4']
 
                 self:connect_signal('mouse::enter',
                                     function()
-                    self.bg = colors['color2']
+                    self.bg = colors['color4']
                 end)
                 self.shape_border_color =
-                    c3.selected and colors['color2'] or colors['color0']
-                self.fg = c3.selected and colors['color0'] or colors['color2']
+                    c3.selected and colors['color4'] or colors['color0']
+                self.fg = c3.selected and colors['color0'] or colors['color4']
 
                 self:connect_signal('mouse::leave', function()
-                    self.bg = c3.selected and colors['color2'] or
+                    self.bg = c3.selected and colors['color4'] or
                                   colors['color0']
                     self.shape_border_color =
-                        c3.selected and colors['color2'] or colors['color0']
+                        c3.selected and colors['color4'] or colors['color0']
                     self.fg = c3.selected and colors['color0'] or
-                                  colors['color2']
+                                  colors['color4']
                 end)
             end,
 
             update_callback = function(self, c3)
-                self.bg = c3.selected and colors['color2'] or colors['color0']
+                self.bg = c3.selected and colors['color4'] or colors['color0']
                 self.bg = c3.urgent and colors['color1'] or self.bg
                 self.shape_border_color =
-                    c3.selected and colors['color2'] or colors['color0']
-                self.fg = c3.selected and colors['color0'] or colors['color2']
+                    c3.selected and colors['color4'] or colors['color0']
+                self.fg = c3.selected and colors['color0'] or colors['color4']
             end
         },
         layout = wibox.layout.fixed.horizontal
@@ -195,7 +195,7 @@ mywidgets.tasklist = function(s)
         buttons = tasklist_buttons,
         style = {
             bg_normal = colors['color0'],
-            bg_focus = colors['color2'],
+            bg_focus = colors['color4'],
             bg_urgent = colors['color1'],
             shape = gears.shape.rounded_rect
         },

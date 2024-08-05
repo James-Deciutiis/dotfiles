@@ -6,7 +6,7 @@ local mywidgets = RC.mywidgets
 local rightbar = {}
 rightbar.makeRightbar = function(s)
     local mytextclock = mywidgets.mywidget_container(mywidgets.mytextclock(),
-                                                     colors['color2'],
+                                                     colors['color4'],
                                                      colors['color0'])
     local mylayoutbox = mywidgets.mylayoutbox(s)
     local volume_widget = mywidgets.myvolumewidget()
@@ -32,7 +32,7 @@ rightbar.makeRightbar = function(s)
             },
             shape = gears.shape.rounded_rect,
             bg = colors['color0'],
-            fg = colors['color2'],
+            fg = colors['color4'],
             shape_border_color = colors['color0'],
             shape_border_width = 4,
             widget = wibox.container.background

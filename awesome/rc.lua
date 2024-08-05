@@ -12,7 +12,7 @@ require("awful.autofocus")
 require("awful.hotkeys_popup.keys")
 require("error-handling")
 
-local current_theme = "everforest"
+local current_theme = "amora"
 
 RC = {}
 RC.colors = require("theme/" .. current_theme .. "/colors")
@@ -73,7 +73,7 @@ awful.rules.rules = RC.rules
 client.connect_signal("manage", function(c)
     c.shape = gears.shape.rectangle
     awful.spawn.with_shell(
-        "feh --bg-fill ~/pictures/greek-mountain-building.jpg")
+        "feh --bg-fill ~/Pictures/purple-forest-lake.jpg")
     awful.spawn.with_shell("picom")
 end)
 -- }}}

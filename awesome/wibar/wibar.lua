@@ -1,4 +1,5 @@
 local awful = require("awful")
+local gears = require("gears")
 local wibox = require("wibox")
 
 local centerPadding = 1000
@@ -19,8 +20,10 @@ awful.screen.connect_for_each_screen(function(s)
         position = "top",
         screen = s,
         bg = colors['color0'],
-        border_width = 7,
-        height = 25
+        border_width = 5,
+        border_color = colors['color0'],
+        shape = gears.shape.rounded_rect,
+        height = 20
     })
 
     s.mywibox:setup{
