@@ -64,7 +64,7 @@ client.connect_signal("mouse::enter", function(c)
 end)
 
 client.connect_signal("focus",
-                      function(c) c.border_color = RC.colors['color2'] end)
+                      function(c) c.border_color = RC.colors['color4'] end)
 client.connect_signal("unfocus",
                       function(c) c.border_color = RC.colors['color0'] end)
 -- }}}
